@@ -1,0 +1,379 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	color: #333;
+	background: #faf9f6;
+}
+
+/* NAVIGATION */
+
+nav {
+	position: fixed;
+	width: 100%;
+	top: 0;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 20px 8%;
+
+	background: rgba(250, 249, 246, 0.95);
+
+	z-index: 1000;
+}
+
+.logo {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 26px;
+}
+
+.nav-links {
+	display: flex;
+	gap: 30px;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #333;
+
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+/* HERO */
+
+.hero {
+	min-height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	text-align: center;
+
+	padding: 100px 20px;
+
+	background:
+		linear-gradient(rgba(250, 249, 246, 0.72), rgba(250, 249, 246, 0.72)),
+		url('wedding.jpg');
+
+	background-size: cover;
+	background-position: center;
+}
+
+.hero-content {
+	max-width: 900px;
+}
+
+.subtitle,
+.section-label {
+	font-size: 11px;
+	letter-spacing: 4px;
+
+	margin-bottom: 25px;
+}
+
+.hero h1 {
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 400;
+
+	font-size: clamp(70px, 12vw, 140px);
+	line-height: 0.75;
+}
+
+.hero h1 span {
+	display: block;
+
+	font-size: 55px;
+	font-style: italic;
+
+	margin: 25px;
+}
+
+.divider,
+.small-divider {
+	width: 60px;
+	height: 1px;
+
+	background: #777;
+
+	margin: 40px auto;
+}
+
+.date {
+	font-size: 11px;
+	letter-spacing: 4px;
+
+	margin-bottom: 10px;
+}
+
+.wedding-date {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 27px;
+
+	margin-bottom: 40px;
+}
+
+/* BUTTON */
+
+.button {
+	display: inline-block;
+
+	border: 1px solid #333;
+
+	background: transparent;
+	color: #333;
+
+	padding: 15px 35px;
+
+	text-decoration: none;
+
+	text-transform: uppercase;
+	letter-spacing: 3px;
+
+	font-size: 11px;
+
+	cursor: pointer;
+
+	transition: 0.3s;
+}
+
+.button:hover {
+	background: #333;
+	color: white;
+}
+
+/* GENERAL SECTION */
+
+.section {
+	padding: 120px 20px;
+
+	text-align: center;
+
+	max-width: 800px;
+	margin: auto;
+}
+
+.section h2,
+.details h2,
+.countdown-section h2 {
+	font-family: 'Cormorant Garamond', serif;
+
+	font-size: 50px;
+	font-weight: 400;
+
+	margin-bottom: 20px;
+}
+
+.story-text {
+	max-width: 650px;
+
+	margin: 20px auto;
+
+	line-height: 2;
+
+	font-size: 15px;
+}
+
+/* DETAILS */
+
+.details {
+	padding: 120px 8%;
+
+	background: #e8ebe3;
+
+	text-align: center;
+}
+
+.details-grid {
+	display: grid;
+
+	grid-template-columns: repeat(3, 1fr);
+
+	gap: 30px;
+
+	max-width: 1100px;
+
+	margin: 60px auto 0;
+}
+
+.detail-card {
+	padding: 50px 25px;
+}
+
+.detail-card h3 {
+	font-family: 'Cormorant Garamond', serif;
+
+	font-size: 32px;
+	font-weight: 400;
+
+	margin-bottom: 25px;
+}
+
+.detail-card p {
+	margin: 10px;
+
+	font-size: 13px;
+	line-height: 1.6;
+}
+
+/* COUNTDOWN */
+
+.countdown-section {
+	padding: 120px 20px;
+
+	text-align: center;
+}
+
+.countdown {
+	display: flex;
+
+	justify-content: center;
+
+	gap: 70px;
+
+	margin-top: 60px;
+}
+
+.countdown span {
+	font-family: 'Cormorant Garamond', serif;
+
+	font-size: 60px;
+}
+
+.countdown p {
+	margin-top: 10px;
+
+	text-transform: uppercase;
+
+	letter-spacing: 2px;
+
+	font-size: 10px;
+}
+
+/* RSVP */
+
+.rsvp p {
+	margin-bottom: 40px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+
+	gap: 20px;
+
+	max-width: 500px;
+
+	margin: auto;
+}
+
+input,
+select,
+textarea {
+	padding: 16px;
+
+	border: none;
+	border-bottom: 1px solid #aaa;
+
+	background: transparent;
+
+	font-family: 'Montserrat', sans-serif;
+
+	outline: none;
+}
+
+textarea {
+	min-height: 100px;
+	resize: vertical;
+}
+
+form .button {
+	margin-top: 20px;
+}
+
+#rsvp-message {
+	margin-top: 30px;
+
+	font-family: 'Cormorant Garamond', serif;
+
+	font-size: 24px;
+}
+
+/* FOOTER */
+
+footer {
+	padding: 80px 20px;
+
+	text-align: center;
+
+	background: #333;
+
+	color: white;
+}
+
+footer h2 {
+	font-family: 'Cormorant Garamond', serif;
+
+	font-size: 45px;
+	font-weight: 400;
+
+	margin-bottom: 15px;
+}
+
+footer p {
+	font-size: 12px;
+
+	letter-spacing: 2px;
+}
+
+.footer-message {
+	margin-top: 30px;
+
+	opacity: 0.7;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+	nav {
+		justify-content: center;
+	}
+
+	.nav-links {
+		display: none;
+	}
+
+	.hero h1 {
+		font-size: 70px;
+	}
+
+	.details-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.countdown {
+		gap: 20px;
+	}
+
+	.countdown span {
+		font-size: 40px;
+	}
+
+	.section h2,
+	.details h2,
+	.countdown-section h2 {
+		font-size: 40px;
+	}
+}

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+
+		<title>Sonali & Piers | Wedding</title>
+
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+			rel="stylesheet" />
+
+		<link
+			rel="stylesheet"
+			href="style.css" />
+	</head>
+
+	<body>
+		<nav>
+			<div class="logo">S & P</div>
+
+			<div class="nav-links">
+				<a href="#home">Home</a>
+				<a href="#story">Our Story</a>
+				<a href="#details">Details</a>
+				<a href="#rsvp">RSVP</a>
+			</div>
+		</nav>
+
+		<!-- HERO -->
+		<section
+			id="home"
+			class="hero">
+			<div class="hero-content">
+				<p class="subtitle">WE'RE GETTING MARRIED</p>
+
+				<h1>
+					Sonali
+					<span>&</span>
+					Piers
+				</h1>
+
+				<div class="divider"></div>
+
+				<p class="date">SAVE THE DATE</p>
+				<p class="wedding-date">June 12, 2027</p>
+
+				<a
+					href="#rsvp"
+					class="button"
+					>RSVP</a
+				>
+			</div>
+		</section>
+
+		<!-- OUR STORY -->
+		<section
+			id="story"
+			class="section">
+			<p class="section-label">OUR STORY</p>
+
+			<h2>Sonali Gobin & Piers Kirk</h2>
+
+			<div class="small-divider"></div>
+
+			<p class="story-text">
+				From the moment we met, through all the adventures, laughter, and
+				memories we've shared along the way, our story has brought us here.
+			</p>
+
+			<p class="story-text">
+				We can't wait to celebrate the beginning of our next chapter surrounded
+				by the people we love most.
+			</p>
+		</section>
+
+		<!-- DETAILS -->
+		<section
+			id="details"
+			class="details">
+			<p class="section-label">THE WEDDING</p>
+
+			<h2>Celebrate With Us</h2>
+
+			<div class="details-grid">
+				<div class="detail-card">
+					<h3>When</h3>
+
+					<p>Saturday</p>
+					<p>June 12, 2027</p>
+					<p>4:00 PM</p>
+				</div>
+
+				<div class="detail-card">
+					<h3>Where</h3>
+
+					<p>Wedding Venue</p>
+					<p>City, Country</p>
+					<p>Address Goes Here</p>
+				</div>
+
+				<div class="detail-card">
+					<h3>Dress</h3>
+
+					<p>Formal Attire</p>
+					<p>Come ready to celebrate.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- COUNTDOWN -->
+		<section class="countdown-section">
+			<p class="section-label">COUNTING DOWN</p>
+
+			<h2>Until We Say "I Do"</h2>
+
+			<div class="countdown">
+				<div>
+					<span id="days">0</span>
+					<p>Days</p>
+				</div>
+
+				<div>
+					<span id="hours">0</span>
+					<p>Hours</p>
+				</div>
+
+				<div>
+					<span id="minutes">0</span>
+					<p>Minutes</p>
+				</div>
+
+				<div>
+					<span id="seconds">0</span>
+					<p>Seconds</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- RSVP -->
+		<section
+			id="rsvp"
+			class="section rsvp">
+			<p class="section-label">RSVP</p>
+
+			<h2>Will You Join Us?</h2>
+
+			<div class="small-divider"></div>
+
+			<p>We would love to celebrate our special day with you.</p>
+
+			<form id="rsvp-form">
+				<input
+					type="text"
+					id="name"
+					placeholder="Your Name"
+					required />
+
+				<select
+					id="attendance"
+					required>
+					<option value="">Will you be attending?</option>
+					<option value="yes">Joyfully Accept</option>
+					<option value="no">Regretfully Decline</option>
+				</select>
+
+				<input
+					type="number"
+					id="guests"
+					min="1"
+					max="5"
+					placeholder="Number of Guests" />
+
+				<textarea
+					id="message"
+					placeholder="Leave us a message..."></textarea>
+
+				<button
+					type="submit"
+					class="button">
+					Send RSVP
+				</button>
+			</form>
+
+			<p id="rsvp-message"></p>
+		</section>
+
+		<footer>
+			<h2>Sonali & Piers</h2>
+
+			<p>June 12, 2027</p>
+
+			<p class="footer-message">We can't wait to celebrate with you.</p>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>
