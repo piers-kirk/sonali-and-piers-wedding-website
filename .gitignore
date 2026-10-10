@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# Allow these repository files
+!.gitignore
+!README.md
+!index.html
+!style.css
+!script.js
