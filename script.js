@@ -51,17 +51,24 @@ if (form) {
 }
 
 // Departures board letter tiles
+// Letters are grouped by word so lines only break between words, never mid-word.
 document.querySelectorAll('.flap').forEach((el, n) => {
 	const s = el.textContent;
 	el.setAttribute('aria-label', s);
 	el.textContent = '';
-	[...s].forEach((c, i) => {
-		const t = document.createElement('span');
-		t.className = 't';
-		t.setAttribute('aria-hidden', 'true');
-		t.textContent = c === ' ' ? '\u00a0' : c.toUpperCase();
-		t.style.animationDelay = n * 0.05 + i * 0.03 + 's';
-		el.appendChild(t);
+	let i = 0;
+	s.split(' ').forEach((word) => {
+		const w = document.createElement('span');
+		w.className = 'w';
+		w.setAttribute('aria-hidden', 'true');
+		[...word].forEach((c) => {
+			const t = document.createElement('span');
+			t.className = 't';
+			t.textContent = c.toUpperCase();
+			t.style.animationDelay = n * 0.05 + i++ * 0.03 + 's';
+			w.appendChild(t);
+		});
+		el.appendChild(w);
 	});
 });
 

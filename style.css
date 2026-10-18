@@ -76,3 +76,82 @@
 .faq-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:26px auto 0;max-width:680px}
 .faq-tab{margin:0;padding:9px 18px;background:transparent;color:var(--deep);border:1px solid #8aa9a0;border-radius:22px;font:500 9px var(--sans);letter-spacing:2.5px;cursor:pointer}
 .faq-tab[aria-selected="true"]{background:var(--green);border-color:var(--green);color:#fff}
+
+/* Departures board: letters grouped into words */
+.flap{column-gap:14px;row-gap:3px}
+.flap .w{display:inline-flex;gap:2px;white-space:nowrap}
+
+/* Mobile fixes */
+@media(max-width:720px){
+	/* Nav: bigger, easier-to-tap links */
+	.nav{padding:16px 0}
+	.nav-group{gap:2px 8px;flex-wrap:wrap}
+	.nav-group+.nav-group{margin-top:2px}
+	.nav a{font-size:12.5px;font-weight:500;letter-spacing:2.5px;padding:8px 10px;text-shadow:0 1px 8px rgba(0,50,70,.45)}
+
+	/* Hero */
+	.hero h1{font-size:clamp(34px,10.4vw,60px);letter-spacing:.04em;white-space:nowrap}
+	.hero-location{font-size:12px;letter-spacing:4px}
+	.hero-date{font-size:11px;letter-spacing:3px}
+
+	/* Intro: let the heading flow naturally instead of forced line breaks */
+	.intro{padding:46px 20px 52px}
+	.intro h2 br{display:none}
+	.intro h2{font-size:clamp(30px,8.4vw,38px);text-wrap:balance}
+
+	/* Section headings stay on one line */
+	.section-heading{gap:12px}
+	.section-heading span{flex:0 0 24px}
+	.section-heading h2{font-size:15px;letter-spacing:3px;white-space:nowrap}
+	.celebrations{padding:44px 16px 52px}
+
+	/* Timeline: date circle sits beside the top of each card */
+	.tl{margin-top:30px}
+	.tl:before{left:22px}
+	.ti{grid-template-columns:44px 1fr;gap:12px;align-items:start;margin-bottom:24px}
+	.node{width:44px;height:44px;font-size:20px;line-height:44px;margin-top:14px;box-shadow:0 0 0 6px #ebf2ed}
+	.box{padding:10px 10px 18px}
+	.box img{height:170px}
+	.box>p,.box .colours>p{font-size:13px}
+	.box .card-date,.colours .lbl{font-size:10px;letter-spacing:2px}
+	.box h3{font-size:30px}
+
+	/* Readable body text */
+	.travel-intro,.travel-note,.stay p,.faq details p{font-size:14px}
+	.travel,.faq,.rsvp-form-section{padding:56px 16px}
+	.stay{padding:22px 20px}
+
+	/* Departures board: airline on its own line, route + status beneath */
+	.board{padding:6px 14px}
+	.board .row{grid-template-columns:1fr auto;grid-template-areas:"airline airline" "route status";gap:6px 10px;padding:12px 0}
+	.board .row>span:nth-child(1){grid-area:airline}
+	.board .row>span:nth-child(2){grid-area:route}
+	.board .row>span:nth-child(3){display:none}
+	.board .row>span:nth-child(4){grid-area:status;justify-content:flex-end}
+	.flap{font-size:11px;column-gap:10px}
+	.flap .t{min-width:12px;padding:5px 1px}
+
+	/* FAQ */
+	.faq-tab{padding:10px 14px;font-size:10px;letter-spacing:1.5px}
+	.faq summary{font-size:19px;padding:15px 4px}
+
+	/* Countdown + RSVP */
+	.countdown p,.cant-wait{font-size:9px}
+	.rsvp-button,button{font-size:11px;padding:14px 28px}
+	/* 16px stops iPhones zooming in when a field is tapped */
+	input,select,textarea{font-size:16px}
+	.form-note{font-size:11px}
+	footer{font-size:9px;line-height:1.9}
+}
+
+/* Desktop nav: one evenly spaced row */
+@media(min-width:721px){
+	.nav{display:flex;justify-content:center;align-items:center;gap:56px;width:auto;white-space:nowrap}
+	.nav-group{display:contents}
+	.palm-mark{display:none}
+}
+@media(max-width:720px){
+	.nav{display:flex;flex-wrap:wrap;justify-content:center;gap:0 4px}
+	.nav-group{display:contents}
+	.nav a{padding:8px 7px;letter-spacing:2px}
+}
