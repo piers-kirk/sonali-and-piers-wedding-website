@@ -126,8 +126,7 @@
 	.board .row{grid-template-columns:1fr auto;grid-template-areas:"airline airline" "route status";gap:6px 10px;padding:12px 0}
 	.board .row>span:nth-child(1){grid-area:airline}
 	.board .row>span:nth-child(2){grid-area:route}
-	.board .row>span:nth-child(3){display:none}
-	.board .row>span:nth-child(4){grid-area:status;justify-content:flex-end}
+	.board .row>span:nth-child(3){grid-area:status;justify-content:flex-end}
 	.flap{font-size:11px;column-gap:10px}
 	.flap .t{min-width:12px;padding:5px 1px}
 
@@ -176,3 +175,108 @@ html{scroll-padding-top:64px}
 	.nav .links a{font-size:10.5px;letter-spacing:2px;padding:8px 0}
 	.nav.scrolled{height:54px}
 }
+
+/* RSVP in the menu: outlined pill, filled once the bar turns cream */
+.nav .links{align-items:center}
+.nav .links a.nav-rsvp{padding:8px 20px;border:1px solid currentColor;border-radius:999px;transition:background .25s,color .25s,border-color .25s}
+.nav .links a.nav-rsvp:after{content:none}
+.nav .links a.nav-rsvp:hover{background:#fff;color:var(--green);text-shadow:none}
+.nav.scrolled .links a.nav-rsvp{background:var(--green);border-color:var(--green);color:#fff}
+.nav.scrolled .links a.nav-rsvp:hover{background:var(--deep)}
+
+/* Bigger hero RSVP button */
+.hero-rsvp{min-width:210px;padding:17px 34px;font-size:13px;font-weight:500;letter-spacing:3.5px;gap:20px;box-shadow:0 8px 24px rgba(0,50,60,.25);transition:background .25s,transform .25s}
+.hero-rsvp:hover{background:var(--deep);transform:translateY(-1px)}
+
+@media(max-width:720px){
+	.nav .links{gap:14px}
+	.nav .links a{letter-spacing:1.6px}
+	.nav .links a.nav-rsvp{padding:7px 13px}
+	.hero-rsvp{min-width:200px;padding:16px 30px;font-size:13px;letter-spacing:3px}
+}
+@media(max-width:720px){.nav{flex-wrap:nowrap;gap:10px}}
+@media(max-width:400px){
+	.nav{padding:0 14px}
+	.nav .mono{font-size:27px}
+	.nav .links{gap:12px}
+	.nav .links a{font-size:10px;letter-spacing:1.3px}
+	.nav .links a.nav-rsvp{padding:6px 11px}
+}
+@media(max-width:345px){
+	.nav{padding:0 10px}
+	.nav .mono{font-size:23px}
+	.nav .links{gap:9px}
+	.nav .links a{font-size:9px;letter-spacing:.9px}
+	.nav .links a.nav-rsvp{padding:5px 8px}
+}
+
+/* ===== UI polish ===== */
+
+/* Swatch names line up with the swatches */
+.box .colours>p{margin-left:0;margin-right:0}
+
+/* Flight board: three columns, wider, names on one line */
+.board{max-width:860px}
+@media(min-width:721px){.board .row{grid-template-columns:2.2fr 1.6fr 1.4fr}.board .h{font-size:10px}}
+
+/* FAQ: thin green plus/minus instead of browser triangles */
+.faq summary{list-style:none;position:relative;padding-right:40px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:'';position:absolute;right:8px;top:50%;width:14px;height:14px;margin-top:-7px;background:linear-gradient(var(--green),var(--green)) center/14px 1.5px no-repeat,linear-gradient(var(--green),var(--green)) center/1.5px 14px no-repeat;transition:transform .25s}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq summary:hover{color:var(--green)}
+
+/* RSVP dropdown: matching chevron */
+select{-webkit-appearance:none;appearance:none;padding-right:44px;cursor:pointer;background:#fffdf8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%230d615e' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 16px center}
+
+/* Footer: monogram and back-to-top */
+footer{display:flex;flex-direction:column;align-items:center;gap:10px;padding:36px 20px 30px}
+footer a{text-decoration:none}
+.foot-mono{font:400 38px/1 'Great Vibes',cursive;letter-spacing:0;color:#fff}
+.foot-mono span{font-size:.8em;margin:0 2px}
+.to-top{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;opacity:.8;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.35)}
+.to-top:hover{opacity:1}
+
+/* Larger text on desktop */
+@media(min-width:721px){
+	.eyebrow,.section-label{font-size:11px}
+	.hero-date{font-size:12px}
+	.hero-location{font-size:14px}
+	.countdown p{font-size:10px;letter-spacing:2px}
+	.hero .countdown span{font-size:40px}
+	.box>p,.box .colours>p{font-size:13px}
+	.box .card-date,.colours .lbl{font-size:10.5px;letter-spacing:2px}
+	.box h3{font-size:34px}
+	.travel-intro,.travel-note,.stay p{font-size:15px}
+	.faq summary{font-size:22px}
+	.faq details p{font-size:14px;line-height:1.7}
+	.faq-tab{font-size:10.5px;padding:10px 20px}
+	input,select,textarea{font-size:14px}
+	#rsvp-form button{font-size:11.5px;padding:16px 38px;letter-spacing:3px}
+	.form-note{font-size:11px}
+	footer p{font-size:10px;letter-spacing:2.5px}
+	.flap .t{min-width:14px}
+}
+
+/* Celebrations: three cards side by side on wide screens */
+@media(min-width:960px){
+	.tl{max-width:1100px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:stretch}
+	.tl:before{left:16.67%;right:16.67%;top:27px;bottom:auto;width:auto;height:1px}
+	.ti{display:flex;flex-direction:column;align-items:stretch;margin:0}
+	.ti .e{display:none}
+	.ti .node{order:0;align-self:center;margin-bottom:22px}
+	.ti .box{order:1;flex:1;display:flex;flex-direction:column}
+	.ti .box .dress{margin-bottom:14px!important}
+	.ti .box .colours{margin-top:auto}
+	.box img{height:190px}
+}
+/* Between phone and wide desktop, use the single-column timeline */
+@media(min-width:701px) and (max-width:959px){
+	.tl{max-width:620px}
+	.tl:before{left:27px}
+	.ti{grid-template-columns:54px 1fr;gap:16px;align-items:start}
+	.ti .node{order:1;margin-top:14px}
+	.ti .box{order:2}
+	.ti .e{display:none}
+}
+.to-top span{font-size:1.4em;line-height:0;vertical-align:-.1em;margin-left:4px}
