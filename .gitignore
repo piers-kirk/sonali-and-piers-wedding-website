@@ -1,9 +1,17 @@
 # Ignore everything
 *
 
-# Allow these repository files
+# Allow repository files
 !.gitignore
 !README.md
 !index.html
+!server.py
 !style.css
 !script.js
+
+# Allow assets directories
+!assets/
+!assets/images/
+
+# Allow JPG images anywhere inside assets/images
+!assets/images/*.jpg

@@ -5,9 +5,10 @@
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
-
+		<meta
+			name="theme-color"
+			content="#0d6663" />
 		<title>Sonali &amp; Piers | Mauritius Wedding</title>
-
 		<link
 			rel="preconnect"
 			href="https://fonts.googleapis.com" />
@@ -16,181 +17,266 @@
 			href="https://fonts.gstatic.com"
 			crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@300;400;500&display=swap"
 			rel="stylesheet" />
-
 		<link
 			rel="stylesheet"
 			href="style.css" />
 	</head>
-
 	<body>
-		<nav aria-label="Main navigation">
-			<a class="logo" href="#home" aria-label="Back to top">Mauritius</a>
+		<header
+			class="hero"
+			id="home">
+			<nav
+				class="nav"
+				aria-label="Main navigation">
+				<div class="nav-group">
+					<a href="#story">Our Story</a>
+					<a href="#itinerary">Itinerary</a>
+				</div>
+				<a
+					class="palm-mark"
+					href="#home"
+					aria-label="Back to top"
+					>♧</a
+				>
+				<div class="nav-group">
+					<a href="#travel">Travel</a>
+					<a href="#faq">FAQ</a>
+					<a href="#rsvp">RSVP</a>
+				</div>
+			</nav>
 
-			<div class="nav-links">
-				<a href="#details">Celebrations</a>
-				<a href="#travel">Travel</a>
-				<a href="#rsvp">RSVP</a>
-			</div>
-		</nav>
-
-		<!-- HERO -->
-		<section id="home" class="hero">
 			<div class="hero-content">
-				<p class="hero-eyebrow">THE WEDDING OF</p>
-				<h1>Sonali <span>&amp;</span> Piers</h1>
+				<p class="eyebrow">THE WEDDING OF</p>
+				<h1>SONALI <span>&amp;</span> PIERS</h1>
 				<p class="hero-location">MAURITIUS</p>
-				<p class="wedding-date">26–28 JUNE 2027</p>
-				<div class="divider"></div>
+				<p class="hero-date">26 – 28 JUNE 2027</p>
+				<span
+					class="hero-rule"
+					aria-hidden="true"></span>
 			</div>
-		</section>
+		</header>
 
-		<!-- WELCOME -->
-		<section id="welcome" class="welcome-section">
-			<p class="section-label">A WEEKEND IN MAURITIUS</p>
-			<h2>Good Food, Great Company<br />and Tropical Vibes</h2>
-			<div class="welcome-features">
-				<div><span class="feature-icon" aria-hidden="true">♧</span><p>BEAUTIFUL<br />LOCATION</p></div>
-				<div><span class="feature-icon" aria-hidden="true">♧</span><p>GOOD FOOD<br />&amp; DRINKS</p></div>
-				<div><span class="feature-icon" aria-hidden="true">☼</span><p>RELAXED<br />CELEBRATIONS</p></div>
-				<div><span class="feature-icon" aria-hidden="true">≈</span><p>TIME TO<br />EXPLORE</p></div>
-			</div>
-		</section>
+		<main>
+			<section
+				class="intro tropical-corners"
+				id="story">
+				<p class="section-label">A WEEKEND OF</p>
+				<h2>Good Food, Great Company<br />and Tropical Vibes</h2>
+				<p class="intro-copy">
+					We’re bringing our favourite people together in Mauritius for a
+					relaxed weekend of food, celebration and time by the ocean.
+				</p>
 
-		<!-- DETAILS -->
-		<section
-			id="details"
-			class="details">
-			<p class="section-label">THE WEDDING WEEKEND</p>
+				<div
+					class="feature-grid"
+					aria-label="Weekend highlights">
+					<article>
+						<span class="line-icon">♧</span>
+						<p>BEAUTIFUL<br />LOCATION</p>
+					</article>
+					<article>
+						<span class="line-icon">♢</span>
+						<p>DELICIOUS<br />FOOD &amp; DRINKS</p>
+					</article>
+					<article>
+						<span class="line-icon">☼</span>
+						<p>RELAXED<br />CELEBRATIONS</p>
+					</article>
+					<article>
+						<span class="line-icon">≈</span>
+						<p>TIME TO<br />EXPLORE</p>
+					</article>
+				</div>
+			</section>
 
-			<h2>Our Celebrations</h2>
-
-			<div class="details-grid itinerary-grid">
-				<div class="detail-card">
-                    <img class="itinerary-image" src="itinerary-day1.jpg" alt="Outdoor dining area at Domaine Anna" />
-					<span class="detail-number" aria-hidden="true">DAY 1 · SATURDAY, 26 JUNE 2027</span>
-					<h3>Mehendi</h3>
-					<p>6:00 PM – 10:00 PM</p>
-					<p>Domaine Anna, Mauritius</p>
-					<p class="event-description">A joyful start to the wedding celebrations.</p>
-					<p class="dress-code"><strong>Dress code:</strong> Traditional Indian attire encouraged; Western festive attire is also welcome.</p>
+			<section
+				class="celebrations"
+				id="itinerary">
+				<div class="section-heading">
+					<span></span>
+					<h2>OUR CELEBRATIONS</h2>
+					<span></span>
 				</div>
 
-				<div class="detail-card">
-                    <img class="itinerary-image" src="itinerary-day2.jpg" alt="Tropical pool at the wedding resort" />
-					<span class="detail-number" aria-hidden="true">DAY 2 · SUNDAY, 27 JUNE 2027</span>
-					<h3>The Wedding</h3>
-					<p>3:00 PM – 6:00 PM</p>
-					<p>Hilton Mauritius Resort &amp; Spa</p>
-					<p class="event-description">The day we say “I do”.</p>
-					<p class="dress-code"><strong>Dress code:</strong> Traditional Indian attire encouraged; Western formal attire is equally welcome.</p>
+				<div class="card-grid">
+					<article class="event-card">
+						<img
+							src="assets/images/itinerary-day1.jpg"
+							alt="Tropical outdoor dinner setting" />
+						<div class="card-body">
+							<p class="card-date">SATURDAY, 26 JUNE 2027</p>
+							<h3>Mehendi</h3>
+							<p class="event-time">6:00 PM – 10:00 PM</p>
+							<p>Domaine Anna, Mauritius</p>
+							<span class="card-rule"></span>
+							<p class="card-copy">
+								A joyful start to the weekend with good food, colour and plenty
+								of time together.
+							</p>
+							<p class="dress">
+								Traditional Indian attire encouraged; Western festive attire is
+								also welcome.
+							</p>
+						</div>
+					</article>
+
+					<article class="event-card">
+						<img
+							src="assets/images/itinerary-day2.jpg"
+							alt="Tropical wedding setting by the ocean" />
+						<div class="card-body">
+							<p class="card-date">SUNDAY, 27 JUNE 2027</p>
+							<h3>The Wedding</h3>
+							<p class="event-time">3:00 PM – 6:00 PM</p>
+							<p>Hilton Mauritius Resort &amp; Spa</p>
+							<span class="card-rule"></span>
+							<p class="card-copy">
+								Join us as we exchange vows and celebrate by the ocean.
+							</p>
+							<p class="dress">
+								Traditional Indian attire encouraged; Western formal attire is
+								equally welcome.
+							</p>
+						</div>
+					</article>
+
+					<article class="event-card">
+						<img
+							src="assets/images/itinerary-day3.jpg"
+							alt="Tropical evening reception setting" />
+						<div class="card-body">
+							<p class="card-date">MONDAY, 28 JUNE 2027</p>
+							<h3>The Reception</h3>
+							<p class="event-time">6:00 PM – MIDNIGHT</p>
+							<p>Venue to be confirmed</p>
+							<span class="card-rule"></span>
+							<p class="card-copy">
+								Dinner, dancing and a relaxed finale to our wedding weekend.
+							</p>
+							<p class="dress">
+								Chic evening attire; both Indian and Western outfits are
+								welcome.
+							</p>
+						</div>
+					</article>
 				</div>
+			</section>
 
-				<div class="detail-card">
-                    <img class="itinerary-image" src="itinerary-day3.jpg" alt="Elegant outdoor evening reception setup" />
-					<span class="detail-number" aria-hidden="true">DAY 3 · MONDAY, 28 JUNE 2027</span>
-					<h3>The Reception</h3>
-					<p>6:00 PM – Midnight</p>
-					<p>Venue to be confirmed</p>
-					<p class="event-description">An evening of celebration, dinner and dancing.</p>
-					<p class="dress-code"><strong>Dress code:</strong> Chic evening attire; both Indian and Western outfits are welcome.</p>
+			<section
+				class="travel"
+				id="travel">
+				<p class="section-label">TRAVEL &amp; STAY</p>
+				<h2>Meet us in Mauritius</h2>
+				<p>
+					Hotel, airport transfer and travel recommendations are coming soon.
+				</p>
+			</section>
+
+			<section
+				class="faq"
+				id="faq">
+				<p class="section-label">GOOD TO KNOW</p>
+				<h2>Frequently Asked Questions</h2>
+				<details>
+					<summary>What should I wear?</summary>
+					<p>
+						Each celebration has its own suggested dress code above. Indian and
+						Western attire are both welcome.
+					</p>
+				</details>
+				<details>
+					<summary>Where should I stay?</summary>
+					<p>
+						Accommodation recommendations will be added here as plans are
+						finalised.
+					</p>
+				</details>
+				<details>
+					<summary>Can I make a holiday of it?</summary>
+					<p>
+						Absolutely. Mauritius is worth exploring, and we’d love for everyone
+						to enjoy the island beyond the celebrations.
+					</p>
+				</details>
+			</section>
+
+			<section
+				class="countdown-rsvp"
+				id="rsvp">
+				<div class="countdown-wrap">
+					<p class="section-label">COUNTING DOWN TO</p>
+					<div
+						class="countdown"
+						aria-label="Countdown to the wedding">
+						<div>
+							<span id="days">0</span>
+							<p>DAYS</p>
+						</div>
+						<i></i>
+						<div>
+							<span id="hours">0</span>
+							<p>HOURS</p>
+						</div>
+						<i></i>
+						<div>
+							<span id="minutes">0</span>
+							<p>MINUTES</p>
+						</div>
+						<i></i>
+						<div>
+							<span id="seconds">0</span>
+							<p>SECONDS</p>
+						</div>
+					</div>
+					<a
+						class="rsvp-button"
+						href="#rsvp-form"
+						>RSVP <span>→</span></a
+					>
+					<p class="cant-wait">WE CAN’T WAIT TO CELEBRATE WITH YOU</p>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- COUNTDOWN -->
-		<section class="countdown-section">
-			<p class="section-label">COUNTDOWN TO THE WEDDING</p>
+			<section class="rsvp-form-section">
+				<p class="section-label">RSVP</p>
+				<h2>Will You Join Us?</h2>
+				<form id="rsvp-form">
+					<input
+						type="text"
+						id="name"
+						placeholder="Your Name"
+						required />
+					<select
+						id="attendance"
+						required>
+						<option value="">Will you be attending?</option>
+						<option value="yes">Joyfully Accept</option>
+						<option value="no">Regretfully Decline</option>
+					</select>
+					<input
+						type="number"
+						id="guests"
+						min="1"
+						max="5"
+						placeholder="Number of Guests" />
+					<textarea
+						id="message"
+						placeholder="Leave us a message..."></textarea>
+					<button type="submit">SEND RSVP</button>
+				</form>
+				<p class="form-note">
+					Preview only — responses are not submitted anywhere yet.
+				</p>
+				<p
+					id="rsvp-message"
+					role="status"
+					aria-live="polite"></p>
+			</section>
+		</main>
 
-			<h2>We look forward to celebrating with you</h2>
-
-			<div class="countdown">
-				<div>
-					<span id="days">0</span>
-					<p>Days</p>
-				</div>
-
-				<div>
-					<span id="hours">0</span>
-					<p>Hours</p>
-				</div>
-
-				<div>
-					<span id="minutes">0</span>
-					<p>Minutes</p>
-				</div>
-
-				<div>
-					<span id="seconds">0</span>
-					<p>Seconds</p>
-				</div>
-			</div>
-		</section>
-
-		<!-- TRAVEL PLACEHOLDER -->
-		<section id="travel" class="travel-strip">
-			<p class="section-label">MAKE A TRIP OF IT</p>
-			<h2>More details on travel and accommodation coming soon.</h2>
-		</section>
-
-		<!-- RSVP -->
-		<section
-			id="rsvp"
-			class="section rsvp">
-			<p class="section-label">RSVP</p>
-
-			<h2>Will You Join Us?</h2>
-
-			<div class="small-divider"></div>
-
-			<p>We would love to celebrate our special day with you.</p>
-
-			<form id="rsvp-form">
-				<input
-					type="text"
-					id="name"
-					placeholder="Your Name"
-					required />
-
-				<select
-					id="attendance"
-					required>
-					<option value="">Will you be attending?</option>
-					<option value="yes">Joyfully Accept</option>
-					<option value="no">Regretfully Decline</option>
-				</select>
-
-				<input
-					type="number"
-					id="guests"
-					min="1"
-					max="5"
-					placeholder="Number of Guests" />
-
-				<textarea
-					id="message"
-					placeholder="Leave us a message..."></textarea>
-
-				<button
-					type="submit"
-					class="button">
-					Send RSVP
-				</button>
-			</form>
-
-			<p class="form-note">Please note: this form is a preview and does not submit responses yet.</p>
-			<p id="rsvp-message" role="status" aria-live="polite"></p>
-		</section>
-
-		<footer>
-			<h2>Sonali & Piers</h2>
-
-			<p>June 26–28, 2027 · Mauritius</p>
-
-			<p class="footer-message">Mauritius · 26–28 June 2027</p>
-		</footer>
-
+		<footer><p>SONALI &amp; PIERS · MAURITIUS · 26–28 JUNE 2027</p></footer>
 		<script src="script.js"></script>
 	</body>
 </html>
