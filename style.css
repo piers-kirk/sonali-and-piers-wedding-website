@@ -1,379 +1,432 @@
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+/* Sonali & Piers — tropical, editorial wedding styling */
+:root {
+  --ink: #183c3b;
+  --deep: #103c3b;
+  --teal: #246d6b;
+  --sea-glass: #dcebe4;
+  --sage: #e9eee4;
+  --ivory: #fbf8f0;
+  --sand: #e9d9bd;
+  --muted: #637673;
+  --white: #fffdf8;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Montserrat', Arial, sans-serif;
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
 body {
-	font-family: 'Montserrat', sans-serif;
-	color: #333;
-	background: #faf9f6;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--ivory);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
-
-/* NAVIGATION */
-
+a { color: inherit; }
 nav {
-	position: fixed;
-	width: 100%;
-	top: 0;
-
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
-	padding: 20px 8%;
-
-	background: rgba(250, 249, 246, 0.95);
-
-	z-index: 1000;
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 7.5%;
+  color: var(--white);
+  border-bottom: 1px solid rgba(255,255,255,.24);
 }
-
 .logo {
-	font-family: 'Cormorant Garamond', serif;
-	font-size: 26px;
+  font-family: var(--serif);
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: .02em;
+  text-decoration: none;
 }
-
-.nav-links {
-	display: flex;
-	gap: 30px;
-}
-
+.logo span { font-style: italic; color: #e5d5b7; }
+.nav-links { display: flex; gap: clamp(18px, 3vw, 42px); align-items: center; }
 .nav-links a {
-	text-decoration: none;
-	color: #333;
-
-	font-size: 12px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  transition: opacity .2s ease;
 }
-
-/* HERO */
+.nav-links a:hover { opacity: .7; }
 
 .hero {
-	min-height: 100vh;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	text-align: center;
-
-	padding: 100px 20px;
-
-	background:
-		linear-gradient(rgba(250, 249, 246, 0.72), rgba(250, 249, 246, 0.72)),
-		url('wedding.jpg');
-
-	background-size: cover;
-	background-position: center;
+  position: relative;
+  min-height: min(850px, 100svh);
+  min-height: max(700px, 100svh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 130px 24px 100px;
+  text-align: center;
+  color: var(--white);
+  background-color: #247a80;
+  background-image:
+    linear-gradient(180deg, rgba(9,43,45,.43) 0%, rgba(8,52,54,.20) 42%, rgba(9,42,43,.40) 100%),
+    url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2400&q=85');
+  background-size: cover;
+  background-position: center 55%;
 }
-
-.hero-content {
-	max-width: 900px;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(255,253,248,.38);
+  pointer-events: none;
+  z-index: -1;
 }
-
-.subtitle,
-.section-label {
-	font-size: 11px;
-	letter-spacing: 4px;
-
-	margin-bottom: 25px;
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -220px;
+  bottom: -300px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50%;
+  box-shadow: 0 0 0 35px rgba(255,255,255,.05), 0 0 0 70px rgba(255,255,255,.04);
+  pointer-events: none;
 }
-
+.hero-content { position: relative; max-width: 960px; width: 100%; }
+.hero-eyebrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 30px;
+  font-size: 9px;
+  letter-spacing: 3.5px;
+  font-weight: 500;
+}
+.hero-eyebrow span { width: 28px; height: 1px; background: #e5d5b7; }
+.subtitle, .section-label {
+  font-size: 10px;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+.subtitle { margin-bottom: 28px; }
 .hero h1 {
-	font-family: 'Cormorant Garamond', serif;
-	font-weight: 400;
-
-	font-size: clamp(70px, 12vw, 140px);
-	line-height: 0.75;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(76px, 12vw, 150px);
+  line-height: .78;
+  letter-spacing: -.045em;
+  text-shadow: 0 3px 28px rgba(0,0,0,.12);
 }
-
 .hero h1 span {
-	display: block;
-
-	font-size: 55px;
-	font-style: italic;
-
-	margin: 25px;
+  display: block;
+  margin: 25px 0 22px;
+  color: #e7d8bc;
+  font-size: clamp(38px, 5vw, 62px);
+  font-style: italic;
+  line-height: .8;
 }
-
-.divider,
-.small-divider {
-	width: 60px;
-	height: 1px;
-
-	background: #777;
-
-	margin: 40px auto;
+.divider, .small-divider {
+  width: 54px;
+  height: 1px;
+  background: #d9c7a6;
+  margin: 36px auto 28px;
 }
-
-.date {
-	font-size: 11px;
-	letter-spacing: 4px;
-
-	margin-bottom: 10px;
-}
-
-.wedding-date {
-	font-family: 'Cormorant Garamond', serif;
-	font-size: 27px;
-
-	margin-bottom: 40px;
-}
-
-/* BUTTON */
-
+.date { font-size: 9px; letter-spacing: 4px; margin-bottom: 2px; }
+.wedding-date { font-family: var(--serif); font-size: 31px; margin-bottom: 30px; }
 .button {
-	display: inline-block;
-
-	border: 1px solid #333;
-
-	background: transparent;
-	color: #333;
-
-	padding: 15px 35px;
-
-	text-decoration: none;
-
-	text-transform: uppercase;
-	letter-spacing: 3px;
-
-	font-size: 11px;
-
-	cursor: pointer;
-
-	transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 14px 34px;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background .25s ease, color .25s ease, transform .25s ease;
 }
-
-.button:hover {
-	background: #333;
-	color: white;
-}
-
-/* GENERAL SECTION */
+.hero .button { border-color: rgba(255,253,248,.82); background: rgba(255,253,248,.08); }
+.hero .button:hover { background: var(--white); color: var(--deep); transform: translateY(-2px); }
+.button:hover { background: var(--deep); color: var(--white); }
 
 .section {
-	padding: 120px 20px;
-
-	text-align: center;
-
-	max-width: 800px;
-	margin: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 115px 24px;
+  text-align: center;
 }
-
-.section h2,
-.details h2,
-.countdown-section h2 {
-	font-family: 'Cormorant Garamond', serif;
-
-	font-size: 50px;
-	font-weight: 400;
-
-	margin-bottom: 20px;
+.story-section {
+  position: relative;
+  overflow: hidden;
+  background: var(--ivory);
 }
-
+.story-section::before, .story-section::after {
+  content: "✳";
+  position: absolute;
+  color: #c6d7c9;
+  font-size: 110px;
+  line-height: 1;
+  opacity: .45;
+  pointer-events: none;
+}
+.story-section::before { left: max(4%, calc((100vw - 1100px) / 2)); top: 50px; transform: rotate(-18deg); }
+.story-section::after { right: max(4%, calc((100vw - 1100px) / 2)); bottom: 25px; transform: rotate(22deg); }
+.section-label { margin-bottom: 22px; color: var(--teal); }
+.leaf-mark { color: #b69d73; margin-right: 8px; }
+.section h2, .details h2, .countdown-section h2 {
+  font-family: var(--serif);
+  font-size: clamp(42px, 5vw, 62px);
+  font-weight: 400;
+  letter-spacing: -.025em;
+  line-height: 1.05;
+  margin-bottom: 22px;
+}
+.story-section h2 { position: relative; }
+.small-divider { background: #b7c9bd; margin: 30px auto; }
 .story-text {
-	max-width: 650px;
-
-	margin: 20px auto;
-
-	line-height: 2;
-
-	font-size: 15px;
+  max-width: 620px;
+  margin: 18px auto;
+  color: #5a6e69;
+  font-size: 14px;
+  line-height: 2.05;
 }
-
-/* DETAILS */
-
 .details {
-	padding: 120px 8%;
-
-	background: #e8ebe3;
-
-	text-align: center;
+  padding: 105px 7.5% 115px;
+  background: var(--sage);
+  text-align: center;
+  position: relative;
 }
-
+.details::before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 1px;
+  background: #b7c9bd;
+  margin: 0 auto 36px;
+}
 .details-grid {
-	display: grid;
-
-	grid-template-columns: repeat(3, 1fr);
-
-	gap: 30px;
-
-	max-width: 1100px;
-
-	margin: 60px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 56px auto 0;
 }
-
 .detail-card {
-	padding: 50px 25px;
+  position: relative;
+  padding: 38px 24px 42px;
+  border: 1px solid rgba(36,109,107,.22);
+  background: rgba(255,253,248,.48);
 }
-
+.itinerary-image {
+  display: block;
+  width: calc(100% + 48px);
+  height: 220px;
+  margin: -38px -24px 28px;
+  object-fit: cover;
+  object-position: center;
+}
+.detail-number {
+  display: block;
+  color: #9aab9f;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
 .detail-card h3 {
-	font-family: 'Cormorant Garamond', serif;
-
-	font-size: 32px;
-	font-weight: 400;
-
-	margin-bottom: 25px;
+  font-family: var(--serif);
+  font-size: 33px;
+  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 22px;
+  color: var(--deep);
 }
-
-.detail-card p {
-	margin: 10px;
-
-	font-size: 13px;
-	line-height: 1.6;
+.detail-card p { margin: 7px 0; font-size: 12px; color: #536762; line-height: 1.8; }
+.detail-card p:first-of-type { color: var(--ink); font-weight: 500; }
+.detail-card .detail-number { line-height: 1.7; }
+.detail-card .event-description { margin-top: 18px; }
+.detail-card .dress-code {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(36,109,107,.18);
+  color: #536762;
+  font-size: 11px;
+  line-height: 1.9;
 }
-
-/* COUNTDOWN */
+.detail-card .dress-code strong { color: var(--deep); font-weight: 500; }
 
 .countdown-section {
-	padding: 120px 20px;
-
-	text-align: center;
+  padding: 100px 20px 110px;
+  text-align: center;
+  color: var(--white);
+  background: var(--deep);
+  position: relative;
+  overflow: hidden;
 }
-
+.countdown-section::before, .countdown-section::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border: 1px solid rgba(226,214,187,.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.countdown-section::before { left: -210px; top: -210px; }
+.countdown-section::after { right: -210px; bottom: -210px; }
+.countdown-section .section-label { color: #d7c6a5; }
+.countdown-section h2 { margin-bottom: 0; }
 .countdown {
-	display: flex;
-
-	justify-content: center;
-
-	gap: 70px;
-
-	margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  gap: clamp(24px, 6vw, 76px);
+  margin-top: 48px;
 }
+.countdown > div { min-width: 66px; }
+.countdown span { font-family: var(--serif); font-size: clamp(42px, 6vw, 66px); line-height: 1; font-variant-numeric: tabular-nums; }
+.countdown p { margin-top: 12px; color: #c3d4cb; text-transform: uppercase; letter-spacing: 2px; font-size: 9px; }
 
-.countdown span {
-	font-family: 'Cormorant Garamond', serif;
-
-	font-size: 60px;
+.rsvp { background: #f4f1e8; }
+.rsvp > p:not(.section-label):not(.form-note):not(#rsvp-message) { color: #61736d; font-size: 13px; }
+form { display: flex; flex-direction: column; gap: 16px; max-width: 510px; margin: 35px auto 0; }
+input, select, textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid #d5ded5;
+  border-radius: 0;
+  background: rgba(255,253,248,.72);
+  color: var(--ink);
+  font: 12px var(--sans);
+  outline: none;
+  transition: border-color .2s ease, background .2s ease;
 }
-
-.countdown p {
-	margin-top: 10px;
-
-	text-transform: uppercase;
-
-	letter-spacing: 2px;
-
-	font-size: 10px;
-}
-
-/* RSVP */
-
-.rsvp p {
-	margin-bottom: 40px;
-}
-
-form {
-	display: flex;
-	flex-direction: column;
-
-	gap: 20px;
-
-	max-width: 500px;
-
-	margin: auto;
-}
-
-input,
-select,
-textarea {
-	padding: 16px;
-
-	border: none;
-	border-bottom: 1px solid #aaa;
-
-	background: transparent;
-
-	font-family: 'Montserrat', sans-serif;
-
-	outline: none;
-}
-
-textarea {
-	min-height: 100px;
-	resize: vertical;
-}
-
-form .button {
-	margin-top: 20px;
-}
-
-#rsvp-message {
-	margin-top: 30px;
-
-	font-family: 'Cormorant Garamond', serif;
-
-	font-size: 24px;
-}
-
-/* FOOTER */
+input:focus, select:focus, textarea:focus { border-color: var(--teal); background: #fffdf8; }
+input::placeholder, textarea::placeholder { color: #7d8b84; }
+textarea { min-height: 105px; resize: vertical; }
+form .button { align-self: center; margin-top: 8px; background: var(--deep); color: var(--white); border-color: var(--deep); }
+form .button:hover { background: var(--teal); border-color: var(--teal); }
+.form-note { max-width: 510px; margin: 20px auto 0; color: #7c8880; font-size: 10px; line-height: 1.7; }
+#rsvp-message { margin: 24px auto 0; font-family: var(--serif); font-size: 23px; color: var(--teal); }
 
 footer {
-	padding: 80px 20px;
-
-	text-align: center;
-
-	background: #333;
-
-	color: white;
+  padding: 62px 20px 55px;
+  text-align: center;
+  background: #0c302f;
+  color: var(--white);
 }
-
-footer h2 {
-	font-family: 'Cormorant Garamond', serif;
-
-	font-size: 45px;
-	font-weight: 400;
-
-	margin-bottom: 15px;
-}
-
-footer p {
-	font-size: 12px;
-
-	letter-spacing: 2px;
-}
-
-.footer-message {
-	margin-top: 30px;
-
-	opacity: 0.7;
-}
-
-/* MOBILE */
+footer h2 { font-family: var(--serif); font-size: 43px; font-weight: 400; line-height: 1.2; margin-bottom: 13px; }
+footer p { font-size: 10px; letter-spacing: 2px; }
+.footer-message { margin-top: 18px; color: #c2d4cb; letter-spacing: 1px; }
 
 @media (max-width: 700px) {
-	nav {
-		justify-content: center;
-	}
+  nav { padding: 20px 24px; justify-content: center; }
+  .nav-links { display: none; }
+  .hero { min-height: 760px; min-height: 100svh; padding: 120px 25px 80px; background-position: center; }
+  .hero::before { inset: 12px; }
+  .hero-eyebrow { gap: 8px; font-size: 8px; letter-spacing: 2px; }
+  .hero-eyebrow span { width: 17px; }
+  .subtitle { font-size: 9px; letter-spacing: 2.5px; }
+  .hero h1 { font-size: clamp(68px, 17vw, 96px); }
+  .hero h1 span { margin: 22px 0 18px; }
+  .wedding-date { font-size: 28px; }
+  .section { padding: 82px 24px; }
+  .story-section::before { left: -25px; top: 25px; font-size: 72px; }
+  .story-section::after { right: -25px; bottom: 10px; font-size: 72px; }
+  .story-text { font-size: 13px; }
+  .details { padding: 80px 22px; }
+  .details-grid { grid-template-columns: 1fr; gap: 14px; margin-top: 38px; }
+  .detail-card { padding: 28px 22px 30px; }
+  .itinerary-image { width: calc(100% + 44px); height: 230px; margin: -28px -22px 24px; }
+  .detail-card h3 { margin-bottom: 14px; }
+  .countdown-section { padding: 82px 15px 88px; }
+  .countdown { gap: clamp(12px, 4vw, 24px); margin-top: 38px; }
+  .countdown > div { min-width: 54px; }
+  .countdown span { font-size: clamp(34px, 10vw, 46px); }
+  .countdown p { font-size: 8px; letter-spacing: 1px; }
+  footer { padding: 52px 20px 45px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
 
-	.nav-links {
-		display: none;
-	}
-
-	.hero h1 {
-		font-size: 70px;
-	}
-
-	.details-grid {
-		grid-template-columns: 1fr;
-	}
-
-	.countdown {
-		gap: 20px;
-	}
-
-	.countdown span {
-		font-size: 40px;
-	}
-
-	.section h2,
-	.details h2,
-	.countdown-section h2 {
-		font-size: 40px;
-	}
+/* Refined tropical landing page: lagoon hero, no monogram, editorial welcome */
+nav { justify-content: center; padding: 28px 6%; border-bottom: 0; }
+.nav-links { gap: clamp(20px, 4.5vw, 62px); }
+.nav-links a { color: #fffdf8; text-shadow: 0 1px 8px rgba(0,35,40,.28); }
+.hero {
+  min-height: min(760px, 88svh);
+  min-height: max(560px, 88svh);
+  padding: 145px 24px 86px;
+  background-image: linear-gradient(180deg, rgba(6,47,58,.25), rgba(5,65,70,.10) 50%, rgba(4,47,49,.18)), url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2400&q=90');
+  background-position: center 53%;
+}
+.hero::before { display: none; }
+.hero::after { display: none; }
+.hero-content { max-width: 1000px; }
+.hero-eyebrow { display: block; margin: 0 0 18px; font-size: 11px; letter-spacing: 5px; }
+.hero h1 { font-size: clamp(52px, 8vw, 104px); line-height: 1.03; letter-spacing: .025em; text-transform: uppercase; }
+.hero h1 span { display: inline; margin: 0 .08em; color: inherit; font-size: .82em; font-style: normal; line-height: inherit; }
+.hero-location { margin-top: 18px; font-size: 12px; letter-spacing: 5px; }
+.hero .wedding-date { margin: 8px 0 0; font-family: var(--sans); font-size: 11px; letter-spacing: 4px; }
+.hero .divider { width: 42px; margin: 24px auto 18px; background: rgba(255,255,255,.8); }
+.hero-link { color: white; font-size: 10px; letter-spacing: 2.5px; text-decoration: none; }
+.hero-link span { margin-left: 8px; }
+.welcome-section { position: relative; overflow: hidden; padding: 62px 24px 68px; text-align: center; background: var(--ivory); }
+.welcome-section::before, .welcome-section::after { position: absolute; top: 8px; color: #9aafa0; opacity: .45; font-size: 110px; line-height: 1; pointer-events: none; }
+.welcome-section::before { content: '❧'; left: -14px; transform: rotate(-35deg); }
+.welcome-section::after { content: '❧'; right: -14px; transform: scaleX(-1) rotate(-35deg); }
+.welcome-section .section-label, .travel-strip .section-label { margin-bottom: 14px; }
+.welcome-section h2, .travel-strip h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 4vw, 48px); line-height: 1.15; color: var(--deep); }
+.welcome-features { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 900px; margin: 34px auto 0; gap: 24px; }
+.welcome-features > div { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.feature-icon { color: var(--teal); font-size: 32px; line-height: 1; }
+.welcome-features p { font-size: 9px; letter-spacing: 2.4px; line-height: 1.8; }
+.details { padding-top: 68px; padding-bottom: 78px; }
+.details::before { display: none; }
+.details .section-label { margin-bottom: 12px; }
+.details h2 { margin-bottom: 0; font-size: clamp(38px, 4.5vw, 54px); }
+.details-grid { margin-top: 36px; gap: 20px; max-width: 1200px; }
+.detail-card { padding: 0 22px 28px; border: 0; border-radius: 5px; overflow: hidden; background: rgba(255,253,248,.86); box-shadow: 0 8px 22px rgba(33,68,60,.06); }
+.itinerary-image { width: calc(100% + 44px); height: 200px; margin: 0 -22px 22px; }
+.detail-number { color: var(--teal); font-size: 9px; letter-spacing: 1.8px; }
+.detail-card h3 { font-size: 31px; margin-bottom: 14px; }
+.detail-card .event-description { margin-top: 14px; }
+.detail-card .dress-code { text-align: left; }
+.countdown-section { padding: 72px 20px 76px; background: linear-gradient(rgba(202,232,223,.18),rgba(202,232,223,.18)), url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2200&q=85') center 70%/cover; color: var(--deep); }
+.countdown-section::before, .countdown-section::after { display: none; }
+.countdown-section .section-label { color: var(--deep); }
+.countdown-section h2 { font-size: clamp(28px, 3vw, 40px); }
+.countdown p { color: var(--deep); }
+.countdown-section .countdown { margin-top: 28px; }
+.countdown-section + .rsvp { padding-top: 78px; }
+.travel-strip { padding: 52px 24px; text-align: center; background: #e6eee7; }
+.travel-strip h2 { max-width: 680px; margin: 0 auto; font-size: clamp(28px, 3vw, 38px); }
+footer { background: #103c3b; }
+@media (max-width: 700px) {
+  nav { padding: 22px 14px; }
+  .nav-links { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .nav-links a { font-size: 8px; letter-spacing: 1.3px; }
+  .hero { min-height: 650px; min-height: 88svh; padding: 120px 20px 70px; }
+  .hero h1 { font-size: clamp(42px, 11vw, 68px); }
+  .hero-eyebrow { font-size: 9px; letter-spacing: 3px; }
+  .hero-location { font-size: 10px; letter-spacing: 3px; }
+  .hero .wedding-date { font-size: 9px; letter-spacing: 2.5px; }
+  .welcome-section { padding: 52px 20px; }
+  .welcome-section::before, .welcome-section::after { font-size: 65px; }
+  .welcome-features { grid-template-columns: repeat(2, 1fr); gap: 24px 12px; }
+  .details { padding: 58px 18px; }
+  .details-grid { grid-template-columns: 1fr; gap: 18px; }
+  .itinerary-image { height: 220px; }
+  .detail-card .dress-code { text-align: center; }
+  .countdown-section { padding: 58px 12px; }
+  .countdown { gap: 10px; }
+  .countdown > div { min-width: 50px; }
+  .countdown span { font-size: 34px; }
 }
