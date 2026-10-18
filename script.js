@@ -2,30 +2,28 @@ const weddingDate = new Date('2027-06-27T15:00:00').getTime();
 
 function updateCountdown() {
 	const distance = weddingDate - Date.now();
-	const countdown = document.querySelector('.countdown');
+	const countdowns = document.querySelectorAll('.countdown');
 
-	if (!countdown) return;
+	if (!countdowns.length) return;
 
 	if (distance <= 0) {
-		countdown.innerHTML = '<div><span>Today</span><p>IS THE DAY</p></div>';
+		countdowns.forEach((c) => {
+			c.innerHTML = '<div><span>Today</span><p>IS THE DAY</p></div>';
+		});
 		return;
 	}
 
 	const day = 1000 * 60 * 60 * 24;
+	const values = {
+		days: Math.floor(distance / day),
+		hours: Math.floor((distance % day) / (1000 * 60 * 60)),
+		minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+		seconds: Math.floor((distance % (1000 * 60)) / 1000),
+	};
 
-	document.getElementById('days').textContent = Math.floor(distance / day);
-
-	document.getElementById('hours').textContent = Math.floor(
-		(distance % day) / (1000 * 60 * 60),
-	);
-
-	document.getElementById('minutes').textContent = Math.floor(
-		(distance % (1000 * 60 * 60)) / (1000 * 60),
-	);
-
-	document.getElementById('seconds').textContent = Math.floor(
-		(distance % (1000 * 60)) / 1000,
-	);
+	document.querySelectorAll('[data-unit]').forEach((el) => {
+		el.textContent = values[el.dataset.unit];
+	});
 }
 
 updateCountdown();
@@ -51,3 +49,30 @@ if (form) {
 		form.reset();
 	});
 }
+
+// Departures board letter tiles
+document.querySelectorAll('.flap').forEach((el, n) => {
+	const s = el.textContent;
+	el.setAttribute('aria-label', s);
+	el.textContent = '';
+	[...s].forEach((c, i) => {
+		const t = document.createElement('span');
+		t.className = 't';
+		t.setAttribute('aria-hidden', 'true');
+		t.textContent = c === ' ' ? '\u00a0' : c.toUpperCase();
+		t.style.animationDelay = n * 0.05 + i * 0.03 + 's';
+		el.appendChild(t);
+	});
+});
+
+// FAQ tabs
+const faqTabs = document.querySelectorAll('.faq-tab');
+faqTabs.forEach((tab) => {
+	tab.addEventListener('click', () => {
+		faqTabs.forEach((t) => {
+			const on = t === tab;
+			t.setAttribute('aria-selected', on);
+			document.getElementById(t.dataset.p).hidden = !on;
+		});
+	});
+});
