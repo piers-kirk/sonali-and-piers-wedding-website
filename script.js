@@ -83,3 +83,9 @@ faqTabs.forEach((tab) => {
 		});
 	});
 });
+
+// Header turns solid once you scroll past the top
+const nav = document.querySelector('.nav');
+const setNav = () => nav && nav.classList.toggle('scrolled', window.scrollY > 40);
+setNav();
+window.addEventListener('scroll', setNav, { passive: true });
