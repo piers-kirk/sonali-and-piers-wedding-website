@@ -1,6 +1,6 @@
 // Wedding countdown
 
-const weddingDate = new Date('June 12, 2027 16:00:00').getTime();
+const weddingDate = new Date('June 27, 2027 16:00:00').getTime();
 
 function updateCountdown() {
 	const now = new Date().getTime();
@@ -38,7 +38,7 @@ setInterval(updateCountdown, 1000);
 
 const form = document.getElementById('rsvp-form');
 
-form.addEventListener('submit', function (event) {
+if (form) form.addEventListener('submit', function (event) {
 	event.preventDefault();
 
 	const name = document.getElementById('name').value;
