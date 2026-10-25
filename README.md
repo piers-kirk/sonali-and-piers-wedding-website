@@ -365,28 +365,30 @@ That's the normal everyday workflow.
 
 # Project Structure
 
-The project should look approximately like this:
+The project looks like this:
 
 ```text
 sonali-and-piers-wedding-website/
 │
-├── index.html
-├── README.md
+├── index.html      ← main wedding page (celebrations, travel, FAQ, RSVP)
+├── explore.html    ← Explore Mauritius: nine days out and more things to do
+├── food.html       ← Eat Mauritius: dishes, drinks, where to eat, markets
+├── style.css       ← styles for index.html
+├── explore.css     ← styles for explore.html
+├── food.css        ← styles for food.html
+├── script.js       ← countdown, RSVP message, departures board, FAQ tabs, island map
 ├── server.py
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── script.js
+├── README.md
 │
 └── assets/
     └── images/
         ├── hero.jpg
-        ├── itinerary-day1.jpg
-        ├── itinerary-day2.jpg
-        └── itinerary-day3.jpg
+        ├── palm-left.jpg
+        ├── palm-right.jpg
+        └── rsvp-bg.jpg
 ```
+
+The illustrations on the cards are drawn in SVG inside the HTML files.
 
 You generally don't need to edit these files yourself.
 

@@ -5,8 +5,12 @@
 !.gitignore
 !README.md
 !index.html
+!explore.html
+!food.html
 !server.py
 !style.css
+!explore.css
+!food.css
 !script.js
 
 # Allow assets directories
