@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta
 			name="viewport"
-			content="width=device-width, initial-scale=1.0" />
+			content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 		<meta
 			name="theme-color"
 			content="#0d6663" />
@@ -19,21 +19,29 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap"
 			rel="stylesheet" />
-		<link
-			rel="stylesheet"
-			href="style.css" />
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<header
 			class="hero"
 			id="home">
-			<nav class="nav" aria-label="Main navigation">
-				<a class="mono" href="#home" aria-label="Back to top">S<span>&amp;</span>P</a>
-				<div class="links">
+			<nav
+				class="nav"
+				aria-label="Main navigation">
+				<div class="nav-group">
 					<a href="#itinerary">Itinerary</a>
-					<a href="#travel">Travel</a>
+					<a href="#travel">Travel</a><a href="explore.html">Explore</a>
+				</div>
+				<a
+					class="palm-mark"
+					href="#home"
+					aria-label="Back to top"
+					>♧</a
+				>
+				<div class="nav-group">
+					<a href="food.html">Food</a>
 					<a href="#faq">FAQ</a>
-					<a class="nav-rsvp" href="#rsvp">RSVP</a>
+					<a href="#rsvp">RSVP</a>
 				</div>
 			</nav>
 
@@ -46,7 +54,7 @@
 					class="hero-rule"
 					aria-hidden="true"></span>
 				<div class="countdown" aria-label="Countdown to the wedding"><div><span data-unit="days">0</span><p>DAYS</p></div><i></i><div><span data-unit="hours">0</span><p>HOURS</p></div><i></i><div><span data-unit="minutes">0</span><p>MINUTES</p></div><i></i><div><span data-unit="seconds">0</span><p>SECONDS</p></div></div>
-				<a class="rsvp-button hero-rsvp" href="#rsvp">RSVP <span>→</span></a>
+				<a class="rsvp-button hero-rsvp" href="#rsvp-form">RSVP <span>→</span></a>
 			</div>
 		</header>
 
@@ -56,7 +64,7 @@
 				id="story">
 				<span class="deco deco-l" aria-hidden="true"></span><span class="deco deco-r" aria-hidden="true"></span>
 				<p class="section-label">A WEEKEND OF</p>
-				<h2>Celebrating Love, Good Food, <br />Cultural Immersion &amp; Great Company</h2>
+				<h2>Celebrating Love, Good Food,<br />Cultural Immersion &amp; Great Company</h2>
 				<p class="welcome-note">We can’t wait to share this weekend with the people who mean the most to us. Come hungry, come curious, and bring your dancing shoes.</p>
 				<p class="sig">Sonali &amp; Piers</p>
 			</section>
@@ -70,26 +78,98 @@
 					<span></span>
 				</div>
 
-				<div class="tl">
-<div class="ti"><div class="box"><img src="assets/images/itinerary-day1.jpg" alt="Tropical outdoor dinner setting" /><p class="card-date">SATURDAY, 26 JUNE 2027</p><h3>Mehendi</h3><p class="event-time">6:00 PM – 10:00 PM</p><p>Domaine Anna, Mauritius</p><span class="card-rule"></span><p class="card-copy">A joyful start to the weekend with good food and colour.</p><p class="dress">Traditional Indian attire encouraged; Western festive attire is also welcome.</p><div class="colours"><p class="lbl">SUGGESTED COLOURS</p><div class="sw"><i style="background:#e9a23b" title="Marigold"></i><i style="background:#c2306b" title="Magenta"></i><i style="background:#1f7a5c" title="Emerald"></i></div><p class="names">Marigold · Magenta · Emerald</p></div></div><div class="node">26</div><div class="e"></div></div>
-<div class="ti"><div class="e"></div><div class="node">27</div><div class="box"><img src="assets/images/itinerary-day2.jpg" alt="Tropical wedding setting by the ocean" /><p class="card-date">SUNDAY, 27 JUNE 2027</p><h3>The Wedding</h3><p class="event-time">3:00 PM – 6:00 PM</p><p>Hilton Mauritius Resort &amp; Spa</p><span class="card-rule"></span><p class="card-copy">Join us as we exchange vows and celebrate.</p><p class="dress">Traditional Indian attire encouraged; Western formal attire is equally welcome.</p><div class="colours"><p class="lbl">SUGGESTED COLOURS</p><div class="sw"><i style="background:#f4ecd8" title="Ivory"></i><i style="background:#c9a24b" title="Gold"></i><i style="background:#0d615e" title="Deep teal"></i></div><p class="names">Ivory · Gold · Deep teal</p></div></div></div>
-<div class="ti"><div class="box"><img src="assets/images/itinerary-day3.jpg" alt="Tropical evening reception setting" /><p class="card-date">MONDAY, 28 JUNE 2027</p><h3>The Reception</h3><p class="event-time">6:00 PM – MIDNIGHT</p><p>Venue to be confirmed</p><span class="card-rule"></span><p class="card-copy">Dinner, dancing and a relaxed finale to our wedding weekend.</p><p class="dress">Chic evening attire; both Indian and Western outfits are welcome.</p><div class="colours"><p class="lbl">SUGGESTED COLOURS</p><div class="sw"><i style="background:#123b4a" title="Midnight"></i><i style="background:#e4695a" title="Coral"></i><i style="background:#e8d5b0" title="Champagne"></i></div><p class="names">Midnight · Coral · Champagne</p></div></div><div class="node">28</div><div class="e"></div></div>
-</div>
+				<div class="ce-grid"><article class="ce"><figure class="ce-art"><svg viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="cm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c2306b"/><stop offset="1" stop-color="#8f1f52"/></linearGradient></defs><rect width="300" height="200" fill="url(#cm)"/>
+<g stroke="#f6c98f" stroke-width="1.2" opacity=".5" fill="none"><path d="M0 30 Q75 60 150 30 T300 30"/></g>
+<g><line x1="24" y1="0" x2="24" y2="110" stroke="#f4d58d" stroke-width="1"/><circle cx="24" cy="12" r="7" fill="#f4b84a"/><circle cx="24" cy="26" r="7" fill="#e9a23b"/><circle cx="24" cy="40" r="7" fill="#f4b84a"/><circle cx="24" cy="54" r="7" fill="#e9a23b"/><circle cx="24" cy="68" r="7" fill="#f4b84a"/><circle cx="24" cy="82" r="7" fill="#e9a23b"/><circle cx="24" cy="96" r="7" fill="#f4b84a"/></g><g><line x1="58" y1="0" x2="58" y2="80" stroke="#f4d58d" stroke-width="1"/><circle cx="58" cy="12" r="7" fill="#e9a23b"/><circle cx="58" cy="26" r="7" fill="#f4b84a"/><circle cx="58" cy="40" r="7" fill="#e9a23b"/><circle cx="58" cy="54" r="7" fill="#f4b84a"/><circle cx="58" cy="68" r="7" fill="#e9a23b"/></g><g><line x1="92" y1="0" x2="92" y2="128" stroke="#f4d58d" stroke-width="1"/><circle cx="92" cy="12" r="7" fill="#f4b84a"/><circle cx="92" cy="26" r="7" fill="#e9a23b"/><circle cx="92" cy="40" r="7" fill="#f4b84a"/><circle cx="92" cy="54" r="7" fill="#e9a23b"/><circle cx="92" cy="68" r="7" fill="#f4b84a"/><circle cx="92" cy="82" r="7" fill="#e9a23b"/><circle cx="92" cy="96" r="7" fill="#f4b84a"/><circle cx="92" cy="110" r="7" fill="#e9a23b"/><circle cx="92" cy="124" r="7" fill="#f4b84a"/></g><g><line x1="208" y1="0" x2="208" y2="128" stroke="#f4d58d" stroke-width="1"/><circle cx="208" cy="12" r="7" fill="#e9a23b"/><circle cx="208" cy="26" r="7" fill="#f4b84a"/><circle cx="208" cy="40" r="7" fill="#e9a23b"/><circle cx="208" cy="54" r="7" fill="#f4b84a"/><circle cx="208" cy="68" r="7" fill="#e9a23b"/><circle cx="208" cy="82" r="7" fill="#f4b84a"/><circle cx="208" cy="96" r="7" fill="#e9a23b"/><circle cx="208" cy="110" r="7" fill="#f4b84a"/><circle cx="208" cy="124" r="7" fill="#e9a23b"/></g><g><line x1="242" y1="0" x2="242" y2="80" stroke="#f4d58d" stroke-width="1"/><circle cx="242" cy="12" r="7" fill="#f4b84a"/><circle cx="242" cy="26" r="7" fill="#e9a23b"/><circle cx="242" cy="40" r="7" fill="#f4b84a"/><circle cx="242" cy="54" r="7" fill="#e9a23b"/><circle cx="242" cy="68" r="7" fill="#f4b84a"/></g><g><line x1="276" y1="0" x2="276" y2="110" stroke="#f4d58d" stroke-width="1"/><circle cx="276" cy="12" r="7" fill="#e9a23b"/><circle cx="276" cy="26" r="7" fill="#f4b84a"/><circle cx="276" cy="40" r="7" fill="#e9a23b"/><circle cx="276" cy="54" r="7" fill="#f4b84a"/><circle cx="276" cy="68" r="7" fill="#e9a23b"/><circle cx="276" cy="82" r="7" fill="#f4b84a"/><circle cx="276" cy="96" r="7" fill="#e9a23b"/></g>
+<g><path d="M150 64 l14 22 h-28z" fill="#f4d58d"/><rect x="140" y="86" width="20" height="26" rx="3" fill="#e9a23b"/><path d="M146 96 h8 M146 104 h8" stroke="#8f1f52" stroke-width="2"/><circle cx="150" cy="120" r="3" fill="#f4d58d"/><line x1="150" y1="0" x2="150" y2="64" stroke="#f4d58d"/></g>
+<path d="M0 200 V160 Q75 140 150 158 T300 150 V200Z" fill="#1f7a5c"/>
+<g fill="#f6c98f"><circle cx="40" cy="176" r="2"/><circle cx="110" cy="168" r="2"/><circle cx="190" cy="172" r="2"/><circle cx="260" cy="166" r="2"/></g></svg><div class="ce-date"><span>SAT</span><b>26</b><span>JUNE</span></div></figure>
+<div class="ce-body"><h3>Mehendi</h3><p class="ce-time">6:00 – 10:00 PM</p><p class="ce-venue">Domaine Anna</p><p class="ce-copy">A joyful start to the weekend with good food and colour.</p>
+<a class="ce-map" href="https://www.google.com/maps/search/?api=1&amp;query=Domaine+Anna+Flic+en+Flac+Mauritius" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>View on map</a>
+<div class="ce-wear"><p class="ce-wear-h">What to wear</p><p>Traditional Indian attire encouraged; Western festive attire is also welcome.</p><div class="ce-sws"><span class="ce-sw"><i style="background:#e9a23b"></i>Marigold</span><span class="ce-sw"><i style="background:#c2306b"></i>Magenta</span><span class="ce-sw"><i style="background:#1f7a5c"></i>Emerald</span></div></div></div></article><article class="ce"><figure class="ce-art"><svg viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="cw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7ead2"/><stop offset="1" stop-color="#fbf3e4"/></linearGradient></defs><rect width="300" height="200" fill="url(#cw)"/>
+<circle cx="236" cy="62" r="20" fill="#f2d48a"/>
+<rect y="118" width="300" height="40" fill="#5fb3a8"/><path d="M0 130 H300 M0 144 H300" stroke="#a6dcd3" stroke-width="2"/>
+<path d="M0 156 Q150 146 300 158 V200H0Z" fill="#f4e6c6"/>
+<g><rect x="96" y="70" width="8" height="92" fill="#c9a24b"/><rect x="196" y="70" width="8" height="92" fill="#c9a24b"/><path d="M88 72 Q150 26 212 72 Z" fill="#fffdf7" stroke="#c9a24b" stroke-width="3"/><path d="M100 72 Q150 40 200 72" fill="none" stroke="#c9a24b" stroke-width="2"/>
+<path d="M104 78 Q126 110 104 150" fill="#fffdf7" opacity=".85"/><path d="M196 78 Q174 110 196 150" fill="#fffdf7" opacity=".85"/>
+<g fill="#fffdf7" stroke="#e1c27a" stroke-width="1"><circle cx="100" cy="66" r="6"/><circle cx="150" cy="44" r="6"/><circle cx="200" cy="66" r="6"/><circle cx="124" cy="52" r="5"/><circle cx="176" cy="52" r="5"/></g>
+<rect x="118" y="146" width="64" height="8" rx="2" fill="#0d615e"/></g>
+<g fill="#0d615e"><path d="M40 160 q-4-30 6-56" stroke="#7a5b3a" stroke-width="4" fill="none"/><path d="M46 104 q-22-4-32 8 q16-6 32-8z"/><path d="M46 104 q22-6 34 4 q-16-4-34-4z"/><path d="M46 104 q-10-14-26-12 q14 2 26 12z"/></g></svg><div class="ce-date"><span>SUN</span><b>27</b><span>JUNE</span></div></figure>
+<div class="ce-body"><h3>The Wedding</h3><p class="ce-time">3:00 – 6:00 PM</p><p class="ce-venue">Hilton Mauritius Resort &amp; Spa</p><p class="ce-copy">Join us as we exchange vows and celebrate.</p>
+<a class="ce-map" href="https://www.google.com/maps/search/?api=1&amp;query=Hilton+Mauritius+Resort+%26+Spa+Flic+en+Flac" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>View on map</a>
+<div class="ce-wear"><p class="ce-wear-h">What to wear</p><p>Traditional Indian attire encouraged; Western formal attire is equally welcome.</p><div class="ce-sws"><span class="ce-sw"><i style="background:#f4ecd8"></i>Ivory</span><span class="ce-sw"><i style="background:#c9a24b"></i>Gold</span><span class="ce-sw"><i style="background:#0d615e"></i>Deep teal</span></div></div></div></article><article class="ce"><figure class="ce-art"><svg viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="cr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14213d"/><stop offset="1" stop-color="#243b5a"/></linearGradient></defs><rect width="300" height="200" fill="url(#cr)"/>
+<g fill="#f7e7c1"><circle cx="30" cy="22" r="1.4"/><circle cx="70" cy="40" r="1"/><circle cx="120" cy="16" r="1.2"/><circle cx="250" cy="30" r="1.4"/><circle cx="280" cy="60" r="1"/><circle cx="200" cy="14" r="1"/></g>
+<circle cx="244" cy="46" r="12" fill="#f7e7c1" opacity=".9"/>
+<g fill="#7c6a58"><rect x="40" y="70" width="34" height="110"/><rect x="226" y="80" width="34" height="100"/><path d="M74 70 h80 v28 q-40-14-80 0z"/><rect x="150" y="96" width="30" height="84"/><path d="M180 96 h46 v22 q-23-10-46 0z"/></g>
+<g fill="#5e4f42"><rect x="48" y="84" width="8" height="8"/><rect x="60" y="120" width="8" height="8"/><rect x="236" y="96" width="8" height="8"/><rect x="158" y="118" width="8" height="8"/></g>
+<path d="M0 30 Q150 110 300 30" fill="none" stroke="#f7e7c1" stroke-width="1" opacity=".6"/>
+<circle cx="12" cy="36.144" r="2.6" fill="#ffd98a"/><circle cx="36" cy="46.896" r="2.6" fill="#ffd98a"/><circle cx="60" cy="55.6" r="2.6" fill="#ffd98a"/><circle cx="84" cy="62.256" r="2.6" fill="#ffd98a"/><circle cx="108" cy="66.864" r="2.6" fill="#ffd98a"/><circle cx="132" cy="69.424" r="2.6" fill="#ffd98a"/><circle cx="156" cy="69.936" r="2.6" fill="#ffd98a"/><circle cx="180" cy="68.4" r="2.6" fill="#ffd98a"/><circle cx="204" cy="64.816" r="2.6" fill="#ffd98a"/><circle cx="228" cy="59.184" r="2.6" fill="#ffd98a"/><circle cx="252" cy="51.50399999999999" r="2.6" fill="#ffd98a"/><circle cx="276" cy="41.776" r="2.6" fill="#ffd98a"/>
+<path d="M0 50 Q150 130 300 50" fill="none" stroke="#f7e7c1" stroke-width="1" opacity=".5"/>
+<circle cx="24" cy="61.776" r="2.2" fill="#f08a5d"/><circle cx="48" cy="71.50399999999999" r="2.2" fill="#f08a5d"/><circle cx="72" cy="79.184" r="2.2" fill="#f08a5d"/><circle cx="96" cy="84.816" r="2.2" fill="#f08a5d"/><circle cx="120" cy="88.4" r="2.2" fill="#f08a5d"/><circle cx="144" cy="89.936" r="2.2" fill="#f08a5d"/><circle cx="168" cy="89.424" r="2.2" fill="#f08a5d"/><circle cx="192" cy="86.864" r="2.2" fill="#f08a5d"/><circle cx="216" cy="82.256" r="2.2" fill="#f08a5d"/><circle cx="240" cy="75.6" r="2.2" fill="#f08a5d"/><circle cx="264" cy="66.896" r="2.2" fill="#f08a5d"/><circle cx="288" cy="56.144" r="2.2" fill="#f08a5d"/>
+<rect y="178" width="300" height="22" fill="#1a2c47"/><g fill="#f08a5d" opacity=".9"><rect x="96" y="164" width="6" height="14" rx="2"/><rect x="200" y="164" width="6" height="14" rx="2"/></g><g fill="#ffd98a"><circle cx="99" cy="162" r="3"/><circle cx="203" cy="162" r="3"/></g></svg><div class="ce-date"><span>MON</span><b>28</b><span>JUNE</span></div></figure>
+<div class="ce-body"><h3>The Reception</h3><p class="ce-time">6:00 PM – Midnight</p><p class="ce-venue">Ruins of Balaclava, Maritim Resort &amp; Spa</p><p class="ce-copy">Dinner, dancing and a relaxed finale to our wedding weekend.</p>
+<a class="ce-map" href="https://www.google.com/maps/search/?api=1&amp;query=Ruines+de+Balaclava+Maritim+Resort+Mauritius" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>View on map</a>
+<div class="ce-wear"><p class="ce-wear-h">What to wear</p><p>Chic evening attire; both Indian and Western outfits are welcome.</p><div class="ce-sws"><span class="ce-sw"><i style="background:#1a2c47"></i>Midnight</span><span class="ce-sw"><i style="background:#f08a5d"></i>Coral</span><span class="ce-sw"><i style="background:#e8d3a6"></i>Champagne</span></div></div></div></article></div>
 			</section>
 
 			<section class="travel" id="travel">
 				<p class="section-label">TRAVEL &amp; STAY</p>
 				<h2>Meet us in Mauritius</h2>
-				<p class="travel-intro">We recommend these airlines. Try to land by 25 June so you have a day to settle in before the celebrations begin.</p>
-				<div class="board"><div class="row h"><span>AIRLINE</span><span>ROUTE</span><span>STATUS</span></div><a class="row" href="https://www.turkishairlines.com" target="_blank" rel="noopener"><span class="flap">Turkish Airlines</span><span class="flap">via Istanbul</span><span class="ok flap">On time ♥</span></a><a class="row" href="https://www.emirates.com" target="_blank" rel="noopener"><span class="flap">Emirates</span><span class="flap">via Dubai</span><span class="ok flap">Boarding</span></a><a class="row" href="https://www.airfrance.com" target="_blank" rel="noopener"><span class="flap">Air France</span><span class="flap">via Paris</span><span class="ok flap">Go to gate</span></a></div>
+				<p class="travel-intro">We recommend these airlines. Try to land 3–5 days before the festivities begin, around 21–23 June, so you have time to recover from the journey and the jet lag.</p>
+				<div class="board"><p class="board-title">DEPARTURES · ALL FLIGHTS TO MRU</p><div class="row h"><span>AIRLINE</span><span>ROUTE</span><span class="to">TO</span><span>STATUS</span></div><a class="row" href="https://www.turkishairlines.com" target="_blank" rel="noopener"><span class="flap air">Turkish Airlines</span><span class="flap via">via Istanbul</span><span class="flap to">MRU</span><span class="ok flap st">On time ♥</span></a><a class="row" href="https://www.emirates.com" target="_blank" rel="noopener"><span class="flap air">Emirates</span><span class="flap via">via Dubai</span><span class="flap to">MRU</span><span class="ok flap st">Boarding</span></a><a class="row" href="https://www.airfrance.com" target="_blank" rel="noopener"><span class="flap air">Air France</span><span class="flap via">via Paris</span><span class="flap to">MRU</span><span class="ok flap st">Go to gate</span></a></div>
 				<p class="travel-note">Before you fly, fill in the free <a href="https://safemauritius.govmu.org/" target="_blank" rel="noopener">SafeMauritius travel form</a>.</p>
-				<div class="stay"><h3>Where to stay</h3><p>We recommend staying in Flic en Flac, where most of the festivities will be happening, but it’s a small island, so you’ll be okay wherever you land. More hotel suggestions coming soon.</p></div>
+				<div class="isle" id="isle">
+					<div class="isle-head"><p class="lbl">FIND YOUR WAY AROUND</p><h3>Our island, at a glance</h3><p class="isle-sub">Tap a place to see what’s happening there.</p></div>
+					<div class="isle-body">
+						<div class="isle-map"><svg id="isle-svg" viewBox="0 0 420 470" role="img" aria-label="Map of Mauritius showing the airport, Flic en Flac and the three wedding venues"></svg></div>
+						<div class="isle-panel" aria-live="polite">
+							<div class="isle-chips" role="tablist" id="isle-chips"></div>
+							<article class="isle-card" id="isle-card"></article>
+						</div>
+					</div>
+				</div>
 			</section>
 
-			<section class="faq" id="faq"><p class="section-label">GOOD TO KNOW</p><h2>Frequently Asked Questions</h2><div class="faq-tabs" role="tablist"><button type="button" class="faq-tab" role="tab" data-p="faq-0" aria-selected="true">GETTING THERE</button><button type="button" class="faq-tab" role="tab" data-p="faq-1" aria-selected="false">WEATHER &amp; PACKING</button><button type="button" class="faq-tab" role="tab" data-p="faq-2" aria-selected="false">ATTIRE</button><button type="button" class="faq-tab" role="tab" data-p="faq-3" aria-selected="false">CELEBRATIONS</button></div><div class="faq-panel" role="tabpanel" id="faq-0"><details><summary>How do I get from the airport?</summary><p>The airport (MRU) is about an hour’s drive from Flic en Flac. Taxis and pre-booked transfers are easy to arrange. Group transfer details are coming soon.</p></details><details><summary>Do I need a visa or any forms?</summary><p>It depends on your passport. Many nationalities can enter visa-free for tourism, but please check the official Mauritius Passport and Immigration Office website for yours. Every traveller must also complete the free All-in-One Travel Digital Form on the <a href="https://safemauritius.govmu.org/" target="_blank" rel="noopener">official SafeMauritius site</a> before flying (currently at least 72 hours before arrival) and save the QR code to show on arrival.</p></details><details><summary>What about money and tipping?</summary><p>The local currency is the Mauritian rupee (MUR). Cards are widely accepted at hotels and restaurants, but carry some cash for markets and taxis. Tipping is appreciated but not expected.</p></details><details><summary>Can I drive?</summary><p>Cars drive on the left in Mauritius. Many visitors hire a driver for a day of sightseeing.</p></details><details><summary>Can I make a holiday of it?</summary><p>Absolutely. We’ll share our favourite day trips and places to visit soon.</p></details></div><div class="faq-panel" role="tabpanel" id="faq-1" hidden><details><summary>What’s the weather like in June?</summary><p>June is winter in Mauritius: sunny days in the mid-20s °C, cooler evenings and the odd shower. The sea is still lovely for swimming.</p></details><details><summary>What should I pack?</summary><p>Light layers, something warmer for the evenings, swimwear, a sun hat, sunscreen, insect repellent and comfortable shoes for sightseeing.</p></details><details><summary>Plugs, power &amp; phones?</summary><p>Sockets are Type C and G (230V), so UK plugs work. Mauritius is on GMT+4. Check your roaming charges, or pick up a local SIM or eSIM.</p></details></div><div class="faq-panel" role="tabpanel" id="faq-2" hidden><details><summary>What should I wear?</summary><p>Each celebration has its own suggested dress code and colours above. Indian and Western attire are both welcome.</p></details><details><summary>Where can I get Indian outfits?</summary><p>Borrow from friends and family, buy online before you travel, or look to the tailors and shops in Mauritius (Port Louis is a good place to start). Details coming soon.</p></details></div><div class="faq-panel" role="tabpanel" id="faq-3" hidden><details><summary>Are children and plus-ones welcome?</summary><p>Details coming soon.</p></details><details><summary>When should I RSVP by?</summary><p>Details coming soon.</p></details><details><summary>I have dietary requirements.</summary><p>Please tell us in the message box on the RSVP form.</p></details><details><summary>Gifts, or who do I contact with questions?</summary><p>Details coming soon.</p></details></div></section>
+			<section class="faq" id="faq"><p class="section-label">GOOD TO KNOW</p><h2>Frequently Asked Questions</h2><div class="faq-tabs" role="tablist"><button type="button" class="faq-tab" role="tab" data-p="faq-0" aria-selected="true">GETTING THERE</button><button type="button" class="faq-tab" role="tab" data-p="faq-1" aria-selected="false">WEATHER &amp; PACKING</button><button type="button" class="faq-tab" role="tab" data-p="faq-2" aria-selected="false">ATTIRE</button><button type="button" class="faq-tab" role="tab" data-p="faq-3" aria-selected="false">CELEBRATIONS</button></div><div class="faq-panel" role="tabpanel" id="faq-0"><details><summary>How do I get from the airport?</summary><p>The airport (MRU) is about an hour’s drive from Flic en Flac. Taxis and pre-booked transfers are easy to arrange. Group transfer details are coming soon.</p></details><details><summary>Do I need a visa or any forms?</summary><p>It depends on your passport. Many nationalities can enter visa-free for tourism, but please check the official Mauritius Passport and Immigration Office website for yours. Every traveller must also complete the free All-in-One Travel Digital Form on the <a href="https://safemauritius.govmu.org/" target="_blank" rel="noopener">official SafeMauritius site</a> before flying (currently at least 72 hours before arrival) and save the QR code to show on arrival.</p></details><details><summary>What about money and tipping?</summary><p>The local currency is the Mauritian rupee (MUR). Cards are widely accepted at hotels and restaurants, but carry some cash for markets and taxis. Tipping is appreciated but not expected.</p></details><details><summary>Can I drive?</summary><p>Cars drive on the left in Mauritius. Many visitors hire a driver for a day of sightseeing.</p></details><details><summary>Can I make a holiday of it?</summary><p>Absolutely. Have a look at our <a href="explore.html">Explore Mauritius</a> page for our favourite day trips.</p></details></div><div class="faq-panel" role="tabpanel" id="faq-1" hidden><details><summary>What’s the weather like in June?</summary><p>June is winter in Mauritius: sunny days in the mid-20s °C, cooler evenings and the odd shower. The sea is still lovely for swimming.</p></details><details><summary>What should I pack?</summary><p>Light layers, something warmer for the evenings, swimwear, a sun hat, sunscreen, insect repellent and comfortable shoes for sightseeing.</p></details><details><summary>Plugs, power &amp; phones?</summary><p>Sockets are Type C and G (230V), so UK plugs work. Mauritius is on GMT+4. Check your roaming charges, or pick up a local SIM or eSIM.</p></details></div><div class="faq-panel" role="tabpanel" id="faq-2" hidden><details><summary>What should I wear?</summary><p>Each celebration has its own suggested dress code and colours above. Indian and Western attire are both welcome.</p></details><details><summary>Where can I get Indian outfits?</summary><p>Borrow from friends and family, buy online before you travel, or look to the tailors and shops in Mauritius (Port Louis is a good place to start). Details coming soon.</p></details></div><div class="faq-panel" role="tabpanel" id="faq-3" hidden><details><summary>Are children and plus-ones welcome?</summary><p>Details coming soon.</p></details><details><summary>When should I RSVP by?</summary><p>Details coming soon.</p></details><details><summary>I have dietary requirements.</summary><p>Please tell us in the message box on the RSVP form.</p></details><details><summary>Gifts, or who do I contact with questions?</summary><p>Details coming soon.</p></details></div></section>
 
+			<section
+				class="countdown-rsvp"
+				id="rsvp">
+				<div class="countdown-wrap">
+					<p class="section-label">COUNTING DOWN TO</p>
+					<div
+						class="countdown"
+						aria-label="Countdown to the wedding">
+						<div>
+							<span data-unit="days">0</span>
+							<p>DAYS</p>
+						</div>
+						<i></i>
+						<div>
+							<span data-unit="hours">0</span>
+							<p>HOURS</p>
+						</div>
+						<i></i>
+						<div>
+							<span data-unit="minutes">0</span>
+							<p>MINUTES</p>
+						</div>
+						<i></i>
+						<div>
+							<span data-unit="seconds">0</span>
+							<p>SECONDS</p>
+						</div>
+					</div>
+					<a
+						class="rsvp-button"
+						href="#rsvp-form"
+						>RSVP <span>→</span></a
+					>
+					<p class="cant-wait">WE CAN’T WAIT TO CELEBRATE WITH YOU</p>
+				</div>
+			</section>
 
-			<section class="rsvp-form-section" id="rsvp">
+			<section class="rsvp-form-section">
 				<p class="section-label">RSVP</p>
 				<h2>Will You Join Us?</h2>
 				<form id="rsvp-form">
@@ -126,11 +206,7 @@
 			</section>
 		</main>
 
-		<footer>
-			<a class="foot-mono" href="#home" aria-label="Back to top">S<span>&amp;</span>P</a>
-			<p>SONALI &amp; PIERS · MAURITIUS · 26–28 JUNE 2027</p>
-			<a class="to-top" href="#home">Back to top <span aria-hidden="true">↑</span></a>
-		</footer>
+		<footer><p>SONALI &amp; PIERS · MAURITIUS · 26–28 JUNE 2027</p></footer>
 		<script src="script.js"></script>
 	</body>
 </html>
