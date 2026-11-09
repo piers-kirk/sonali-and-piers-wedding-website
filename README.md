@@ -370,23 +370,26 @@ The project looks like this:
 ```text
 sonali-and-piers-wedding-website/
 │
-├── index.html      ← main wedding page (celebrations, travel, FAQ, RSVP)
-├── explore.html    ← Explore Mauritius: nine days out and more things to do
-├── food.html       ← Eat Mauritius: dishes, drinks, where to eat, markets
-├── style.css       ← styles for index.html
-├── explore.css     ← styles for explore.html
-├── food.css        ← styles for food.html
-├── script.js       ← countdown, RSVP message, departures board, FAQ tabs, island map
-├── server.py
+├── index.html          ← main wedding page (celebrations, travel, FAQ, RSVP)
+├── explore.html        ← Explore Mauritius: nine days out and more things to do
+├── food.html           ← Eat Mauritius: dishes, drinks, where to eat, markets
+├── server.py           ← runs the site locally (py server.py)
 ├── README.md
 │
 └── assets/
-    └── images/
-        ├── hero.jpg
-        ├── palm-left.jpg
-        ├── palm-right.jpg
-        └── rsvp-bg.jpg
+    ├── css/
+    │   ├── style.css       ← styles for index.html
+    │   ├── explore.css     ← styles for explore.html
+    │   └── food.css        ← styles for food.html
+    ├── js/
+    │   ├── script.js       ← countdown, RSVP message, departures board, FAQ tabs, island map
+    │   └── explore.js      ← extra behaviour for explore.html
+    ├── images/             ← all photos, illustrations and the favicon
+    └── calendar/           ← "Add to calendar" files (mehendi, wedding, reception)
 ```
+
+The HTML pages stay at the top level so the website addresses stay simple
+(for example `/explore.html`). Everything they load lives in `assets/`.
 
 The illustrations on the cards are drawn in SVG inside the HTML files.
 

@@ -1,21 +1,15 @@
-# Ignore everything
-*
+# macOS / Windows system files
+.DS_Store
+Thumbs.db
+desktop.ini
 
-# Allow repository files
-!.gitignore
-!README.md
-!index.html
-!explore.html
-!food.html
-!server.py
-!style.css
-!explore.css
-!food.css
-!script.js
+# Editor folders
+.vscode/
+.idea/
 
-# Allow assets directories
-!assets/
-!assets/images/
+# Python
+__pycache__/
+*.pyc
 
-# Allow JPG images anywhere inside assets/images
-!assets/images/*.jpg
+# Archives (keep backups of photos out of the repo)
+*.zip

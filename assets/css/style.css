@@ -90,7 +90,7 @@ footer{text-align:center;padding:28px 20px;background:var(--deep);color:white;fo
 
 
 /* Mockup look */
-.hero{background:url('assets/images/le-morne.jpg') center 30%/cover no-repeat;height:min(680px,46vw);min-height:440px}
+.hero{background:url('../images/le-morne.jpg') center 30%/cover no-repeat;height:min(680px,46vw);min-height:440px}
 
 .nav a{font-size:11px;letter-spacing:3px;text-shadow:0 1px 6px rgba(0,60,80,.25)}
 
@@ -104,9 +104,9 @@ footer{text-align:center;padding:28px 20px;background:var(--deep);color:white;fo
 
 .deco{position:absolute;top:0;width:min(12.5vw,150px);aspect-ratio:128/298;background-size:100% 100%;background-repeat:no-repeat}
 
-.deco-l{left:0;background-image:url('assets/images/palm-left.jpg');-webkit-mask-image:linear-gradient(to right,#000 78%,transparent);mask-image:linear-gradient(to right,#000 78%,transparent)}
+.deco-l{left:0;background-image:url('../images/palm-left.jpg');-webkit-mask-image:linear-gradient(to right,#000 78%,transparent);mask-image:linear-gradient(to right,#000 78%,transparent)}
 
-.deco-r{right:0;background-image:url('assets/images/palm-right.jpg');-webkit-mask-image:linear-gradient(to left,#000 78%,transparent);mask-image:linear-gradient(to left,#000 78%,transparent)}
+.deco-r{right:0;background-image:url('../images/palm-right.jpg');-webkit-mask-image:linear-gradient(to left,#000 78%,transparent);mask-image:linear-gradient(to left,#000 78%,transparent)}
 
 .intro h2:after{content:'';display:block;width:38px;height:1px;background:#6c9a92;margin:22px auto 0}
 
@@ -118,7 +118,7 @@ footer{text-align:center;padding:28px 20px;background:var(--deep);color:white;fo
 .event-card{padding:5px;background:#faf9f3}
 .event-card img{border-radius:2px;height:auto;aspect-ratio:276/163}
 
-.countdown-rsvp{background:url('assets/images/rsvp-bg.jpg') center/cover no-repeat;min-height:340px}
+.countdown-rsvp{background:url('../images/rsvp-bg.jpg') center/cover no-repeat;min-height:340px}
 
 .cant-wait:after{content:'\2661';display:block;font-size:18px;letter-spacing:0;margin-top:12px}
 
@@ -439,8 +439,8 @@ footer{position:relative;padding-top:60px}footer:before{height:40px;background-i
 @media(max-width:560px){.stamps{gap:12px;padding:26px 12px}.stamp{width:148px;height:148px;padding:8px}.stamp b{font-size:19px}.stamp small{font-size:8px}}
 
 /* Real photos */
-.hero{background-image:url('assets/images/le-morne.jpg');background-size:cover;background-position:center 30%}
-.countdown-rsvp{background:linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)),url('assets/images/rsvp-bg.jpg') center/cover no-repeat}
+.hero{background-image:url('../images/le-morne.jpg');background-size:cover;background-position:center 30%}
+.countdown-rsvp{background:linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)),url('../images/rsvp-bg.jpg') center/cover no-repeat}
 /* Keep hero text readable over the photo */
 .hero:before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,45,75,.24),rgba(0,45,75,.14) 45%,rgba(0,45,75,.34));pointer-events:none}
 .hero-content{position:relative;z-index:1}
@@ -494,11 +494,11 @@ footer:before{display:none}footer{padding-top:28px}
 .ce-expect p{color:#627b76;font-size:12px;margin-bottom:12px}
 
 /* toran divider under main section headings */
-.toran{width:min(380px,82%);aspect-ratio:600/90;margin:12px auto 20px;background:url('assets/images/toran.svg') center/contain no-repeat}
+.toran{width:min(380px,82%);aspect-ratio:600/90;margin:12px auto 20px;background:url('../images/toran.svg') center/contain no-repeat}
 .ce-grid{margin-top:8px}
 .section-heading + .toran{margin-top:22px;margin-bottom:30px}
-.toran.diyas{background-image:url('assets/images/diyas.svg');aspect-ratio:600/80;width:min(380px,82%);margin-top:6px}
-.toran.garland{background-image:url('assets/images/garland.svg');aspect-ratio:600/80;width:min(400px,82%);margin-top:8px}
+.toran.diyas{background-image:url('../images/diyas.svg');aspect-ratio:600/80;width:min(380px,82%);margin-top:6px}
+.toran.garland{background-image:url('../images/garland.svg');aspect-ratio:600/80;width:min(400px,82%);margin-top:8px}
 
 /* Our story: then & now polaroids */
 .story{text-align:center;padding:56px 20px 64px}
