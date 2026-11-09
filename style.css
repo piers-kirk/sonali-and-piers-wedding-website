@@ -401,3 +401,62 @@ to{opacity:1;transform:none}
 .ce-wear-h{padding:12px 0 6px;font:500 9px var(--sans);letter-spacing:2.4px;text-transform:uppercase;color:var(--green)}
 .ce-wear>p.ce-wear-h{color:var(--green);font-size:9px;line-height:1.4}
 
+
+/* Mobile: easier-to-tap, more readable nav */
+@media(max-width:720px){.nav a{font-size:10px;letter-spacing:2px;padding:10px 4px;display:inline-block}.nav-group{gap:14px}.nav-group+.nav-group{margin-top:0}}
+@media(max-width:720px){.nav a.palm-mark{display:none}}
+
+/* Waves & flowers */
+.celebrations,.travel,.faq{position:relative}
+.celebrations:before,.travel:before,.faq:before,.countdown-rsvp:after,footer:before,.hero:after{content:'';position:absolute;left:0;right:0;height:56px;background-size:100% 100%;background-repeat:no-repeat;pointer-events:none;z-index:1}
+.celebrations:before,.travel:before,.faq:before,footer:before{top:-1px}
+.countdown-rsvp:after,.hero:after{bottom:-1px}
+.celebrations:before{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%2060%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20d%3D%27M0%200H1200V28C1000%2062%20850%200%20650%2026S300%2060%20150%2030%2040%2014%200%2030Z%27%20fill%3D%27%23f8f7ef%27/%3E%3C/svg%3E")}
+.travel:before{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%2060%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20d%3D%27M0%200H1200V28C1000%2062%20850%200%20650%2026S300%2060%20150%2030%2040%2014%200%2030Z%27%20fill%3D%27%23ebf2ed%27%20transform%3D%22scale%28-1%201%29%20translate%28-1200%200%29%22/%3E%3C/svg%3E")}
+.faq:before{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%2060%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20d%3D%27M0%200H1200V28C1000%2062%20850%200%20650%2026S300%2060%20150%2030%2040%2014%200%2030Z%27%20fill%3D%27%23fbf8ef%27/%3E%3C/svg%3E")}
+.countdown-rsvp:before{content:'';position:absolute;left:0;right:0;top:-1px;height:56px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%2060%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20d%3D%27M0%200H1200V28C1000%2062%20850%200%20650%2026S300%2060%20150%2030%2040%2014%200%2030Z%27%20fill%3D%27%23f2f6f0%27%20transform%3D%22scale%28-1%201%29%20translate%28-1200%200%29%22/%3E%3C/svg%3E") 0 0/100% 100% no-repeat;pointer-events:none;z-index:1}
+.countdown-rsvp:after{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%2060%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20d%3D%27M0%2060H1200V32C1000%20-2%20850%2060%20650%2034S300%200%20150%2030%2040%2046%200%2030Z%27%20fill%3D%27%23fbf8ef%27/%3E%3C/svg%3E")}
+footer{position:relative;padding-top:60px}footer:before{height:40px;background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%2060%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20d%3D%27M0%200H1200V28C1000%2062%20850%200%20650%2026S300%2060%20150%2030%2040%2014%200%2030Z%27%20fill%3D%27%23fbf8ef%27/%3E%3C/svg%3E")}
+.hero:after{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%2060%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20d%3D%27M0%2060H1200V32C1000%20-2%20850%2060%20650%2034S300%200%20150%2030%2040%2046%200%2030Z%27%20fill%3D%27%23f8f7ef%27/%3E%3C/svg%3E")}
+.celebrations{padding-top:92px}.travel,.faq{padding-top:100px}
+.hib{position:absolute;top:96px;width:56px;height:56px;background-size:contain;background-repeat:no-repeat;opacity:.92;pointer-events:none}
+.hib-l{left:5%;transform:rotate(-12deg);background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2060%27%3E%3Cg%20fill%3D%27%23e4695a%27%20stroke%3D%27%23c9544a%27%20stroke-width%3D%27.8%27%3E%3Cellipse%20cx%3D%2730%27%20cy%3D%2715%27%20rx%3D%279%27%20ry%3D%2714%27%20transform%3D%27rotate%280%2030%2030%29%27/%3E%3Cellipse%20cx%3D%2730%27%20cy%3D%2715%27%20rx%3D%279%27%20ry%3D%2714%27%20transform%3D%27rotate%2872%2030%2030%29%27/%3E%3Cellipse%20cx%3D%2730%27%20cy%3D%2715%27%20rx%3D%279%27%20ry%3D%2714%27%20transform%3D%27rotate%28144%2030%2030%29%27/%3E%3Cellipse%20cx%3D%2730%27%20cy%3D%2715%27%20rx%3D%279%27%20ry%3D%2714%27%20transform%3D%27rotate%28216%2030%2030%29%27/%3E%3Cellipse%20cx%3D%2730%27%20cy%3D%2715%27%20rx%3D%279%27%20ry%3D%2714%27%20transform%3D%27rotate%28288%2030%2030%29%27/%3E%3C/g%3E%3Ccircle%20cx%3D%2730%27%20cy%3D%2730%27%20r%3D%275%27%20fill%3D%27%23f4c542%27/%3E%3C/svg%3E")}
+.hib-r{right:5%;transform:rotate(14deg);background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2060%2060%27%3E%3Cg%20fill%3D%27%23ffffff%27%20stroke%3D%27%23e3b9c2%27%20stroke-width%3D%27.8%27%3E%3Cellipse%20cx%3D%2730%27%20cy%3D%2715%27%20rx%3D%279%27%20ry%3D%2714%27%20transform%3D%27rotate%280%2030%2030%29%27/%3E%3Cellipse%20cx%3D%2730%27%20cy%3D%2715%27%20rx%3D%279%27%20ry%3D%2714%27%20transform%3D%27rotate%2872%2030%2030%29%27/%3E%3Cellipse%20cx%3D%2730%27%20cy%3D%2715%27%20rx%3D%279%27%20ry%3D%2714%27%20transform%3D%27rotate%28144%2030%2030%29%27/%3E%3Cellipse%20cx%3D%2730%27%20cy%3D%2715%27%20rx%3D%279%27%20ry%3D%2714%27%20transform%3D%27rotate%28216%2030%2030%29%27/%3E%3Cellipse%20cx%3D%2730%27%20cy%3D%2715%27%20rx%3D%279%27%20ry%3D%2714%27%20transform%3D%27rotate%28288%2030%2030%29%27/%3E%3C/g%3E%3Ccircle%20cx%3D%2730%27%20cy%3D%2730%27%20r%3D%275%27%20fill%3D%27%23f4c542%27/%3E%3C/svg%3E")}
+@media(max-width:720px){.celebrations:before,.travel:before,.faq:before,.countdown-rsvp:before,.countdown-rsvp:after,.hero:after{height:30px}footer:before{height:24px}footer{padding-top:44px}.celebrations{padding-top:64px}.travel,.faq{padding-top:72px}}
+@media(max-width:560px){.hib{display:none}}
+/* Hibiscus flank the "Our Celebrations" heading */
+.hib{top:62px}
+.hib-l{left:max(8px,calc(50% - 300px))}.hib-r{right:max(8px,calc(50% - 300px))}
+@media(max-width:720px){.hib{top:44px;width:44px;height:44px}}
+.hib{top:72px}@media(max-width:720px){.hib{top:52px}}
+
+/* Passport stamps (airlines) */
+.stamps{display:flex;flex-wrap:wrap;justify-content:center;gap:26px;max-width:760px;margin:30px auto 0;padding:36px 20px;background:#f1e8d2 repeating-linear-gradient(0deg,transparent 0 27px,rgba(13,97,94,.06) 27px 28px);border-radius:10px;box-shadow:inset 0 0 0 1px rgba(13,97,94,.1)}
+.stamp{width:176px;height:176px;border-radius:50%;border:4px double var(--c);color:var(--c);display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(var(--r));opacity:.9;font-family:'Courier New',monospace;font-weight:700;letter-spacing:1px;text-align:center;padding:12px;text-decoration:none;transition:transform .2s,opacity .2s}
+.stamp small{font-size:9px}.stamp b{font:600 22px/1.1 var(--serif);margin:5px 0}
+.stamp:hover,.stamp:focus-visible{transform:rotate(0) scale(1.05);opacity:1}
+@media(prefers-reduced-motion:reduce){.stamp{transition:none}}
+@media(max-width:560px){.stamps{gap:12px;padding:26px 12px}.stamp{width:148px;height:148px;padding:8px}.stamp b{font-size:19px}.stamp small{font-size:8px}}
+
+/* Real photos */
+.hero{background-image:url('assets/images/hero.jpg');background-size:cover;background-position:center 14%}
+.countdown-rsvp{background:linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)),url('assets/images/rsvp-bg.jpg') center/cover no-repeat}
+/* Keep hero text readable over the photo */
+.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,45,75,.24),rgba(0,45,75,.14) 45%,rgba(0,45,75,.34));pointer-events:none}
+.hero-content{position:relative;z-index:1}
+.hero .countdown,.hero-date,.hero-location,.eyebrow{text-shadow:0 1px 10px rgba(0,40,60,.55)}
+@media(max-width:720px){.hero{background-position:80% 14%}}
+
+/* Island overview + street map tabs */
+.isle-tabs{display:flex;gap:6px;padding:4px 4px 8px}
+.isle-tabs button{align-self:auto;margin:0;border:1px solid #b9d3cb;background:rgba(255,253,247,.75);color:var(--deep);border-radius:18px;padding:7px 12px;font:500 8px var(--sans);letter-spacing:1.8px;cursor:pointer}
+.isle-tabs button[aria-selected="true"]{background:var(--green);border-color:var(--green);color:#fff}
+.isle-tabs button:focus-visible{outline:2px solid #c8705a;outline-offset:2px}
+.isle-frame{display:block;width:100%;aspect-ratio:420/470;border:0;border-radius:4px;background:#e5ece8}
+@media(max-width:760px){.isle-frame{pointer-events:none}}
+
+/* RSVP opens the Google Form: countdown section flows straight into the footer */
+.countdown-rsvp:after{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201200%2060%27%20preserveAspectRatio%3D%27none%27%3E%3Cpath%20d%3D%27M0%2060H1200V32C1000%20-2%20850%2060%20650%2034S300%200%20150%2030%2040%2046%200%2030Z%27%20fill%3D%27%2307514f%27/%3E%3C/svg%3E")}
+footer:before{display:none}footer{padding-top:28px}
+.rsvp-by{margin-top:16px;font-weight:500}
+.rsvp-by{font-size:8px;letter-spacing:2.4px;margin-top:16px;font-weight:500}

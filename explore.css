@@ -241,3 +241,23 @@ to{transform:none}
 @media(prefers-reduced-motion:reduce){.food-cta{transition:none}
 }
 
+
+/* Mobile: easier-to-tap, more readable nav */
+@media(max-width:720px){.nav a{font-size:10px;letter-spacing:2px;padding:10px 4px;display:inline-block}.nav-group{gap:14px}.nav-group+.nav-group{margin-top:0}}
+
+/* Mobile: taller, more readable Explore/Food header */
+@media(max-width:720px){
+.hero.mini{height:auto;min-height:360px;padding:120px 0 44px}
+.hero.mini:before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,50,70,.2),rgba(0,50,70,.32))}
+.hero.mini .hero-content{position:relative;z-index:1;margin-top:0;padding:0 18px}
+.hero.mini .hero-location{font-size:11px;letter-spacing:3px;line-height:1.8;text-shadow:0 1px 8px rgba(0,50,70,.5)}
+.hero.mini h1{text-shadow:0 1px 10px rgba(0,50,70,.35)}}
+@media(max-width:720px){.nav a.palm-mark{display:none}}
+
+/* Real photos */
+.hero.mini{background-image:url('assets/images/le-morne.jpg');background-size:cover;background-position:center 16%}
+@media(min-width:721px){.hero.mini:before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,40,60,.2),rgba(0,40,60,.32))}.hero.mini .hero-content{position:relative;z-index:1}}
+/* Explore header: Le Morne, full peak */
+.hero.mini{height:min(470px,40vw);min-height:340px;background-position:center 0%}
+@media(min-width:721px){.hero.mini:before{background:linear-gradient(rgba(0,40,60,.38),rgba(0,40,60,.08) 38%,rgba(0,40,60,.3))}}
+@media(max-width:720px){.hero.mini{min-height:420px;background-position:58% 0%}.hero.mini:before{background:linear-gradient(rgba(0,40,60,.4),rgba(0,40,60,.1) 40%,rgba(0,40,60,.32))}}

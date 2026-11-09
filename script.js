@@ -79,6 +79,7 @@ faqTabs.forEach((tab) => {
 
 (function(){
 var svg=document.getElementById('isle-svg');if(!svg)return;
+var useMap=!!svg.parentNode;
 var NS='http://www.w3.org/2000/svg';
 function P(lon,lat){return [(lon-57.255)*720+10,(-19.955-lat)*766+18];}
 var coast=[[57.612,-19.982],[57.668,-20.006],[57.705,-20.058],[57.748,-20.105],[57.781,-20.158],[57.787,-20.205],[57.796,-20.246],[57.776,-20.300],[57.742,-20.352],[57.712,-20.405],[57.724,-20.452],[57.680,-20.475],[57.600,-20.505],[57.520,-20.520],[57.440,-20.505],[57.380,-20.492],[57.318,-20.470],[57.312,-20.442],[57.345,-20.428],[57.370,-20.380],[57.368,-20.330],[57.358,-20.290],[57.372,-20.250],[57.400,-20.210],[57.450,-20.180],[57.492,-20.162],[57.505,-20.120],[57.522,-20.080],[57.528,-20.050],[57.548,-20.025],[57.580,-20.008]];
@@ -112,6 +113,12 @@ var places=[
  {id:'ruins',chip:'RECEPTION',lbl:'MONDAY, 28 JUNE',name:'Ruins of Balaclava',when:'The Reception · from 6:00 PM',ll:[57.516,-20.082],side:'l',
   txt:'Welcome drinks among the old stone ruins at Maritim Resort & Spa, then dinner and dancing under the stars on the north-west coast.',map:q('Ruines de Balaclava Maritim Resort Mauritius')}
 ];
+var geo={mru:[-20.4302,57.6836],ffl:[-20.2761,57.3645],anna:[-20.265949,57.3850828],hilton:[-20.3084199,57.3672756],ruins:[-20.0856876,57.520626]},zoomTo={mru:11,ffl:14,anna:16,hilton:16,ruins:16},frame=null;
+if(useMap){frame=document.createElement('iframe');frame.className='isle-frame';frame.title='Map of Mauritius';frame.loading='lazy';frame.setAttribute('allowfullscreen','');frame.referrerPolicy='no-referrer-when-downgrade';var wrap=svg.parentNode;frame.style.display='none';wrap.insertBefore(frame,svg.nextSibling);
+ var tabs=document.createElement('div');tabs.className='isle-tabs';tabs.setAttribute('role','tablist');var tabBtns=[];
+ function setView(v){var st=v==='street';svg.style.display=st?'none':'';frame.style.display=st?'block':'none';tabBtns.forEach(function(b){b.setAttribute('aria-selected',b.dataset.v===v?'true':'false')});}
+ [['island','ISLAND OVERVIEW'],['street','STREET MAP']].forEach(function(t){var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.dataset.v=t[0];b.textContent=t[1];b.addEventListener('click',function(){setView(t[0])});tabs.appendChild(b);tabBtns.push(b);});
+ wrap.insertBefore(tabs,svg);setView('island');}
 var chips=document.getElementById('isle-chips'),card=document.getElementById('isle-card'),pins={},btns={};
 places.forEach(function(pl){
  var xy=P(pl.ll[0],pl.ll[1]);
@@ -126,11 +133,12 @@ places.forEach(function(pl){
  pins[pl.id]=g;
  var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.textContent=pl.chip;b.addEventListener('click',function(){show(pl.id)});chips.appendChild(b);btns[pl.id]=b;
 });
-function show(id){var pl=places.filter(function(p){return p.id===id})[0];
+function show(id,init){var pl=places.filter(function(p){return p.id===id})[0];
  for(var k in pins){pins[k].classList.toggle('on',k===id);btns[k].setAttribute('aria-selected',k===id?'true':'false');}
  svg.appendChild(pins[id]);
+ if(frame){var g=geo[id];frame.src='https://maps.google.com/maps?q='+g[0]+','+g[1]+'('+encodeURIComponent(pl.name)+')&z='+zoomTo[id]+'&output=embed';}
  card.style.animation='none';void card.offsetWidth;card.style.animation='';
  card.innerHTML='<p class="lbl">'+pl.lbl+'</p><h4>'+pl.name+'</h4><p class="when">'+pl.when+'</p><p class="txt">'+pl.txt.replace(/&/g,'&amp;')+'</p><a class="go" href="'+pl.map+'" target="_blank" rel="noopener">'+pinIcon+'OPEN IN GOOGLE MAPS</a>';
 }
-show('mru');
+show('mru',true);
 })();

@@ -247,3 +247,20 @@ to{transform:none}
 @media(prefers-reduced-motion:reduce){.dish,.food-cta{transition:none}
 }
 
+
+/* Mobile: easier-to-tap, more readable nav */
+@media(max-width:720px){.nav a{font-size:10px;letter-spacing:2px;padding:10px 4px;display:inline-block}.nav-group{gap:14px}.nav-group+.nav-group{margin-top:0}}
+
+/* Mobile: taller, more readable Explore/Food header */
+@media(max-width:720px){
+.hero.mini{height:auto;min-height:360px;padding:120px 0 44px}
+.hero.mini:before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,50,70,.2),rgba(0,50,70,.32))}
+.hero.mini .hero-content{position:relative;z-index:1;margin-top:0;padding:0 18px}
+.hero.mini .hero-location{font-size:11px;letter-spacing:3px;line-height:1.8;text-shadow:0 1px 8px rgba(0,50,70,.5)}
+.hero.mini h1{text-shadow:0 1px 10px rgba(0,50,70,.35)}}
+@media(max-width:720px){.nav a.palm-mark{display:none}}
+
+/* Real photos */
+.hero{background-image:url('assets/images/hero.jpg');background-size:cover;background-position:center 14%}
+@media(min-width:721px){.hero.mini:before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,40,60,.2),rgba(0,40,60,.32))}.hero.mini .hero-content{position:relative;z-index:1}}
+@media(max-width:720px){.hero.mini{background-position:80% 30%}}
