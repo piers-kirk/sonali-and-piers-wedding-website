@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sonali and Piers//Wedding//EN
+BEGIN:VEVENT
+UID:mehendi@sonali-and-piers-2027
+DTSTAMP:20261109T000000Z
+DTSTART:20270626T140000Z
+DTEND:20270626T200000Z
+SUMMARY:Sonali & Piers - Mehendi
+LOCATION:Domaine Anna\, Flic en Flac\, Mauritius
+DESCRIPTION:Times are Mauritius time (UTC+4).
+END:VEVENT
+END:VCALENDAR

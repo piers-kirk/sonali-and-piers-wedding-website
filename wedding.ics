@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sonali and Piers//Wedding//EN
+BEGIN:VEVENT
+UID:wedding@sonali-and-piers-2027
+DTSTAMP:20261109T000000Z
+DTSTART:20270627T110000Z
+DTEND:20270627T140000Z
+SUMMARY:Sonali & Piers - The Wedding
+LOCATION:Hilton Mauritius Resort & Spa\, Flic en Flac\, Mauritius
+DESCRIPTION:Times are Mauritius time (UTC+4).
+END:VEVENT
+END:VCALENDAR

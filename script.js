@@ -106,7 +106,7 @@ var places=[
   txt:'Sir Seewoosagur Ramgoolam International Airport, in the south-east. Flic en Flac is about an hour’s drive away, and taxis and pre-booked transfers are easy to arrange. Remember the free SafeMauritius travel form before you fly.',map:q('Sir Seewoosagur Ramgoolam International Airport')},
  {id:'ffl',chip:'FLIC EN FLAC',lbl:'WHERE TO STAY',name:'Flic en Flac',when:'Our recommended base',ll:[57.372,-20.278],side:'l',dy:-20,
   txt:'A relaxed beach town on the west coast, close to the Mehendi and the wedding. It’s a small island, though, so you’ll be fine wherever you land. More hotel suggestions coming soon.',map:q('Flic en Flac Mauritius')},
- {id:'anna',chip:'MEHENDI',lbl:'SATURDAY, 26 JUNE',name:'Domaine Anna',when:'Mehendi · 6:00 – 10:00 PM',ll:[57.392,-20.262],side:'r',
+ {id:'anna',chip:'MEHENDI',lbl:'SATURDAY, 26 JUNE',name:'Domaine Anna',when:'Mehendi · 6:00 PM – Midnight',ll:[57.392,-20.262],side:'r',
   txt:'A joyful start to the weekend with good food and colour, just inland from Flic en Flac.',map:q('Domaine Anna Flic en Flac Mauritius')},
  {id:'hilton',chip:'WEDDING',lbl:'SUNDAY, 27 JUNE',name:'Hilton Mauritius',when:'The Wedding · 3:00 – 6:00 PM',ll:[57.362,-20.297],side:'l',dy:12,
   txt:'Hilton Mauritius Resort & Spa, right on the beach at Flic en Flac. Join us as we exchange vows and celebrate.',map:q('Hilton Mauritius Resort & Spa Flic en Flac')},
@@ -141,4 +141,45 @@ function show(id,init){var pl=places.filter(function(p){return p.id===id})[0];
  card.innerHTML='<p class="lbl">'+pl.lbl+'</p><h4>'+pl.name+'</h4><p class="when">'+pl.when+'</p><p class="txt">'+pl.txt.replace(/&/g,'&amp;')+'</p><a class="go" href="'+pl.map+'" target="_blank" rel="noopener">'+pinIcon+'OPEN IN GOOGLE MAPS</a>';
 }
 show('mru',true);
+})();
+
+// Floating RSVP pill (shown on phones via CSS). Hidden near the top, the RSVP section and the footer.
+(function () {
+	const float = document.createElement('a');
+	float.className = 'rsvp-float';
+	float.href = 'https://forms.gle/JEmLaittAGjbe9GV7';
+	float.target = '_blank';
+	float.rel = 'noopener';
+	float.innerHTML = 'RSVP <span aria-hidden="true">→</span>';
+	document.body.appendChild(float);
+
+	if (!('IntersectionObserver' in window)) return;
+	const hide = new Set();
+	const watch = document.querySelectorAll('.hero, .countdown-rsvp, footer');
+	const io = new IntersectionObserver((entries) => {
+		entries.forEach((e) => {
+			if (e.isIntersecting) hide.add(e.target);
+			else hide.delete(e.target);
+		});
+		float.classList.toggle('show', hide.size === 0);
+	});
+	watch.forEach((el) => io.observe(el));
+})();
+
+// Soft scroll-reveal. Classes are added here, so content stays visible if JS is off.
+(function () {
+	if (!('IntersectionObserver' in window)) return;
+	if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+	const sel = '.story > *, .stay > *, .stay-card, .section-heading, .intro > *, .ce, .stamps, .isle, .faq-tabs, .dy, .dish, .drink, .fd-block, .wh-col, .mo-col, .countdown-rsvp > *';
+	const els = Array.from(document.querySelectorAll(sel)).filter((el) => el.getBoundingClientRect().top > window.innerHeight * 0.9);
+	const io = new IntersectionObserver((entries) => {
+		entries.forEach((e) => {
+			if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+		});
+	}, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+	els.forEach((el, i) => {
+		el.classList.add('reveal');
+		el.style.setProperty('--d', ((i % 3) * 0.08) + 's');
+		io.observe(el);
+	});
 })();

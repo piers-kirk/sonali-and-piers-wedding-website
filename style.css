@@ -90,7 +90,7 @@ footer{text-align:center;padding:28px 20px;background:var(--deep);color:white;fo
 
 
 /* Mockup look */
-.hero{background:url('assets/images/hero.jpg') center 45%/cover no-repeat;height:min(680px,46vw);min-height:440px}
+.hero{background:url('assets/images/le-morne.jpg') center 30%/cover no-repeat;height:min(680px,46vw);min-height:440px}
 
 .nav a{font-size:11px;letter-spacing:3px;text-shadow:0 1px 6px rgba(0,60,80,.25)}
 
@@ -210,7 +210,7 @@ to{transform:none}
 
 
 /* Welcome note */
-.welcome-note{max-width:560px;margin:26px auto 0;font:italic 400 24px/1.45 var(--serif);color:var(--deep)}
+.welcome-note{max-width:560px;margin:26px auto 0;font:400 24px/1.45 var(--serif);color:var(--deep)}
 
 .sig{font-family:'Great Vibes',cursive;font-size:46px;line-height:1.2;color:var(--green);margin-top:8px}
 
@@ -281,7 +281,7 @@ to{transform:none}
 @media(max-width:720px){.tj{grid-template-columns:1fr;gap:28px;max-width:360px}
 .tj:before{top:22px;bottom:22px;left:50%;right:auto;width:1px;height:auto}
 }
-.tv-script{font-family:"Great Vibes",cursive;font-size:34px;line-height:1.2;color:var(--green);margin-top:10px}
+.tv-script{font-family:var(--serif);font-size:20px;line-height:1.3;color:var(--green);margin-top:10px}
 .tv-grid{max-width:1000px;margin:34px auto 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;text-align:center}
 .tv-card{background:#fffdf7;border-radius:6px;padding:30px 26px 26px;box-shadow:0 6px 20px rgba(28,78,70,.07);display:flex;flex-direction:column;align-items:center;min-width:0}
 .tv-icon{width:74px;height:74px;border-radius:50%;background:#eef5ef;display:grid;place-items:center;margin-bottom:16px;box-shadow:0 0 0 6px #f6f9f4}
@@ -323,8 +323,8 @@ to{transform:none}
 #isle-svg .reef{fill:none;stroke:#fffdf7;stroke-width:1.4;stroke-dasharray:2 5;opacity:.9}
 #isle-svg .hills{fill:#e5e9d3}
 #isle-svg .route{fill:none;stroke:#c8705a;stroke-width:1.6;stroke-dasharray:5 5}
-#isle-svg .route-lbl{font:italic 500 13px var(--serif);fill:#c8705a}
-#isle-svg .sea{font:italic 400 15px var(--serif);fill:#5d958b;letter-spacing:2px}
+#isle-svg .route-lbl{font:500 13px var(--serif);fill:#c8705a}
+#isle-svg .sea{font:400 15px var(--serif);fill:#5d958b;letter-spacing:2px}
 #isle-svg .town{font:500 7.5px var(--sans);letter-spacing:1.6px;fill:#8aa39c}
 #isle-svg .halo{fill:#0d615e;opacity:.09}
 #isle-svg .pin{cursor:pointer;outline:none}
@@ -439,7 +439,7 @@ footer{position:relative;padding-top:60px}footer:before{height:40px;background-i
 @media(max-width:560px){.stamps{gap:12px;padding:26px 12px}.stamp{width:148px;height:148px;padding:8px}.stamp b{font-size:19px}.stamp small{font-size:8px}}
 
 /* Real photos */
-.hero{background-image:url('assets/images/hero.jpg');background-size:cover;background-position:center 14%}
+.hero{background-image:url('assets/images/le-morne.jpg');background-size:cover;background-position:center 30%}
 .countdown-rsvp{background:linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)),url('assets/images/rsvp-bg.jpg') center/cover no-repeat}
 /* Keep hero text readable over the photo */
 .hero:before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,45,75,.24),rgba(0,45,75,.14) 45%,rgba(0,45,75,.34));pointer-events:none}
@@ -460,3 +460,100 @@ footer{position:relative;padding-top:60px}footer:before{height:40px;background-i
 footer:before{display:none}footer{padding-top:28px}
 .rsvp-by{margin-top:16px;font-weight:500}
 .rsvp-by{font-size:8px;letter-spacing:2.4px;margin-top:16px;font-weight:500}
+/* Longer menu labels: keep each on one line */
+.nav a{white-space:nowrap}
+@media(min-width:721px){.nav{width:min(1000px,94%)}.nav-group{gap:24px}}
+@media(max-width:720px){.nav-group{flex-wrap:wrap;gap:0 14px}.nav a{font-size:9px;letter-spacing:1.6px}}
+@media(min-width:721px){.nav-group{justify-content:center;gap:36px}}
+
+/* Deadline under the top RSVP button */
+.hero-by{margin-top:14px;text-shadow:0 1px 10px rgba(0,40,60,.55)}
+/* Floating RSVP pill (phones only) */
+.rsvp-float{display:none}
+@media(max-width:720px){
+.rsvp-float{display:flex;position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);z-index:50;gap:12px;padding:13px 30px;border-radius:28px;background:var(--green);color:#fff;text-decoration:none;font:500 9px var(--sans);letter-spacing:3px;box-shadow:0 6px 20px rgba(0,40,40,.4);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s}
+.rsvp-float.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+}
+@media(prefers-reduced-motion:reduce){.rsvp-float{transition:none}}
+
+/* calendar buttons + what to expect */
+.ce-actions{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}
+.ce-cal{display:inline-block;padding:9px 14px;border:1px solid var(--green);border-radius:20px;font-size:9px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--green);background:transparent;min-height:34px}
+.ce-cal:hover{background:var(--green);color:#fff}.ce-cal.alt{border-color:rgba(13,97,94,.35)}
+.ce-expect{margin-top:12px;font-size:12px}
+.ce-expect summary{cursor:pointer;font-size:9px;letter-spacing:2.4px;text-transform:uppercase;color:var(--green);padding:6px 0;list-style:none}
+.ce-expect summary::-webkit-details-marker{display:none}
+.ce-expect summary:after{content:' +'}.ce-expect[open] summary:after{content:' \2212'}
+.ce-expect p{margin-top:6px;line-height:1.6}
+
+/* soft scroll reveal (class added by JS, so nothing hides if JS fails) */
+.reveal{opacity:0}
+.reveal.in{opacity:1;animation:rv .8s ease backwards;animation-delay:var(--d,0s)}
+@keyframes rv{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1}.reveal.in{animation:none}}
+.ce-expect p{color:#627b76;font-size:12px;margin-bottom:12px}
+
+/* toran divider under main section headings */
+.toran{width:min(380px,82%);aspect-ratio:600/90;margin:12px auto 20px;background:url('assets/images/toran.svg') center/contain no-repeat}
+.ce-grid{margin-top:8px}
+.section-heading + .toran{margin-top:22px;margin-bottom:30px}
+.toran.diyas{background-image:url('assets/images/diyas.svg');aspect-ratio:600/80;width:min(380px,82%);margin-top:6px}
+.toran.garland{background-image:url('assets/images/garland.svg');aspect-ratio:600/80;width:min(400px,82%);margin-top:8px}
+
+/* Our story: then & now polaroids */
+.story{text-align:center;padding:56px 20px 64px}
+.story h2{font:400 clamp(30px,4vw,44px)/1.1 var(--serif);margin:8px 0 34px;color:var(--deep,#07514f)}
+.story-pols{display:flex;gap:26px;justify-content:center;align-items:center;flex-wrap:wrap}
+.pol{margin:0;background:#fffdf7;padding:10px 10px 44px;box-shadow:0 8px 22px rgba(13,97,94,.18);width:240px;position:relative}
+.pol img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.pol figcaption{position:absolute;left:0;right:0;bottom:8px;font:500 20px var(--serif);letter-spacing:1px;color:var(--green)}
+.pol-a{transform:rotate(-4deg)}.pol-b{transform:rotate(3deg)}
+.story-arrow{font:38px var(--serif);color:#c9a24b}
+.story-cap{margin-top:30px;font-size:12px;letter-spacing:1px;color:#627b76}
+@media(max-width:620px){.pol{width:172px;padding:8px 8px 38px}.pol figcaption{font-size:24px}.story-pols{gap:8px;flex-wrap:nowrap}.story-arrow{font-size:26px}.pol-a{transform:rotate(-3deg)}.pol-b{transform:rotate(2deg)}}
+.ce-expect{margin-top:14px}
+.ce-expect-h{font-size:9px;letter-spacing:2.4px;text-transform:uppercase;color:var(--green);margin:0 0 6px}
+.ce-expect p:not(.ce-expect-h){margin:0 0 12px}
+.story h2{margin-top:0}
+.ce-expect p.ce-expect-h{font-size:9px;letter-spacing:2.4px;color:var(--green);margin:0 0 6px;text-transform:uppercase;font-weight:400}
+
+/* smoother flow from welcome note into story */
+.intro{padding-bottom:18px;min-height:0}
+.story{background:#f8f7ef;padding:6px 20px 64px}
+
+/* outfit inspiration link */
+.ce-insp{display:inline-block;margin-top:14px;font-size:9px;letter-spacing:2.2px;text-transform:uppercase;color:var(--green);text-decoration:none;border-bottom:1px solid rgba(13,97,94,.4);padding:4px 0}
+.ce-insp:hover{border-bottom-color:var(--green)}
+
+/* where to stay */
+.stay{max-width:980px;margin:56px auto 0;text-align:center}
+.stay h3{font:400 clamp(28px,3.4vw,38px)/1.1 var(--serif);color:var(--deep);margin:6px 0 0}
+.stay .travel-intro{margin-bottom:26px}
+.stay-pick{position:relative;max-width:620px;margin:0 auto;background:#fffdf7;border-radius:10px;padding:34px 28px 26px;box-shadow:0 8px 24px rgba(28,78,70,.12);border:1px solid rgba(201,162,75,.55)}
+.stay-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;font:500 9px var(--sans);letter-spacing:3px;padding:5px 14px;border-radius:14px}
+.stay h4{font:500 26px/1.15 var(--serif);color:var(--deep);margin:0 0 8px}
+.stay-pick p,.stay-card p,.stay-bnb p{font-size:12px;line-height:1.7;color:#627b76;margin:0}
+.stay-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.stay-links a,.stay-bnb a{display:inline-block;padding:9px 16px;border:1px solid var(--green);border-radius:20px;font-size:9px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--green)}
+.stay-links a:first-child{background:var(--green);color:#fff}
+.stay-links a:hover,.stay-bnb a:hover{background:var(--green);color:#fff}
+.stay-sub{margin:34px 0 14px;font-size:9px;letter-spacing:3px;color:#4b827b}
+.stay-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:left}
+.stay-card{background:#fffdf7;border-radius:10px;padding:18px 18px 16px;box-shadow:0 6px 18px rgba(28,78,70,.09);display:flex;flex-direction:column}
+.stay-card h4{font-size:21px}
+.stay-card p{flex:1}
+.stay-card a{margin-top:12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--green);text-decoration:none;border-bottom:1px solid rgba(13,97,94,.4);align-self:flex-start;padding:4px 0}
+.stay-tag{font-size:8px;letter-spacing:2.4px;text-transform:uppercase;color:#4b827b;margin-bottom:6px}
+.stay-bnb{max-width:620px;margin:22px auto 0;background:rgba(255,253,247,.6);border:1px dashed rgba(13,97,94,.35);border-radius:10px;padding:22px 24px}
+.stay-bnb h4{font-size:22px}.stay-bnb a{margin-top:14px}
+.stay-note{margin:18px 0 0;font-size:11px;color:#627b76}
+@media(max-width:860px){.stay-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.stay-grid{grid-template-columns:1fr}.stay{margin-top:40px}.stay-pick{padding:32px 20px 22px}}
+.story:before{content:'';display:block;width:38px;height:1px;background:#6c9a92;margin:34px auto 38px}
+.story{padding-top:0}
+.stay{background:none;box-shadow:none;padding:0;border-radius:0}
+.stay p{font-size:12px}
+.stay .section-label{font-size:10px}
+.stay .travel-intro{font-size:12px}.stay .stay-note{font-size:11px}.stay .stay-sub{font-size:9px;color:#4b827b}
+.ce-serve{font-size:11px;letter-spacing:.4px;color:#4b827b;margin:2px 0 10px}
+.ce-body .ce-serve+.ce-copy{margin-top:8px}

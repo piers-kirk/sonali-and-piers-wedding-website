@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sonali and Piers//Wedding//EN
+BEGIN:VEVENT
+UID:reception@sonali-and-piers-2027
+DTSTAMP:20261109T000000Z
+DTSTART:20270628T140000Z
+DTEND:20270628T200000Z
+SUMMARY:Sonali & Piers - The Reception
+LOCATION:Ruins of Balaclava\, Maritim Resort & Spa\, Balaclava\, Mauritius
+DESCRIPTION:Times are Mauritius time (UTC+4).
+END:VEVENT
+END:VCALENDAR

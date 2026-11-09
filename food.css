@@ -198,7 +198,7 @@ to{transform:none}
 }
 
 .fd-lede{max-width:620px;margin:16px auto 0;font-size:12px;color:#5d7b75}
-.fd-script{font-family:"Great Vibes",cursive;font-size:30px;color:var(--green);margin-top:6px}
+.fd-script{font-family:var(--serif);font-size:20px;color:var(--green);margin-top:6px}
 .dish-grid{max-width:1180px;margin:34px auto 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;text-align:left}
 .dish{background:#fffdf7;border-radius:6px;overflow:hidden;box-shadow:0 6px 20px rgba(28,78,70,.07);display:flex;flex-direction:column;transition:transform .25s}
 .dish:hover{transform:translateY(-4px)}
@@ -264,3 +264,22 @@ to{transform:none}
 .hero{background-image:url('assets/images/hero.jpg');background-size:cover;background-position:center 14%}
 @media(min-width:721px){.hero.mini:before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(0,40,60,.2),rgba(0,40,60,.32))}.hero.mini .hero-content{position:relative;z-index:1}}
 @media(max-width:720px){.hero.mini{background-position:80% 30%}}
+/* Longer menu labels: keep each on one line */
+.nav a{white-space:nowrap}
+@media(min-width:721px){.nav{width:min(1000px,94%)}.nav-group{gap:24px}}
+@media(max-width:720px){.nav-group{flex-wrap:wrap;gap:0 14px}.nav a{font-size:9px;letter-spacing:1.6px}}
+@media(min-width:721px){.nav-group{justify-content:center;gap:36px}}
+
+/* Deadline under the top RSVP button */
+.hero-by{margin-top:14px;text-shadow:0 1px 10px rgba(0,40,60,.55)}
+/* Floating RSVP pill (phones only) */
+.rsvp-float{display:none}
+@media(max-width:720px){
+.rsvp-float{display:flex;position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);z-index:50;gap:12px;padding:13px 30px;border-radius:28px;background:var(--green);color:#fff;text-decoration:none;font:500 9px var(--sans);letter-spacing:3px;box-shadow:0 6px 20px rgba(0,40,40,.4);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility .25s}
+.rsvp-float.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+}
+@media(prefers-reduced-motion:reduce){.rsvp-float{transition:none}}
+
+.hero.mini{background:linear-gradient(rgba(0,50,70,.12),rgba(0,50,70,.2)),url("assets/images/food-header.jpg") center 40%/cover no-repeat}
+@media(max-width:720px){.hero.mini{background-position:40% 40%}}
+.hero.mini .nav a{text-shadow:0 1px 8px rgba(0,50,70,.55)}
