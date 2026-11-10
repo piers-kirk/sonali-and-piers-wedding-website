@@ -765,3 +765,13 @@ body .xc-d {
 		height: 170px;
 	}
 }
+
+/* Header "&": use the regular ampersand, slanted, on every page. The home page
+   loads the font's true italic, whose "&" looks quite different from the one
+   on Explore and Food (which only have the regular style available). */
+.brand span {
+	display: inline-block;
+	font-style: normal;
+	transform: skewX(-12deg);
+	margin: 0 0.04em;
+}
