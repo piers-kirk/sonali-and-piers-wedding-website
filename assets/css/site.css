@@ -693,3 +693,59 @@ body .xc-d {
 		transition: none;
 	}
 }
+
+/* --------------------------------------------------------------------------
+   Home photo header on larger screens: bigger small print and a little more
+   shade behind it. (Phone sizes are unchanged.)
+   -------------------------------------------------------------------------- */
+@media (min-width: 721px) {
+	.hero:not(.mini)::before {
+		background: radial-gradient(ellipse 50% 60% at 50% 50%, rgba(0, 28, 42, 0.5), rgba(0, 28, 42, 0) 78%),
+			linear-gradient(rgba(0, 28, 42, 0.36), rgba(0, 28, 42, 0.22) 45%, rgba(0, 28, 42, 0.42));
+	}
+	.hero:not(.mini) .eyebrow {
+		font-size: 17px;
+		letter-spacing: 0.32em;
+	}
+	.hero:not(.mini) .hero-location {
+		font-size: 24px;
+		letter-spacing: 0.32em;
+		font-weight: 600;
+		margin-top: 18px;
+	}
+	.hero:not(.mini) .hero-date {
+		font-size: 20px;
+		letter-spacing: 0.2em;
+		margin-top: 10px;
+	}
+	.hero:not(.mini) .countdown {
+		gap: 36px;
+		margin: 30px auto 24px;
+	}
+	.hero:not(.mini) .countdown div {
+		min-width: 96px;
+	}
+	body .hero:not(.mini) .countdown span {
+		font-size: 52px;
+		font-weight: 500;
+	}
+	body .hero:not(.mini) .countdown p {
+		font-size: 14px;
+		letter-spacing: 0.16em;
+		margin-top: 8px;
+	}
+	.hero:not(.mini) .countdown i {
+		height: 46px;
+		background: rgba(255, 255, 255, 0.7);
+	}
+	body .hero:not(.mini) .hero-by {
+		font-size: 16px;
+		letter-spacing: 0.16em;
+		margin-top: 6px;
+	}
+	.hero:not(.mini) .hero-rule {
+		width: 64px;
+		margin-top: 26px;
+		opacity: 0.9;
+	}
+}
