@@ -848,3 +848,250 @@ footer .fn .name-amp {
 		font-size: clamp(44px, 12.5vw, 56px);
 	}
 }
+
+
+/* Eight menu items on smaller laptops: tighten the top menu a little. */
+@media (min-width: 901px) and (max-width: 1280px) {
+	.site-nav a {
+		padding: 10px 7px;
+		font-size: 12.5px;
+	}
+}
+
+/* ==========================================================================
+   Phone menu: five tabs (Home, Celebrations, Getting Here, Explore, More).
+   "More" opens a sheet with Food, What to Wear, Mauritius 101 and FAQ.
+   ========================================================================== */
+.more-sheet {
+	display: none;
+}
+@media (max-width: 900px) {
+	body .tabbar {
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+	}
+	.tabbar a,
+	.tab-more {
+		gap: 5px;
+	}
+	.tabbar a span,
+	.tab-more span {
+		font: 500 11px/1.1 var(--sans);
+		letter-spacing: 0;
+		text-align: center;
+		white-space: nowrap;
+	}
+	.tab-more {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		margin: 0;
+		border: 0;
+		background: none;
+		color: var(--muted);
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+	}
+	.tab-more svg {
+		width: 24px;
+		height: 24px;
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 1.7;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		padding: 2px 10px;
+		box-sizing: content-box;
+		border-radius: 999px;
+		transition: background-color 0.2s;
+	}
+	.tab-more.is-current,
+	.tab-more[aria-expanded='true'] {
+		color: var(--deep);
+		font-weight: 600;
+	}
+	.tab-more.is-current svg,
+	.tab-more[aria-expanded='true'] svg {
+		background: rgba(10, 58, 94, 0.12);
+		stroke-width: 2;
+	}
+	.tab-more:focus-visible {
+		outline: 2px solid var(--green);
+		outline-offset: -4px;
+		border-radius: 12px;
+	}
+
+	.more-sheet {
+		display: block;
+		position: fixed;
+		inset: 0 0 var(--tab-h) 0;
+		z-index: 59;
+	}
+	.more-sheet[hidden] {
+		display: none;
+	}
+	.more-scrim {
+		position: absolute;
+		inset: 0;
+		background: rgba(6, 30, 48, 0.38);
+		animation: more-fade 0.2s ease;
+	}
+	.more-panel {
+		position: absolute;
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		padding: 14px 8px 8px;
+		background: #fffcf5;
+		border-radius: 18px;
+		box-shadow: 0 12px 40px rgba(6, 30, 48, 0.28);
+		animation: more-rise 0.22s ease;
+	}
+	.more-h {
+		margin: 0 14px 6px;
+		font: 600 11px/1.2 var(--sans);
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+		color: var(--muted);
+	}
+	.more-panel ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.more-panel li + li {
+		border-top: 1px solid var(--line);
+	}
+	.more-panel a {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		min-height: 54px;
+		padding: 0 14px;
+		border-radius: 12px;
+		color: var(--deep);
+		text-decoration: none;
+		font: 500 17px/1.2 var(--sans);
+		-webkit-tap-highlight-color: transparent;
+	}
+	.more-panel a:active,
+	.more-panel a:hover {
+		background: rgba(10, 58, 94, 0.06);
+	}
+	.more-panel a[aria-current='page'] {
+		background: rgba(10, 58, 94, 0.08);
+		font-weight: 700;
+	}
+	.more-panel svg {
+		flex: 0 0 24px;
+		width: 24px;
+		height: 24px;
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 1.7;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+	.more-panel span {
+		flex: 1;
+	}
+	.more-panel i {
+		font-style: normal;
+		font-size: 24px;
+		line-height: 1;
+		color: var(--muted);
+	}
+	.more-panel a:focus-visible {
+		outline: 2px solid var(--green);
+		outline-offset: -2px;
+	}
+}
+@keyframes more-rise {
+	from {
+		transform: translateY(16px);
+		opacity: 0;
+	}
+}
+@keyframes more-fade {
+	from {
+		opacity: 0;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	.more-panel,
+	.more-scrim {
+		animation: none;
+	}
+}
+@media (max-width: 374px) {
+	.tabbar a span,
+	.tab-more span {
+		font-size: 10px;
+		letter-spacing: -0.01em;
+	}
+}
+
+/* ==========================================================================
+   Minimum sizes for small labels added on the newer pages
+   ========================================================================== */
+body .inv-k {
+	font-size: clamp(10px, 0.9vw, 11px);
+}
+body .inv-d {
+	font-size: clamp(10px, 0.95vw, 11.5px);
+}
+body .story-pols .pol figcaption small {
+	font-size: clamp(10.5px, 0.85vw, 11px);
+}
+body .fav-tag {
+	font-size: 11px;
+	letter-spacing: 0.12em;
+	padding: 7px 11px;
+}
+body .bg-k,
+body .bg-who,
+body .ql-k {
+	font-size: 11.5px;
+}
+body .ql-h,
+body .ql-more,
+body .wr-for,
+body .wr-pal,
+body .wr-tip b,
+body .tp-ex b {
+	font-size: 11.5px;
+}
+body .tp-tags span {
+	font-size: 11px;
+	letter-spacing: 0.08em;
+	padding: 6px 10px;
+}
+@media (max-width: 600px) {
+	body .fav-tag {
+		font-size: 10.5px;
+		letter-spacing: 0.05em;
+		line-height: 1.25;
+		padding: 6px 9px;
+		white-space: normal;
+		max-width: calc(100% - 16px);
+		top: 8px;
+		left: 8px;
+	}
+}
+
+/* RSVP card on very small phones (320px): a little less padding so the
+   countdown fits. */
+@media (max-width: 374px) {
+	.countdown-rsvp {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	.countdown-rsvp .countdown-wrap {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	.countdown-rsvp .countdown div {
+		min-width: 0;
+	}
+}

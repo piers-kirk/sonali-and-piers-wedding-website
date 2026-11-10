@@ -1,0 +1,23 @@
+/* What to Wear page (loaded after site.css) */
+/* What to Wear page */
+.hero.mini{background:linear-gradient(rgba(10,58,94,.22),rgba(10,58,94,.32)),url('../images/rsvp-bg.jpg') center 50%/cover no-repeat}
+.wr-jump{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:22px 0 6px}
+.wr-jump a{padding:9px 18px;border-radius:20px;background:#eaf4fc;color:#0a3a5e;text-decoration:none;font:600 11px 'Nunito Sans',sans-serif;letter-spacing:2px;text-transform:uppercase}
+.wr-jump a:hover{background:#cfe4f5}
+.wr-ev{scroll-margin-top:80px}
+.wr-lede{max-width:620px;margin:10px auto 0;color:#3e5a72;font-size:15px;line-height:1.7}
+.wr-pal{display:inline-flex;align-items:center;gap:10px;margin:16px auto 0;padding:7px 14px;border-radius:18px;border:1px dashed #cfe4f5;color:#5a7891;font:600 10.5px 'Nunito Sans',sans-serif;letter-spacing:1.6px;text-transform:uppercase}
+.wr-sw{display:inline-flex}.wr-sw i{width:14px;height:14px;border-radius:50%;background:#e4dccb;border:2px solid #f8f2e6;margin-left:-4px}.wr-sw i:first-child{margin-left:0}
+.wr-for{font:700 10.5px 'Nunito Sans',sans-serif;letter-spacing:2.5px;color:#c75a3e;margin:30px 0 -10px;text-align:left}
+.wr-tip{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-top:22px;padding:16px 20px;border-radius:10px;background:#fffcf5;box-shadow:0 6px 18px rgba(10,58,94,.06);text-align:left;font-size:14px;color:#3e5a72}
+.wr-tip b{font:700 10.5px 'Nunito Sans',sans-serif;letter-spacing:2px;text-transform:uppercase;color:#1670b8}
+.wr-tip span{flex:1 1 320px}
+.wr-tip a{color:#c75a3e;font:700 11px 'Nunito Sans',sans-serif;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;white-space:nowrap}
+.wr-gl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:26px;text-align:left}
+.wr-gl div,.wr-get div{background:#fffcf5;border-radius:10px;padding:16px 18px;box-shadow:0 6px 18px rgba(10,58,94,.06)}
+.wr-gl b,.wr-get b{display:block;font:400 19px 'Marcellus',Georgia,serif;color:#0a3a5e;margin-bottom:4px}
+.wr-gl p,.wr-get p{font-size:13px;line-height:1.6;color:#3e5a72;margin:0}
+.wr-get{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:26px;text-align:left}
+.wr-help{margin-top:20px;font:400 18px 'Marcellus',Georgia,serif;color:#0a3a5e}
+@media(max-width:900px){.wr-gl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.wr-gl,.wr-get{grid-template-columns:1fr}.wr-for{margin-top:24px}}

@@ -1,0 +1,13 @@
+/* Mauritius 101 page (loaded after site.css) */
+.pc-l a{color:#1670b8}.hero.mini{background:linear-gradient(rgba(10,58,94,.2),rgba(10,58,94,.34)),url('../images/landmarks/trou_aux_biches_grand_baie.jpeg') center 55%/cover no-repeat}
+.tp-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.tp-tags span{font:700 9.5px 'Nunito Sans',sans-serif;letter-spacing:1.4px;text-transform:uppercase;padding:5px 9px;border-radius:12px}.tp-tags .y{background:#eaf4fc;color:#1670b8}.tp-tags .n{background:#fde9e3;color:#c75a3e}
+.tp-ex{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px;text-align:left}.tp-ex div{border-top:2px solid #cfe4f5;padding-top:12px}.tp-ex b{display:block;font:700 10.5px 'Nunito Sans',sans-serif;letter-spacing:2px;text-transform:uppercase;color:#c75a3e;margin-bottom:4px}.tp-ex p{font-size:13.5px;line-height:1.6;color:#3e5a72;margin:0}
+@media(max-width:900px){.tp-ex{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.pcs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 30px;max-width:1040px;margin:36px auto 0;text-align:left}
+.pc{display:grid;grid-template-columns:1.5fr 1fr;background:#fffdf8;border-radius:6px;box-shadow:0 10px 26px rgba(10,58,94,.14);padding:22px;gap:20px;position:relative;background-image:repeating-linear-gradient(0deg,transparent 0 27px,rgba(22,112,184,.06) 27px 28px)}
+.pc-l{border-right:1px solid #cfe4f5;padding-right:18px}.pc-l h3{font:400 23px/1.2 'Marcellus',Georgia,serif;color:#0a3a5e;margin:0 0 8px}.pc-l p{font-size:14px;line-height:1.7;color:#3e5a72;margin:0}
+.pc-r{position:relative}.pc-st{width:100%;max-width:150px;margin-left:auto;padding:6px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.12);background-image:radial-gradient(circle at 4px 4px,#f8f2e6 3px,transparent 3.5px);background-size:10px 10px}
+.pc-art{display:block;width:100%;height:auto;aspect-ratio:3/2}
+.pc-pm{position:absolute;left:0;top:70px;width:74px;height:74px;border-radius:50%;border:2px solid rgba(199,90,62,.55);display:flex;align-items:center;justify-content:center;text-align:center;font:700 8px/1.4 'Nunito Sans',sans-serif;letter-spacing:1.5px;color:rgba(199,90,62,.75);transform:rotate(-14deg)}
+.pc-r i{display:block;height:1px;background:#cfe4f5;margin:16px 0 0 0}.pc-r i:first-of-type{margin-top:72px}
+@media(max-width:760px){.pcs{grid-template-columns:1fr}.pc{grid-template-columns:1fr}.pc-l{border-right:0;padding-right:0;order:2}.pc-r{order:1}.pc-r i,.pc-pm{display:none}.pc-st{max-width:none}}

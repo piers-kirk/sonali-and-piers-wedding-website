@@ -130,6 +130,12 @@ If that doesn't work, try:
 python server.py
 ```
 
+On a Mac, use Terminal instead of PowerShell and run:
+
+```bash
+python3 server.py
+```
+
 The wedding website should automatically open in your browser.
 
 If it doesn't, open:
@@ -370,39 +376,51 @@ The project looks like this:
 ```text
 sonali-and-piers-wedding-website/
 │
-├── index.html          ← main wedding page (celebrations, travel, FAQ, RSVP)
-├── explore.html        ← Explore Mauritius: nine days out and more things to do
-├── food.html           ← Eat Mauritius: dishes, drinks, where to eat, markets
-├── server.py           ← runs the site locally (py server.py)
+├── index.html          ← main page: Home, Our Celebrations, Getting Here, FAQ, RSVP
+├── explore.html        ← Explore: days out and things to do
+├── food.html           ← Food: dishes, drinks, where to eat, Sonali's favourites
+├── wear.html           ← What to Wear: outfit ideas for each celebration
+├── tips.html           ← Mauritius 101: practical tips
+├── server.py           ← runs the site on your computer
 ├── README.md
 │
 └── assets/
     ├── css/
-    │   ├── style.css       ← styles for index.html
-    │   ├── explore.css     ← styles for explore.html
-    │   ├── food.css        ← styles for food.html
-    │   └── site.css        ← shared menu, readability fixes (loaded on every page)
+    │   ├── site.css        ← shared look: menu, names, colours, text sizes (every page)
+    │   ├── style.css       ← main page
+    │   ├── explore.css     ← Explore page
+    │   ├── food.css        ← Food page (also the base for What to Wear and Mauritius 101)
+    │   ├── wear.css        ← What to Wear page
+    │   └── tips.css        ← Mauritius 101 page
     ├── js/
-    │   ├── script.js       ← countdown, RSVP message, departures board, FAQ tabs, island map
-    │   ├── explore.js      ← extra behaviour for explore.html
-    │   └── site.js         ← menu highlighting and one-section-at-a-time home page
-    ├── images/             ← all photos, illustrations and the favicon
+    │   ├── script.js       ← countdown, FAQ tabs, island map
+    │   ├── explore.js      ← Explore page cards and map
+    │   └── site.js         ← menu, "More" sheet on phones, one-section-at-a-time main page
+    ├── images/             ← photos, illustrations, favicon and the link-preview picture
+    │   ├── events/         ← venue photos for the celebration cards
+    │   ├── food/  drinks/  ← photos for the Food page
+    │   └── landmarks/      ← photos for the Explore cards
     └── calendar/           ← "Add to calendar" files (mehendi, wedding, reception)
 ```
 
-The home page is split into sections (Home, Events, Travel, FAQ, RSVP) that are shown
-one at a time, each with its own address such as `index.html#travel`.
-Explore and Food are separate pages. The menu is a bar along the top on
-computers and a tab bar along the bottom on phones.
+The main page is split into sections (Home, Our Celebrations, Getting Here,
+FAQ, RSVP) that are shown one at a time, each with its own address such as
+`index.html#travel`. The other pages are separate files.
 
-The HTML pages stay at the top level so the website addresses stay simple
-(for example `/explore.html`). Everything they load lives in `assets/`.
+On computers the menu is a bar along the top. On phones it is a tab bar along
+the bottom with Home, Celebrations, Getting Here, Explore and More; "More"
+opens Food, What to Wear, Mauritius 101 and FAQ.
 
-The illustrations on the cards are drawn in SVG inside the HTML files.
+Styles go in the CSS files above rather than inside the HTML pages, so each
+look is defined in one place. Images referenced from a CSS file use paths
+starting `../images/`.
+
+When the link is shared in WhatsApp, iMessage or email, the preview uses
+`assets/images/share.jpg` and the title and description at the top of each page.
 
 You generally don't need to edit these files yourself.
 
-Codex can do that for you.
+Codex or Claude can do that for you.
 
 ---
 
