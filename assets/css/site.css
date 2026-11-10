@@ -653,3 +653,43 @@ body > footer {
 body .xc-d {
 	letter-spacing: 0.06em;
 }
+
+/* --------------------------------------------------------------------------
+   Food: dish and drink photos
+   -------------------------------------------------------------------------- */
+.dish figure {
+	height: 190px;
+	overflow: hidden;
+	background: #efe6d4;
+}
+.dish figure img,
+.dish figure svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.4s ease;
+}
+.dish:hover figure img {
+	transform: scale(1.04);
+}
+.drink > img {
+	display: block;
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	background: #efe6d4;
+}
+@media (max-width: 720px) {
+	.dish figure {
+		height: 140px;
+	}
+	.drink > img {
+		height: 160px;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	.dish figure img {
+		transition: none;
+	}
+}
