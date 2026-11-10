@@ -380,13 +380,20 @@ sonali-and-piers-wedding-website/
     ├── css/
     │   ├── style.css       ← styles for index.html
     │   ├── explore.css     ← styles for explore.html
-    │   └── food.css        ← styles for food.html
+    │   ├── food.css        ← styles for food.html
+    │   └── site.css        ← shared menu, readability fixes (loaded on every page)
     ├── js/
     │   ├── script.js       ← countdown, RSVP message, departures board, FAQ tabs, island map
-    │   └── explore.js      ← extra behaviour for explore.html
+    │   ├── explore.js      ← extra behaviour for explore.html
+    │   └── site.js         ← menu highlighting and one-section-at-a-time home page
     ├── images/             ← all photos, illustrations and the favicon
     └── calendar/           ← "Add to calendar" files (mehendi, wedding, reception)
 ```
+
+The home page is split into sections (Home, Events, Travel, FAQ) that are shown
+one at a time, each with its own address such as `index.html#travel`.
+Explore and Food are separate pages. The menu is a bar along the top on
+computers and a tab bar along the bottom on phones.
 
 The HTML pages stay at the top level so the website addresses stay simple
 (for example `/explore.html`). Everything they load lives in `assets/`.

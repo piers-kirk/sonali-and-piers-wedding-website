@@ -143,29 +143,6 @@ function show(id,init){var pl=places.filter(function(p){return p.id===id})[0];
 show('mru',true);
 })();
 
-// Floating RSVP pill (shown on phones via CSS). Hidden near the top, the RSVP section and the footer.
-(function () {
-	const float = document.createElement('a');
-	float.className = 'rsvp-float';
-	float.href = 'https://forms.gle/JEmLaittAGjbe9GV7';
-	float.target = '_blank';
-	float.rel = 'noopener';
-	float.innerHTML = 'RSVP <span aria-hidden="true">→</span>';
-	document.body.appendChild(float);
-
-	if (!('IntersectionObserver' in window)) return;
-	const hide = new Set();
-	const watch = document.querySelectorAll('.hero, .countdown-rsvp, footer');
-	const io = new IntersectionObserver((entries) => {
-		entries.forEach((e) => {
-			if (e.isIntersecting) hide.add(e.target);
-			else hide.delete(e.target);
-		});
-		float.classList.toggle('show', hide.size === 0);
-	});
-	watch.forEach((el) => io.observe(el));
-})();
-
 // Soft scroll-reveal. Classes are added here, so content stays visible if JS is off.
 (function () {
 	if (!('IntersectionObserver' in window)) return;

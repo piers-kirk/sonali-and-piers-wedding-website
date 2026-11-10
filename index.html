@@ -21,31 +21,18 @@
 			rel="stylesheet" />
 		<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
 		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="assets/css/site.css" />
 	</head>
-	<body>
+	<body data-page="home">
+		<header class="site-head">
+			<a class="brand" href="index.html#home" aria-label="Sonali and Piers, home">Sonali <span>&amp;</span> Piers</a>
+			<nav class="site-nav" aria-label="Main"><a href="index.html#home" data-nav="home">Home</a><a href="index.html#itinerary" data-nav="itinerary">Events</a><a href="index.html#travel" data-nav="travel">Travel</a><a href="explore.html" data-nav="explore">Explore</a><a href="food.html" data-nav="food">Food</a><a href="index.html#faq" data-nav="faq">FAQ</a></nav>
+			<a class="head-rsvp" href="https://forms.gle/JEmLaittAGjbe9GV7" target="_blank" rel="noopener">RSVP</a>
+		</header>
+		<nav class="tabbar" aria-label="Main"><a href="index.html#home" data-nav="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h5v-6h4v6h5V9.5"/></svg><span>Home</span></a><a href="index.html#itinerary" data-nav="itinerary"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="m9.2 15 2 2 3.8-4" /></svg><span>Events</span></a><a href="index.html#travel" data-nav="travel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.2 20.5 12 15l4.6 4.3 1.6-.6-2.4-6.5 3.6-3.6a1.9 1.9 0 0 0-2.7-2.7l-3.6 3.6-6.5-2.4-.6 1.6L10.3 12l-5.5 1.8-1.4-1.4-1.3.6 2.3 2.8 2.8 2.3.6-1.3z"/></svg><span>Travel</span></a><a href="explore.html" data-nav="explore"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg><span>Explore</span></a><a href="food.html" data-nav="food"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v8M4.5 3v5a2.5 2.5 0 0 0 5 0V3M7 11v10"/><path d="M17.5 21V3c-2.2 1.3-3.5 3.7-3.5 7v3h3.5"/></svg><span>Food</span></a><a href="index.html#faq" data-nav="faq"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.7 9.5a2.4 2.4 0 1 1 3.3 2.2c-.7.3-1 .8-1 1.5v.4"/><circle cx="12" cy="16.6" r=".6" fill="currentColor"/></svg><span>FAQ</span></a></nav>
 		<header
 			class="hero"
-			id="home">
-			<nav
-				class="nav"
-				aria-label="Main navigation">
-				<div class="nav-group">
-					<a href="#itinerary">Our Celebrations</a>
-					<a href="#travel">Getting Here</a><a href="explore.html">Explore the Island</a>
-				</div>
-				<a
-					class="palm-mark"
-					href="#home"
-					aria-label="Back to top"
-					>♧</a
-				>
-				<div class="nav-group">
-					<a href="food.html">Food</a>
-					<a href="#faq">FAQ</a>
-					<a href="#rsvp">RSVP</a>
-				</div>
-			</nav>
-
+			id="home" data-view="home">
 			<div class="hero-content">
 				<p class="eyebrow">THE WEDDING OF</p>
 				<h1>SONALI <span>&amp;</span> PIERS</h1>
@@ -63,7 +50,7 @@
 		<main>
 			<section
 				class="intro tropical-corners"
-				id="story">
+				id="welcome" data-view="home">
 				<span class="deco deco-l" aria-hidden="true"></span><span class="deco deco-r" aria-hidden="true"></span>
 				<p class="section-label">A WEEKEND OF</p>
 				<h2>Celebrating Love, Good Food,<br />Cultural Immersion &amp; Great Company</h2>
@@ -71,17 +58,17 @@
 				<p class="sig">Sonali &amp; Piers</p>
 			</section>
 
-			<section class="story" id="story">
+			<section class="story" id="story" data-view="home">
 				<h2>From prom to Mauritius</h2>
 				<div class="story-pols">
 					<figure class="pol pol-a"><img src="assets/images/story-then.jpg" alt="Sonali and Piers at prom" loading="lazy" /><figcaption>then</figcaption></figure>
 					<span class="story-arrow" aria-hidden="true">→</span>
 					<figure class="pol pol-b"><img src="assets/images/story-now.jpg" alt="Sonali and Piers today" loading="lazy" /><figcaption>now</figcaption></figure>
 				</div>
-			</section>
+			<a class="view-next" href="#itinerary"><small>Up next</small><b>Our celebrations</b><span aria-hidden="true">→</span></a></section>
 			<section
 				class="celebrations"
-				id="itinerary"><span class="hib hib-l" aria-hidden="true"></span><span class="hib hib-r" aria-hidden="true"></span>
+				id="itinerary" data-view="itinerary"><span class="hib hib-l" aria-hidden="true"></span><span class="hib hib-r" aria-hidden="true"></span>
 				<div class="section-heading">
 					<span></span>
 					<h2>OUR CELEBRATIONS</h2>
@@ -121,9 +108,9 @@
 <div class="ce-body"><h3>The Reception</h3><p class="ce-time">6:00 PM – Midnight</p><p class="ce-venue">Ruins of Balaclava, Maritim Resort &amp; Spa</p><p class="ce-serve">Dinner will be served</p><p class="ce-copy">Dinner, dancing and a relaxed finale to our wedding weekend.</p>
 <a class="ce-map" href="https://www.google.com/maps/place/Historical+Ruins+of+Balaclava/@-20.0841305,57.5164028,16z/data=!4m10!1m2!2m1!1sRuines+de+Balaclava+Maritim+Resort+Mauritius!3m6!1s0x217c530b0ad2eef7:0xcdc414f5a4ec753e!8m2!3d-20.0856876!4d57.520626!15sCixSdWluZXMgZGUgQmFsYWNsYXZhIE1hcml0aW0gUmVzb3J0IE1hdXJpdGl1c1ouIixydWluZXMgZGUgYmFsYWNsYXZhIG1hcml0aW0gcmVzb3J0IG1hdXJpdGl1c5IBBm11c2V1bZoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyMDVWRTB4UmpCVE1EUXdUbGRTVEUweU5UWk1WMUYzWkRCTmVsTXhSUkFC4AEA-gEECAAQOQ!16s%2Fg%2F11hdvd_tl2?entry=ttu&amp;g_ep=EgoyMDI2MTEwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>View on map</a>
 <div class="ce-actions"><a class="ce-cal" href="assets/calendar/reception.ics" download>Add to calendar</a><a class="ce-cal alt" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Sonali%20%26%20Piers%20-%20The%20Reception&amp;dates=20270628T140000Z/20270628T200000Z&amp;location=Ruins%20of%20Balaclava%2C%20Maritim%20Resort%20%26%20Spa%2C%20Balaclava%2C%20Mauritius&amp;details=Times%20are%20Mauritius%20time%20%28UTC%2B4%29." target="_blank" rel="noopener">Google Calendar</a></div><div class="ce-expect"><p class="ce-expect-h">What to expect</p><p>Dinner, dancing and the last big party of the weekend. Dress for an evening outdoors. (Draft - to be confirmed.)</p></div><div class="ce-wear"><p class="ce-wear-h">What to wear</p><p>Chic evening attire; both Indian and Western outfits are welcome.</p><div class="ce-sws"><span class="ce-sw"><i style="background:#1a2c47"></i>Midnight</span><span class="ce-sw"><i style="background:#f08a5d"></i>Coral</span><span class="ce-sw"><i style="background:#e8d3a6"></i>Champagne</span></div><a class="ce-insp" href="https://www.pinterest.com/search/pins/?q=chic%20evening%20wedding%20guest%20outfit" target="_blank" rel="noopener">Outfit inspiration &rarr;</a></div></div></article></div>
-			</section>
+			<a class="view-next" href="#travel"><small>Up next</small><b>Getting here &amp; where to stay</b><span aria-hidden="true">→</span></a></section>
 
-			<section class="travel" id="travel">
+			<section class="travel" id="travel" data-view="travel">
 				<p class="section-label">TRAVEL &amp; STAY</p>
 				<h2>Getting Here</h2><div class="toran garland" aria-hidden="true"></div>
 				<p class="travel-intro">We recommend these airlines. Try to land 3–5 days before the festivities begin, around 21–23 June, so you have time to recover from the journey and the jet lag.</p>
@@ -163,13 +150,13 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			<a class="view-next" href="explore.html"><small>Up next</small><b>Explore the island</b><span aria-hidden="true">→</span></a></section>
 
-			<section class="faq" id="faq"><p class="section-label">FREQUENTLY ASKED QUESTIONS</p><h2>FAQ</h2><div class="toran diyas" aria-hidden="true"></div><div class="faq-tabs" role="tablist"><button type="button" class="faq-tab" role="tab" data-p="faq-0" aria-selected="true">GETTING THERE</button><button type="button" class="faq-tab" role="tab" data-p="faq-1" aria-selected="false">WEATHER &amp; PACKING</button><button type="button" class="faq-tab" role="tab" data-p="faq-2" aria-selected="false">ATTIRE</button><button type="button" class="faq-tab" role="tab" data-p="faq-3" aria-selected="false">CELEBRATIONS</button></div><div class="faq-panel" role="tabpanel" id="faq-0"><details><summary>How do I get from the airport?</summary><p>The airport (MRU) is about an hour’s drive from Flic en Flac. Taxis and pre-booked transfers are easy to arrange. Group transfer details are coming soon.</p></details><details><summary>Do I need a visa or any forms?</summary><p>It depends on your passport. Many nationalities can enter visa-free for tourism, but please check the official Mauritius Passport and Immigration Office website for yours. Every traveller must also complete the free All-in-One Travel Digital Form on the <a href="https://safemauritius.govmu.org/" target="_blank" rel="noopener">official SafeMauritius site</a> before flying (currently at least 72 hours before arrival) and save the QR code to show on arrival.</p></details><details><summary>What about money and tipping?</summary><p>The local currency is the Mauritian rupee (MUR). Cards are widely accepted at hotels and restaurants, but carry some cash for markets and taxis. Tipping is appreciated but not expected.</p></details><details><summary>Can I drive?</summary><p>Cars drive on the left in Mauritius. Many visitors hire a driver for a day of sightseeing.</p></details><details><summary>Can I make a holiday of it?</summary><p>Absolutely. Have a look at our <a href="explore.html">Explore the Island</a> page for our favourite day trips.</p></details></div><div class="faq-panel" role="tabpanel" id="faq-1" hidden><details><summary>What’s the weather like in June?</summary><p>June is winter in Mauritius: sunny days in the mid-20s °C, cooler evenings and the odd shower. The sea is still lovely for swimming.</p></details><details><summary>What should I pack?</summary><p>Light layers, something warmer for the evenings, swimwear, a sun hat, sunscreen, insect repellent and comfortable shoes for sightseeing.</p></details><details><summary>Plugs, power &amp; phones?</summary><p>Sockets are Type C and G (230V), so UK plugs work. Mauritius is on GMT+4. Check your roaming charges, or pick up a local SIM or eSIM.</p></details></div><div class="faq-panel" role="tabpanel" id="faq-2" hidden><details><summary>What should I wear?</summary><p>Each celebration has its own suggested dress code and colours above. Indian and Western attire are both welcome.</p></details><details><summary>Where can I get Indian outfits?</summary><p>Borrow from friends and family, buy online before you travel, or look to the tailors and shops in Mauritius (Port Louis is a good place to start). Details coming soon.</p></details></div><div class="faq-panel" role="tabpanel" id="faq-3" hidden><details><summary>Can I bring a plus-one or my children?</summary><p>We’ve named everyone we’re delighted to be celebrating with on your invitation. With a destination wedding and a limited guest list, we’re sadly not able to accommodate additional guests or plus-ones who weren’t included. Thank you so much for understanding. We can’t wait to celebrate with you!</p></details><details><summary>When should I RSVP by?</summary><p>Please RSVP by 15 January 2027.</p></details><details><summary>Gifts, or who do I contact with questions?</summary><p>Please message Sonali or Piers directly.</p></details></div></section>
+			<section class="faq" id="faq" data-view="faq"><p class="section-label">FREQUENTLY ASKED QUESTIONS</p><h2>FAQ</h2><div class="toran diyas" aria-hidden="true"></div><div class="faq-tabs" role="tablist"><button type="button" class="faq-tab" role="tab" data-p="faq-0" aria-selected="true">GETTING THERE</button><button type="button" class="faq-tab" role="tab" data-p="faq-1" aria-selected="false">WEATHER &amp; PACKING</button><button type="button" class="faq-tab" role="tab" data-p="faq-2" aria-selected="false">ATTIRE</button><button type="button" class="faq-tab" role="tab" data-p="faq-3" aria-selected="false">CELEBRATIONS</button></div><div class="faq-panel" role="tabpanel" id="faq-0"><details><summary>How do I get from the airport?</summary><p>The airport (MRU) is about an hour’s drive from Flic en Flac. Taxis and pre-booked transfers are easy to arrange. Group transfer details are coming soon.</p></details><details><summary>Do I need a visa or any forms?</summary><p>It depends on your passport. Many nationalities can enter visa-free for tourism, but please check the official Mauritius Passport and Immigration Office website for yours. Every traveller must also complete the free All-in-One Travel Digital Form on the <a href="https://safemauritius.govmu.org/" target="_blank" rel="noopener">official SafeMauritius site</a> before flying (currently at least 72 hours before arrival) and save the QR code to show on arrival.</p></details><details><summary>What about money and tipping?</summary><p>The local currency is the Mauritian rupee (MUR). Cards are widely accepted at hotels and restaurants, but carry some cash for markets and taxis. Tipping is appreciated but not expected.</p></details><details><summary>Can I drive?</summary><p>Cars drive on the left in Mauritius. Many visitors hire a driver for a day of sightseeing.</p></details><details><summary>Can I make a holiday of it?</summary><p>Absolutely. Have a look at our <a href="explore.html">Explore the Island</a> page for our favourite day trips.</p></details></div><div class="faq-panel" role="tabpanel" id="faq-1" hidden><details><summary>What’s the weather like in June?</summary><p>June is winter in Mauritius: sunny days in the mid-20s °C, cooler evenings and the odd shower. The sea is still lovely for swimming.</p></details><details><summary>What should I pack?</summary><p>Light layers, something warmer for the evenings, swimwear, a sun hat, sunscreen, insect repellent and comfortable shoes for sightseeing.</p></details><details><summary>Plugs, power &amp; phones?</summary><p>Sockets are Type C and G (230V), so UK plugs work. Mauritius is on GMT+4. Check your roaming charges, or pick up a local SIM or eSIM.</p></details></div><div class="faq-panel" role="tabpanel" id="faq-2" hidden><details><summary>What should I wear?</summary><p>Each celebration has its own suggested dress code and colours on the <a href="#itinerary">Events</a> page. Indian and Western attire are both welcome.</p></details><details><summary>Where can I get Indian outfits?</summary><p>Borrow from friends and family, buy online before you travel, or look to the tailors and shops in Mauritius (Port Louis is a good place to start). Details coming soon.</p></details></div><div class="faq-panel" role="tabpanel" id="faq-3" hidden><details><summary>Can I bring a plus-one or my children?</summary><p>We’ve named everyone we’re delighted to be celebrating with on your invitation. With a destination wedding and a limited guest list, we’re sadly not able to accommodate additional guests or plus-ones who weren’t included. Thank you so much for understanding. We can’t wait to celebrate with you!</p></details><details><summary>When should I RSVP by?</summary><p>Please RSVP by 15 January 2027.</p></details><details><summary>Gifts, or who do I contact with questions?</summary><p>Please message Sonali or Piers directly.</p></details></div></section>
 
 			<section
 				class="countdown-rsvp"
-				id="rsvp">
+				id="rsvp" data-view="faq">
 				<div class="countdown-wrap">
 					<p class="section-label">RSVP</p>
 					<div
@@ -208,5 +195,6 @@
 
 		<footer><p>SONALI &amp; PIERS · MAURITIUS · 26–28 JUNE 2027</p></footer>
 		<script src="assets/js/script.js"></script>
+		<script src="assets/js/site.js"></script>
 	</body>
 </html>

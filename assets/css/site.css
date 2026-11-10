@@ -1,0 +1,529 @@
+/* ==========================================================================
+   Shared site styles, loaded last on every page.
+   - The menu: a bar along the top, plus a tab bar along the bottom on phones
+   - One-section-at-a-time view switching on the home page
+   - Readability: darker photo overlays and larger small print
+   ========================================================================== */
+
+:root {
+	--head-h: 68px;
+	--tab-h: 0px;
+	--muted: #4a6967;
+	--line: rgba(13, 97, 94, 0.14);
+}
+
+/* --------------------------------------------------------------------------
+   Top bar (all pages)
+   -------------------------------------------------------------------------- */
+.site-head {
+	position: sticky;
+	top: 0;
+	z-index: 60;
+	height: var(--head-h);
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	padding: 0 max(24px, calc((100% - 1180px) / 2));
+	background: rgba(251, 248, 239, 0.96);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid var(--line);
+}
+.brand {
+	font: 500 26px/1 var(--serif);
+	color: var(--deep);
+	text-decoration: none;
+	white-space: nowrap;
+	letter-spacing: 0.01em;
+}
+.brand span {
+	font-style: italic;
+	color: #c46a4a;
+}
+.site-nav {
+	display: flex;
+	gap: 4px;
+	margin-left: auto;
+}
+.site-nav a {
+	position: relative;
+	padding: 10px 14px;
+	font: 500 14px/1 var(--sans);
+	color: var(--muted);
+	text-decoration: none;
+	border-radius: 8px;
+	transition: color 0.2s, background-color 0.2s;
+}
+.site-nav a:hover {
+	color: var(--deep);
+	background: rgba(13, 97, 94, 0.07);
+}
+.site-nav a[aria-current='page'] {
+	color: var(--deep);
+	font-weight: 600;
+}
+.site-nav a[aria-current='page']::after {
+	content: '';
+	position: absolute;
+	left: 14px;
+	right: 14px;
+	bottom: 2px;
+	height: 2px;
+	border-radius: 2px;
+	background: var(--green);
+}
+.head-rsvp {
+	flex-shrink: 0;
+	padding: 11px 22px;
+	border-radius: 999px;
+	background: var(--green);
+	color: #fff;
+	font: 600 13px/1 var(--sans);
+	letter-spacing: 0.12em;
+	text-decoration: none;
+	transition: background-color 0.2s;
+}
+.head-rsvp:hover {
+	background: var(--deep);
+}
+.site-nav a:focus-visible,
+.head-rsvp:focus-visible,
+.brand:focus-visible,
+.tabbar a:focus-visible,
+.view-next:focus-visible {
+	outline: 2px solid var(--green);
+	outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Bottom tab bar (phones and small tablets)
+   -------------------------------------------------------------------------- */
+.tabbar {
+	display: none;
+}
+
+@media (max-width: 900px) {
+	:root {
+		--head-h: 58px;
+		--tab-h: calc(64px + env(safe-area-inset-bottom, 0px));
+	}
+	.site-head {
+		padding: 0 16px;
+	}
+	.brand {
+		font-size: 23px;
+	}
+	.site-nav {
+		display: none;
+	}
+	.head-rsvp {
+		margin-left: auto;
+		padding: 10px 20px;
+	}
+	.tabbar {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 60;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		height: var(--tab-h);
+		padding-bottom: env(safe-area-inset-bottom, 0px);
+		background: rgba(251, 248, 239, 0.97);
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+		border-top: 1px solid var(--line);
+		box-shadow: 0 -4px 18px rgba(7, 81, 79, 0.06);
+	}
+	.tabbar a {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 4px;
+		color: var(--muted);
+		text-decoration: none;
+		font: 500 11px/1 var(--sans);
+		-webkit-tap-highlight-color: transparent;
+	}
+	.tabbar svg {
+		width: 24px;
+		height: 24px;
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 1.7;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		padding: 2px 10px;
+		box-sizing: content-box;
+		border-radius: 999px;
+		transition: background-color 0.2s;
+	}
+	.tabbar a[aria-current='page'] {
+		color: var(--deep);
+		font-weight: 600;
+	}
+	.tabbar a[aria-current='page'] svg {
+		background: rgba(13, 97, 94, 0.12);
+		stroke-width: 2;
+	}
+	body footer {
+		padding-bottom: calc(32px + var(--tab-h));
+	}
+}
+
+/* Anchored content never hides under the sticky top bar. */
+html {
+	scroll-padding-top: calc(var(--head-h) + 12px);
+}
+
+/* --------------------------------------------------------------------------
+   One section at a time (home page, when JavaScript is on)
+   -------------------------------------------------------------------------- */
+[data-view][hidden] {
+	display: none !important;
+}
+/* The wavy tops were drawn to blend into the section above; each section now
+   starts straight under the menu, so they're not needed. */
+.has-views .celebrations::before,
+.has-views .travel::before,
+.has-views .faq::before {
+	display: none;
+}
+.has-views .celebrations,
+.has-views .travel,
+.has-views .faq {
+	padding-top: 56px;
+}
+@media (max-width: 720px) {
+	.has-views .celebrations,
+	.has-views .travel,
+	.has-views .faq {
+		padding-top: 40px;
+	}
+}
+
+/* "Up next" link at the end of each section */
+.view-next {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	column-gap: 18px;
+	width: min(460px, 100%);
+	margin: 56px auto 8px;
+	padding: 18px 24px;
+	border: 1px solid var(--line);
+	border-radius: 14px;
+	background: #fffdf8;
+	color: var(--deep);
+	text-align: left;
+	text-decoration: none;
+	box-shadow: 0 6px 20px rgba(7, 81, 79, 0.06);
+	transition: transform 0.2s, box-shadow 0.2s;
+	position: relative;
+	z-index: 2;
+}
+.view-next:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 26px rgba(7, 81, 79, 0.1);
+}
+.view-next small {
+	grid-column: 1;
+	font: 600 11px/1.2 var(--sans);
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: #b4583a;
+}
+.view-next b {
+	grid-column: 1;
+	font: 500 24px/1.2 var(--serif);
+	margin-top: 4px;
+}
+.view-next span {
+	grid-column: 2;
+	grid-row: 1 / span 2;
+	font-size: 22px;
+	color: var(--green);
+}
+.story .view-next {
+	margin-top: 64px;
+}
+
+/* --------------------------------------------------------------------------
+   Photo headers: no menu inside them any more, and stronger shading so the
+   white text is easy to read.
+   -------------------------------------------------------------------------- */
+.hero {
+	height: auto;
+	min-height: min(640px, calc(100svh - var(--head-h)));
+	padding: 48px 20px 88px;
+}
+.hero::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background: radial-gradient(ellipse 60% 55% at 50% 48%, rgba(0, 30, 45, 0.42), rgba(0, 30, 45, 0) 75%),
+		linear-gradient(rgba(0, 30, 45, 0.38), rgba(0, 30, 45, 0.2) 45%, rgba(0, 30, 45, 0.42));
+}
+.hero .hero-content {
+	position: relative;
+	z-index: 2;
+	margin-top: 0;
+}
+.hero h1 {
+	text-shadow: 0 2px 18px rgba(0, 25, 40, 0.45);
+}
+.hero .eyebrow,
+.hero .hero-location,
+.hero .hero-date,
+.hero .hero-by,
+.hero .countdown {
+	text-shadow: 0 1px 12px rgba(0, 25, 40, 0.7);
+}
+.hero .eyebrow {
+	font-size: 13px;
+	letter-spacing: 0.3em;
+	font-weight: 600;
+}
+.hero .hero-location {
+	font-size: 17px;
+	letter-spacing: 0.3em;
+	font-weight: 500;
+}
+.hero .hero-date {
+	font-size: 15px;
+	letter-spacing: 0.22em;
+	font-weight: 600;
+}
+.hero .countdown p {
+	font-size: 11px;
+	letter-spacing: 0.14em;
+	font-weight: 600;
+}
+.hero .hero-by {
+	font-size: 12px;
+	letter-spacing: 0.16em;
+	font-weight: 600;
+}
+.hero .rsvp-button,
+body .hero .rsvp-button {
+	background: #fffdf8;
+	color: var(--deep);
+	font-size: 13px;
+	padding: 14px 30px;
+	box-shadow: 0 6px 20px rgba(0, 25, 40, 0.35);
+	text-shadow: none;
+}
+.hero.mini {
+	min-height: 0;
+	height: auto;
+	padding: 72px 20px 84px;
+}
+@media (max-width: 720px) {
+	.hero {
+		min-height: calc(100svh - var(--head-h) - var(--tab-h));
+		padding: 32px 16px 64px;
+	}
+	.hero.mini {
+		min-height: 0;
+		padding: 56px 16px 60px;
+	}
+	.hero .hero-location {
+		font-size: 15px;
+	}
+	.hero .hero-date {
+		font-size: 13px;
+	}
+}
+
+/* --------------------------------------------------------------------------
+   RSVP block: darker text on the sea photo
+   -------------------------------------------------------------------------- */
+.countdown-rsvp {
+	background: linear-gradient(rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.62)),
+		url('../images/rsvp-bg.jpg') center/cover no-repeat;
+	color: var(--deep);
+}
+.countdown-rsvp .section-label {
+	font-size: 14px;
+	font-weight: 600;
+}
+.countdown-rsvp .cant-wait,
+.countdown-rsvp .rsvp-by {
+	font-size: 12px;
+	letter-spacing: 0.16em;
+	font-weight: 600;
+}
+.countdown-rsvp .countdown i {
+	background: rgba(7, 81, 79, 0.45);
+}
+
+/* --------------------------------------------------------------------------
+   Larger small print. A lot of labels and buttons were 7–9px, which is very
+   hard to read on a phone. These set a sensible minimum.
+   -------------------------------------------------------------------------- */
+body .section-label,
+body .eyebrow,
+body .stay .section-label,
+body .countdown p,
+body .rsvp-by,
+body .cant-wait,
+body .card-date,
+body .box .card-date,
+body .ce-date span,
+body .ce-expect-h,
+body .ce-expect p.ce-expect-h,
+body .ce-expect summary,
+body .ce-wear-h,
+body .ce-wear > p.ce-wear-h,
+body .ce-wear summary,
+body .colours .lbl,
+body .faq-group,
+body .board .h,
+body .board-title,
+body .tj-when,
+body .isle .lbl,
+body .stay-badge,
+body .stay-tag,
+body .stay-sub,
+body .stay .stay-sub,
+body .mo-h,
+body .fc-eye,
+body .dy-eye,
+body .xp-k,
+body .xp-fav,
+body .xc-m,
+body .mk-grid span,
+body .stamp small,
+body .dish-b .dish-w,
+body footer {
+	font-size: 11px;
+	letter-spacing: 0.16em;
+}
+body .rsvp-button,
+body .faq-tab,
+body .ce-cal,
+body .ce-insp,
+body .ce a.ce-map,
+body .map-link,
+body .box a.map-link,
+body .isle-chips button,
+body .isle-tabs button,
+body .isle-card .go,
+body .stay-links a,
+body .stay-bnb a,
+body .stay-card a,
+body .xp-chips button,
+body .xp-drive,
+body .xp-route,
+body .dy-stops a.mp,
+body .wh-i a.mp {
+	font-size: 11px;
+	letter-spacing: 0.12em;
+	font-weight: 600;
+}
+body .ce-sw,
+body .isle-card .when,
+body .xc-d {
+	font-size: 12px;
+}
+body .isle-card p.txt,
+body .ce-copy,
+body .ce-wear > p,
+body .box > p,
+body .card-body > p:not(.card-date),
+body .feature-grid p,
+body .form-note,
+body .dish-b p,
+body .mo-i p,
+body .wh-i p,
+body .dy-stops p,
+body .dy-tip {
+	font-size: 14px;
+	line-height: 1.6;
+}
+body .dy-stops b,
+body .dy-tip b {
+	font-size: inherit;
+}
+footer {
+	padding-bottom: 32px;
+}
+
+/* --------------------------------------------------------------------------
+   Darker body text. The pale grey-green and coral used for paragraphs and
+   small labels were below the recommended contrast for reading on a phone
+   outdoors.
+   -------------------------------------------------------------------------- */
+body .travel-intro,
+body .travel-note,
+body .stay-note,
+body .isle-sub,
+body .xp-lede,
+body .fd-lede,
+body .ce-copy,
+body .ce-serve,
+body .ce-sw,
+body .ce-expect p,
+body .ce-wear p,
+body .stay-pick p,
+body .stay-card p,
+body .stay-bnb p,
+body .stay > p,
+body .isle-card p.txt,
+body .faq details p,
+body .mo-i p,
+body .dish-b p,
+body .drink p,
+body .wh-i p,
+body .dy-stops p,
+body .dy-tip,
+body .welcome-note {
+	color: #3d5c58;
+}
+body .ce-date span,
+body .stay-tag,
+body .stay-sub,
+body .stay .stay-sub,
+body .isle .lbl:not(.isle-card .lbl),
+body .stay .section-label {
+	color: #3d6b66;
+}
+body .ce-expect-h,
+body .ce-wear-h {
+	color: var(--deep);
+}
+body .xp-k,
+body .mo-h,
+body .dish-w,
+body .dish-b .dish-w,
+body .isle-card .lbl,
+body .xp-save b,
+body .xp-card i,
+body .xc-m,
+body .dy-eye,
+body .view-next small {
+	color: #a4492f;
+}
+body .travel-intro,
+body .xp-lede,
+body .fd-lede,
+body .isle-sub,
+body .travel-note,
+body .stay > p {
+	font-size: 15px;
+	line-height: 1.65;
+}
+body .stay-pick p,
+body .stay-card p,
+body .drink p,
+body .faq details p,
+body .ce-expect p:not(.ce-expect-h) {
+	font-size: 14px;
+	line-height: 1.6;
+}
+body .stay-note {
+	font-size: 13px;
+}
