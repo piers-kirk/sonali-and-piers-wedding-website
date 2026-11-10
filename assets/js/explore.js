@@ -6,7 +6,7 @@ var SPOTS=[{"a": 0, "n": "Flic en Flac beach", "d": "A long beach with a calm la
 // Photos for each area card, in the same order as AREAS.
 var PHOTOS=["flic_en_flac_tamarin","chamarel_grand_bassin","le_morne_gris_gris","tea_vanilla_rum","port_louis","gardens_sugar","trou_aux_biches_grand_baie","ile_aux_cerfs","blue_bay"];
 var DRIVE=["about 20 min", "about 45 min", "about 1 hr", "about 1 hr 15 min", "about 45 min", "about 1 hr", "about 1 hr", "about 1 hr 30 min", "about 1 hr 15 min"];
-var FAVS=["Tamarin Bay", "Chamarel", "Le Morne Brabant", "Saint Aubin", "Central Market", "Pamplemousses Botanical Garden", "Grand Baie", "Catamaran to Île aux Cerfs", "Blue Bay Marine Park"];
+var FAVS=["Sunset in Flic en Flac", "Grand Bassin", "Chamarel", "Le Morne Brabant", "Gris Gris", "Saint Aubin", "Bois Chéri", "Caudan Waterfront", "Central Market", "Pamplemousses Botanical Garden", "Grand Baie", "Catamaran to Île aux Cerfs", "Île aux Aigrettes"];
 
 var grid=document.getElementById('xp-grid');
 var pinIcon='<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>';
