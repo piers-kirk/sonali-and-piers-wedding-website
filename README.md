@@ -412,7 +412,13 @@ the bottom with Home, Celebrations, Getting Here, Explore and More; "More"
 opens Food, What to Wear, Mauritius 101 and FAQ.
 
 Styles go in the CSS files above rather than inside the HTML pages, so each
-look is defined in one place. Images referenced from a CSS file use paths
+look is defined in one place.
+
+Every link to a CSS or JS file ends in a version, for example
+`assets/css/site.css?v=20261110`. After changing any CSS or JS file, change
+that number on every page (today's date works well). Otherwise phones,
+especially iPhones with Safari, can keep showing the old styles for a while
+and the site looks broken until they refresh. Images referenced from a CSS file use paths
 starting `../images/`.
 
 When the link is shared in WhatsApp, iMessage or email, the preview uses
