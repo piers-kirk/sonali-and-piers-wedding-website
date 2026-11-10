@@ -590,8 +590,8 @@ body .countdown-rsvp .rsvp-button {
 	margin-top: 22px;
 }
 
-/* The header RSVP button shows when you're on the RSVP page. */
+/* On the RSVP page itself the header button is hidden (the page has its own).
+   It keeps its space so the menu doesn't shift. */
 .head-rsvp[aria-current='page'] {
-	background: var(--deep);
-	box-shadow: 0 0 0 3px rgba(13, 97, 94, 0.22);
+	visibility: hidden;
 }
