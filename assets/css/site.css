@@ -578,7 +578,7 @@ html:not(.has-views) .countdown-rsvp {
 	font-size: 16px;
 	line-height: 1.6;
 	color: #3d5c58;
-	max-width: 380px;
+	max-width: 420px;
 	margin: 0 auto 26px;
 }
 body .countdown-rsvp .rsvp-button {
@@ -594,4 +594,10 @@ body .countdown-rsvp .rsvp-button {
    It keeps its space so the menu doesn't shift. */
 .head-rsvp[aria-current='page'] {
 	visibility: hidden;
+}
+
+.rsvp-lede strong {
+	color: var(--deep);
+	font-weight: 600;
+	white-space: nowrap;
 }
