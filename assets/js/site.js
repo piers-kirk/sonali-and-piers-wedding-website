@@ -1,5 +1,5 @@
 // Site navigation: highlights the current page in the menus, and on the
-// home page shows one section at a time (Home, Events, Travel, FAQ) instead
+// home page shows one section at a time (Home, Events, Travel, FAQ, RSVP) instead
 // of one long scroll. Each section has its own address, e.g. index.html#travel,
 // so the browser back button and shared links work as expected.
 (function () {
@@ -7,7 +7,7 @@
 	const views = document.querySelectorAll('[data-view]');
 
 	// Old links and anchors that live inside a section.
-	const aliases = { '': 'home', story: 'home', welcome: 'home', rsvp: 'faq' };
+	const aliases = { '': 'home', story: 'home', welcome: 'home' };
 
 	function setActive(key) {
 		document.querySelectorAll('[data-nav]').forEach((a) => {
@@ -38,7 +38,7 @@
 		if (target) target.scrollIntoView();
 		else if (!first) window.scrollTo(0, 0);
 
-		const titles = { home: '', itinerary: 'Events', travel: 'Travel', faq: 'FAQ' };
+		const titles = { home: '', itinerary: 'Events', travel: 'Travel', faq: 'FAQ', rsvp: 'RSVP' };
 		document.title = (titles[name] ? titles[name] + ' | ' : '') + 'Sonali & Piers | Mauritius Wedding';
 	}
 

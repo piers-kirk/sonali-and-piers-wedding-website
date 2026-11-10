@@ -307,15 +307,6 @@ html {
 	letter-spacing: 0.16em;
 	font-weight: 600;
 }
-.hero .rsvp-button,
-body .hero .rsvp-button {
-	background: #fffdf8;
-	color: var(--deep);
-	font-size: 13px;
-	padding: 14px 30px;
-	box-shadow: 0 6px 20px rgba(0, 25, 40, 0.35);
-	text-shadow: none;
-}
 .hero.mini {
 	min-height: 0;
 	height: auto;
@@ -339,7 +330,7 @@ body .hero .rsvp-button {
 }
 
 /* --------------------------------------------------------------------------
-   RSVP block: darker text on the sea photo
+   RSVP page: darker text on the sea photo
    -------------------------------------------------------------------------- */
 .countdown-rsvp {
 	background: linear-gradient(rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.62)),
@@ -526,4 +517,81 @@ body .ce-expect p:not(.ce-expect-h) {
 }
 body .stay-note {
 	font-size: 13px;
+}
+
+/* --------------------------------------------------------------------------
+   Straight section dividers. The wavy edges are replaced by one consistent
+   gold line wherever two blocks meet.
+   -------------------------------------------------------------------------- */
+:root {
+	--divider: 2px solid #c9a24b;
+}
+.hero::after,
+.celebrations::before,
+.travel::before,
+.faq::before,
+.countdown-rsvp::before,
+.countdown-rsvp::after,
+footer::before,
+.story::before {
+	display: none !important;
+}
+.hero {
+	border-bottom: var(--divider);
+}
+.story {
+	border-top: var(--divider);
+	padding-top: 64px;
+}
+footer {
+	border-top: var(--divider);
+	padding-top: 28px;
+}
+/* Without JavaScript the home page is one long page; keep the lines there too. */
+html:not(.has-views) .celebrations,
+html:not(.has-views) .travel,
+html:not(.has-views) .faq,
+html:not(.has-views) .countdown-rsvp {
+	border-top: var(--divider);
+}
+
+/* --------------------------------------------------------------------------
+   RSVP page
+   -------------------------------------------------------------------------- */
+.countdown-rsvp {
+	min-height: calc(100svh - var(--head-h) - var(--tab-h) - 80px);
+	padding: 56px 20px;
+}
+.countdown-rsvp .countdown-wrap {
+	max-width: 560px;
+	padding: 40px 28px 44px;
+	border-radius: 18px;
+	background: rgba(255, 253, 248, 0.82);
+	box-shadow: 0 10px 34px rgba(7, 81, 79, 0.12);
+}
+.rsvp-title {
+	font: 400 clamp(36px, 6vw, 52px)/1.1 var(--serif);
+	color: var(--deep);
+	margin: 10px 0 12px;
+}
+.rsvp-lede {
+	font-size: 16px;
+	line-height: 1.6;
+	color: #3d5c58;
+	max-width: 380px;
+	margin: 0 auto 26px;
+}
+body .countdown-rsvp .rsvp-button {
+	font-size: 13px;
+	padding: 15px 34px;
+	margin-top: 8px;
+}
+.countdown-rsvp .cant-wait {
+	margin-top: 22px;
+}
+
+/* The header RSVP button shows when you're on the RSVP page. */
+.head-rsvp[aria-current='page'] {
+	background: var(--deep);
+	box-shadow: 0 0 0 3px rgba(13, 97, 94, 0.22);
 }

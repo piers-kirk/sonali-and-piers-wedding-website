@@ -390,7 +390,7 @@ sonali-and-piers-wedding-website/
     └── calendar/           ← "Add to calendar" files (mehendi, wedding, reception)
 ```
 
-The home page is split into sections (Home, Events, Travel, FAQ) that are shown
+The home page is split into sections (Home, Events, Travel, FAQ, RSVP) that are shown
 one at a time, each with its own address such as `index.html#travel`.
 Explore and Food are separate pages. The menu is a bar along the top on
 computers and a tab bar along the bottom on phones.
