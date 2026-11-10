@@ -749,3 +749,19 @@ body .xc-d {
 		opacity: 0.9;
 	}
 }
+
+/* --------------------------------------------------------------------------
+   Events: venue photos on the celebration cards
+   -------------------------------------------------------------------------- */
+.ce-art > img {
+	display: block;
+	width: 100%;
+	height: 190px;
+	object-fit: cover;
+	background: #efe6d4;
+}
+@media (max-width: 720px) {
+	.ce-art > img {
+		height: 170px;
+	}
+}
