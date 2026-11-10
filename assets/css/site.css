@@ -777,271 +777,74 @@ body .xc-d {
 }
 
 /* ==========================================================================
-   "Sonali & Piers" wordmark: Cinzel capitals with a gold script ampersand,
-   the same in the header, the landing page, the sign-off and the footer.
+   "Sonali & Piers": Cormorant Garamond names with the Marcellus "&",
+   the same in the header, the landing page title, the sign-off and footer.
    ========================================================================== */
 :root {
-	--display: 'Cinzel', 'Marcellus', Georgia, serif;
-	--script: 'Great Vibes', 'Marcellus', cursive;
-	--gold: #b8862b;
-	--gold-light: #f3c873;
+	--names: 'Cormorant Garamond', Georgia, serif;
+	--amp: 'Marcellus', Georgia, serif;
 }
 .hero h1 {
 	text-transform: none;
 }
 .brand,
+.hero .names,
 .sig,
 footer .fn {
-	font-family: var(--display);
+	font-family: var(--names);
 	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 0.12em;
-	color: var(--deep);
-}
-.brand {
-	font-size: 19px;
-	line-height: 1;
-	display: inline-flex;
-	align-items: baseline;
-	gap: 0.32em;
+	text-transform: none;
+	letter-spacing: 0.01em;
 }
 .brand span,
+.hero .names .name-amp,
 .sig .name-amp,
-footer .fn .name-amp,
-.hero .names .name-amp {
-	display: inline-block;
+footer .fn .name-amp {
+	display: inline;
 	transform: none;
 	margin: 0;
-	font-family: var(--script);
+	font-family: var(--amp);
 	font-style: normal;
 	font-weight: 400;
-	text-transform: none;
+	font-size: 0.9em;
 	letter-spacing: 0;
-	color: var(--gold);
+}
+.brand {
+	font-size: 28px;
+	line-height: 1;
+	color: var(--deep);
 }
 .brand span {
-	font-size: 1.55em;
-	line-height: 0;
-	position: relative;
-	top: 0.08em;
+	color: #f07a5a;
+}
+.hero .names {
+	font-size: clamp(54px, 7vw, 104px);
+	line-height: 1.05;
+	font-weight: 500;
+}
+.hero .names .name-amp {
+	color: #f4c9a8;
 }
 .sig {
-	font-size: 24px;
-	margin-top: 10px;
+	font-size: 36px;
+	color: var(--deep);
 }
 .sig .name-amp {
-	font-size: 1.6em;
-	line-height: 0;
-	margin: 0 0.12em;
-	vertical-align: -0.08em;
+	color: #f07a5a;
 }
 footer .fn {
-	font-size: 14px;
-	color: inherit;
+	font-size: 19px;
 }
 footer .fn .name-amp {
-	font-size: 1.6em;
-	line-height: 0;
-	margin: 0 0.1em;
-	color: var(--gold-light);
-	vertical-align: -0.08em;
+	color: #e3b04b;
 }
 @media (max-width: 900px) {
 	.brand {
-		font-size: 16px;
-		letter-spacing: 0.1em;
+		font-size: 25px;
 	}
 }
-@media (max-width: 360px) {
-	.brand {
-		font-size: 14px;
-		letter-spacing: 0.07em;
-	}
-}
-
-/* ==========================================================================
-   Landing page: an Indian wedding-card feel
-   - marigold toran hanging across the top of the photo
-   - script "The wedding of", Cinzel names, gold lotus divider
-   - faint gold mandala behind the names
-   ========================================================================== */
-.hero .hero-toran {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 96px;
-	z-index: 2;
-	pointer-events: none;
-	background: url('../images/hero-toran.svg') center top / 240px 96px repeat-x;
-	filter: drop-shadow(0 4px 6px rgba(0, 20, 35, 0.35));
-}
-.hero .hero-content {
-	isolation: isolate;
-	padding: 56px 20px 8px;
-}
-.hero .hero-content::before {
-	content: '';
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	width: 640px;
-	height: 640px;
-	transform: translate(-50%, -54%);
-	background: url('../images/mandala.svg') center / contain no-repeat;
-	opacity: 0.2;
-	z-index: -1;
-	pointer-events: none;
-}
-.hero .eyebrow {
-	font-family: var(--script);
-	font-size: 34px;
-	font-weight: 400;
-	letter-spacing: 0;
-	text-transform: none;
-	color: #fde7b8;
-	line-height: 1.1;
-}
-.hero .names {
-	font-family: var(--display);
-	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	font-size: clamp(44px, 5.6vw, 78px);
-	line-height: 1.05;
-	margin: 6px 0 0;
-	text-shadow: 0 2px 22px rgba(0, 25, 40, 0.55);
-}
-.hero .names .name-amp {
-	font-size: 1.25em;
-	line-height: 0;
-	vertical-align: -0.06em;
-	margin: 0 0.06em;
-	color: var(--gold-light);
-	text-shadow: 0 2px 16px rgba(0, 25, 40, 0.45);
-}
-.hero .hero-location {
-	font-family: var(--display);
-	font-weight: 500;
-}
-.hero .hero-date {
-	font-family: var(--sans);
-	font-weight: 700;
-}
-.hero-orn {
-	display: block;
-	width: 220px;
-	margin: 18px auto 0;
-	color: var(--gold-light);
-	filter: drop-shadow(0 1px 6px rgba(0, 25, 40, 0.5));
-}
-.hero-orn svg {
-	display: block;
-	width: 100%;
-	height: auto;
-}
-body .hero .countdown span {
-	font-family: var(--display);
-	font-weight: 500;
-}
-.hero .countdown i {
-	width: 6px;
-	height: 6px;
-	border-radius: 0;
-	transform: rotate(45deg);
-	background: var(--gold-light);
-	opacity: 0.9;
-	align-self: center;
-	margin-top: -22px;
-}
-body .hero .hero-by {
-	font-family: var(--sans);
-	font-weight: 700;
-}
-
-@media (min-width: 721px) {
-	body .hero:not(.mini) .countdown i {
-		height: 7px;
-		width: 7px;
-		background: var(--gold-light);
-	}
-}
-
-/* Phones: stack the names like a wedding card */
 @media (max-width: 720px) {
-	.hero .hero-toran {
-		height: 64px;
-		background-size: 160px 64px;
-	}
-	.hero .hero-content {
-		padding: 52px 8px 4px;
-	}
-	.hero .hero-content::before {
-		width: 420px;
-		height: 420px;
-		transform: translate(-50%, -58%);
-	}
-	.hero .eyebrow {
-		font-size: 30px;
-	}
 	.hero .names {
-		font-size: clamp(38px, 11.5vw, 50px);
-		letter-spacing: 0.07em;
-		line-height: 1;
+		font-size: clamp(44px, 12.5vw, 56px);
 	}
-	.hero .names > span:not(.name-amp) {
-		display: block;
-	}
-	.hero .names .name-amp {
-		display: block;
-		font-size: 1.15em;
-		line-height: 0.9;
-		margin: 2px 0 6px;
-	}
-	.hero-orn {
-		width: 180px;
-		margin-top: 14px;
-	}
-	.hero .countdown i {
-		margin-top: -18px;
-		width: 5px;
-		height: 5px;
-	}
-}
-
-/* Welcome section under the photo: gold lotus instead of the plain rule */
-.intro h2::after {
-	width: 120px !important;
-	height: 20px !important;
-	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20'%3E%3Cpath d='M2 12H44M76 12H118' stroke='%23b8862b' stroke-width='1'/%3E%3Ccircle cx='49' cy='12' r='1.5' fill='%23b8862b'/%3E%3Ccircle cx='71' cy='12' r='1.5' fill='%23b8862b'/%3E%3Cpath d='M60 1c4 4 5 9 0 16c-5-7-4-12 0-16z' fill='%23b8862b'/%3E%3Cpath d='M60 17c-2-5-7-8-12-7c1 4 6 7 12 7zM60 17c2-5 7-8 12-7c-1 4-6 7-12 7z' fill='%23b8862b' opacity='.75'/%3E%3C/svg%3E") center / contain no-repeat !important;
-}
-
-/* Keep the mandala inside the photo (it is wider than a phone screen). */
-.hero {
-	overflow: hidden;
-}
-/* Script "The wedding of" beats the earlier desktop size rule. */
-body .hero .eyebrow,
-body .hero:not(.mini) .eyebrow {
-	font-family: var(--script);
-	font-size: 40px;
-	letter-spacing: 0;
-	font-weight: 400;
-	text-transform: none;
-	text-shadow: 0 2px 12px rgba(0, 25, 40, 0.6);
-}
-@media (max-width: 720px) {
-	body .hero .eyebrow {
-		font-size: 32px;
-	}
-}
-.brand span {
-	margin: 0 0.06em;
-}
-/* The script "&" leans left; give it a little more room on the right. */
-.brand span {
-	margin: 0 0.16em 0 0;
-}
-footer .fn .name-amp {
-	margin: 0 0.22em 0 0.06em;
 }
