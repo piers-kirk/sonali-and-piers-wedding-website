@@ -1097,3 +1097,22 @@ body .tp-tags span {
 		min-width: 0;
 	}
 }
+
+/* Food: bottle photos on white are shown whole rather than cropped */
+.drink > img.on-white {
+	object-fit: contain;
+	background: #fff;
+	padding: 10px 0;
+	box-sizing: border-box;
+}
+/* A map link inside a food description */
+.drink p a.inline-map {
+	color: var(--deep);
+	text-decoration: underline;
+	text-decoration-color: rgba(10, 58, 94, 0.4);
+	text-underline-offset: 3px;
+	font-weight: 600;
+}
+.drink p a.inline-map:hover {
+	text-decoration-color: currentColor;
+}
