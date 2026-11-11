@@ -1127,3 +1127,41 @@ body .tp-tags span {
 .pc-st img[src*='whats_with_all_the_dogs'] {
 	object-position: center 70%;
 }
+
+/* What to Wear: full-length outfit photos (portrait), and two photos side
+   by side on the Anarkali or sharara card */
+.wr .drink > img,
+.wr .wr-pair {
+	height: auto;
+	aspect-ratio: 3 / 4;
+}
+.wr .drink > img {
+	object-fit: cover;
+	object-position: center top;
+}
+.wr-pair {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3px;
+	background: #fff;
+}
+.wr-pair img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 0;
+	object-fit: cover;
+	object-position: center top;
+}
+/* Any card still showing a drawing keeps the same shape as the photos */
+.wr .drink > svg {
+	height: auto;
+	aspect-ratio: 3 / 4;
+	width: 100%;
+}
+/* The photo pair is a <div>, so undo the caption padding cards give their divs */
+.wr .drink > .wr-pair {
+	padding: 0;
+	margin: 0;
+	flex: none;
+}
