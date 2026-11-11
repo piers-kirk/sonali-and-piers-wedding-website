@@ -1124,3 +1124,14 @@ body .fav-tag {
 	margin: 0;
 	flex: none;
 }
+
+/* Hotel cards: website and map links side by side */
+.stay-card-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px 20px;
+	margin-top: 12px;
+}
+.stay-card .stay-card-links a {
+	margin-top: 0;
+}
