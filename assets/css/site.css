@@ -1116,3 +1116,14 @@ body .tp-tags span {
 .drink p a.inline-map:hover {
 	text-decoration-color: currentColor;
 }
+
+/* Mauritius 101: photos inside the postcard stamps */
+.pc-st img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 3 / 2;
+	object-fit: cover;
+}
+.pc-st img[src*='whats_with_all_the_dogs'] {
+	object-position: center 70%;
+}
