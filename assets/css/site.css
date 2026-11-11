@@ -58,12 +58,12 @@
 	color: var(--deep);
 	background: rgba(10, 58, 94, 0.07);
 }
-.site-nav a[aria-current='page'] {
+.site-nav a[aria-current="page"] {
 	color: var(--deep);
 	font-weight: 600;
 }
-.site-nav a[aria-current='page']::after {
-	content: '';
+.site-nav a[aria-current="page"]::after {
+	content: "";
 	position: absolute;
 	left: 14px;
 	right: 14px;
@@ -103,7 +103,7 @@
 }
 
 @media (max-width: 900px) {
-	:root {
+:root {
 		--head-h: 58px;
 		--tab-h: calc(64px + env(safe-area-inset-bottom, 0px));
 	}
@@ -160,11 +160,11 @@
 		border-radius: 999px;
 		transition: background-color 0.2s;
 	}
-	.tabbar a[aria-current='page'] {
+	.tabbar a[aria-current="page"] {
 		color: var(--deep);
 		font-weight: 600;
 	}
-	.tabbar a[aria-current='page'] svg {
+	.tabbar a[aria-current="page"] svg {
 		background: rgba(10, 58, 94, 0.12);
 		stroke-width: 2;
 	}
@@ -197,7 +197,7 @@ html {
 	padding-top: 56px;
 }
 @media (max-width: 720px) {
-	.has-views .celebrations,
+.has-views .celebrations,
 	.has-views .travel,
 	.has-views .faq {
 		padding-top: 40px;
@@ -261,7 +261,7 @@ html {
 	padding: 48px 20px 88px;
 }
 .hero::before {
-	content: '';
+	content: "";
 	position: absolute;
 	inset: 0;
 	pointer-events: none;
@@ -314,7 +314,7 @@ html {
 	padding: 72px 20px 84px;
 }
 @media (max-width: 720px) {
-	.hero {
+.hero {
 		min-height: calc(100vh - var(--head-h) - var(--tab-h));
 		min-height: calc(100svh - var(--head-h) - var(--tab-h));
 		padding: 32px 16px 64px;
@@ -336,15 +336,14 @@ html {
    -------------------------------------------------------------------------- */
 .countdown-rsvp {
 	background: linear-gradient(rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.62)),
-		url('../images/rsvp-bg.jpg') center/cover no-repeat;
+		url("../images/rsvp-bg.jpg") center/cover no-repeat;
 	color: var(--deep);
 }
 .countdown-rsvp .section-label {
 	font-size: 14px;
 	font-weight: 600;
 }
-.countdown-rsvp .cant-wait,
-.countdown-rsvp .rsvp-by {
+.countdown-rsvp .cant-wait {
 	font-size: 12px;
 	letter-spacing: 0.16em;
 	font-weight: 600;
@@ -363,20 +362,11 @@ body .stay .section-label,
 body .countdown p,
 body .rsvp-by,
 body .cant-wait,
-body .card-date,
-body .box .card-date,
 body .ce-date span,
 body .ce-expect-h,
 body .ce-expect p.ce-expect-h,
-body .ce-expect summary,
 body .ce-wear-h,
 body .ce-wear > p.ce-wear-h,
-body .ce-wear summary,
-body .colours .lbl,
-body .faq-group,
-body .board .h,
-body .board-title,
-body .tj-when,
 body .isle .lbl,
 body .stay-badge,
 body .stay-tag,
@@ -384,11 +374,9 @@ body .stay-sub,
 body .stay .stay-sub,
 body .mo-h,
 body .fc-eye,
-body .dy-eye,
 body .xp-k,
 body .xp-fav,
 body .xc-m,
-body .mk-grid span,
 body .stamp small,
 body .dish-b .dish-w,
 body footer {
@@ -400,24 +388,17 @@ body .faq-tab,
 body .ce-cal,
 body .ce-insp,
 body .ce a.ce-map,
-body .map-link,
-body .box a.map-link,
 body .isle-chips button,
 body .isle-tabs button,
 body .isle-card .go,
 body .stay-links a,
 body .stay-bnb a,
 body .stay-card a,
-body .xp-chips button,
-body .xp-drive,
-body .xp-route,
-body .dy-stops a.mp,
-body .wh-i a.mp {
+body .xp-route {
 	font-size: 11px;
 	letter-spacing: 0.12em;
 	font-weight: 600;
 }
-body .ce-sw,
 body .isle-card .when,
 body .xc-d {
 	font-size: 12px;
@@ -425,22 +406,13 @@ body .xc-d {
 body .isle-card p.txt,
 body .ce-copy,
 body .ce-wear > p,
-body .box > p,
-body .card-body > p:not(.card-date),
-body .feature-grid p,
-body .form-note,
 body .dish-b p,
 body .mo-i p,
-body .wh-i p,
-body .dy-stops p,
-body .dy-tip {
+body .wh-i p {
 	font-size: 14px;
 	line-height: 1.6;
 }
-body .dy-stops b,
-body .dy-tip b {
-	font-size: inherit;
-}
+
 footer {
 	padding-bottom: 32px;
 }
@@ -458,7 +430,6 @@ body .xp-lede,
 body .fd-lede,
 body .ce-copy,
 body .ce-serve,
-body .ce-sw,
 body .ce-expect p,
 body .ce-wear p,
 body .stay-pick p,
@@ -471,8 +442,6 @@ body .mo-i p,
 body .dish-b p,
 body .drink p,
 body .wh-i p,
-body .dy-stops p,
-body .dy-tip,
 body .welcome-note {
 	color: #3e5a72;
 }
@@ -494,9 +463,7 @@ body .dish-w,
 body .dish-b .dish-w,
 body .isle-card .lbl,
 body .xp-save b,
-body .xp-card i,
 body .xc-m,
-body .dy-eye,
 body .view-next small {
 	color: #c75a3e;
 }
@@ -593,7 +560,7 @@ body .countdown-rsvp .rsvp-button {
 
 /* On the RSVP page itself the header button is hidden (the page has its own).
    It keeps its space so the menu doesn't shift. */
-.head-rsvp[aria-current='page'] {
+.head-rsvp[aria-current="page"] {
 	visibility: hidden;
 }
 
@@ -643,12 +610,12 @@ body > footer {
 	transform: scale(1.04);
 }
 @media (prefers-reduced-motion: reduce) {
-	.xc-art img {
+.xc-art img {
 		transition: none;
 	}
 }
 @media (min-width: 721px) {
-	.xc-art {
+.xc-art {
 		height: 190px;
 	}
 }
@@ -664,8 +631,7 @@ body .xc-d {
 	overflow: hidden;
 	background: #f8f2e6;
 }
-.dish figure img,
-.dish figure svg {
+.dish figure img {
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -683,7 +649,7 @@ body .xc-d {
 	background: #f8f2e6;
 }
 @media (max-width: 720px) {
-	.dish figure {
+.dish figure {
 		height: 140px;
 	}
 	.drink > img {
@@ -691,7 +657,7 @@ body .xc-d {
 	}
 }
 @media (prefers-reduced-motion: reduce) {
-	.dish figure img {
+.dish figure img {
 		transition: none;
 	}
 }
@@ -701,7 +667,7 @@ body .xc-d {
    shade behind it. (Phone sizes are unchanged.)
    -------------------------------------------------------------------------- */
 @media (min-width: 721px) {
-	.hero:not(.mini)::before {
+.hero:not(.mini)::before {
 		background: radial-gradient(ellipse 50% 60% at 50% 50%, rgba(10, 58, 94, 0.5), rgba(10, 58, 94, 0) 78%),
 			linear-gradient(rgba(10, 58, 94, 0.36), rgba(10, 58, 94, 0.22) 45%, rgba(10, 58, 94, 0.42));
 	}
@@ -763,7 +729,7 @@ body .xc-d {
 	background: #f8f2e6;
 }
 @media (max-width: 720px) {
-	.ce-art > img {
+.ce-art > img {
 		height: 170px;
 	}
 }
@@ -783,8 +749,8 @@ body .xc-d {
    the same in the header, the landing page title, the sign-off and footer.
    ========================================================================== */
 :root {
-	--names: 'Cormorant Garamond', Georgia, serif;
-	--amp: 'Marcellus', Georgia, serif;
+	--names: "Cormorant Garamond", Georgia, serif;
+	--amp: "Marcellus", Georgia, serif;
 }
 .hero h1 {
 	text-transform: none;
@@ -841,20 +807,19 @@ footer .fn .name-amp {
 	color: #e3b04b;
 }
 @media (max-width: 900px) {
-	.brand {
+.brand {
 		font-size: 25px;
 	}
 }
 @media (max-width: 720px) {
-	.hero .names {
+.hero .names {
 		font-size: clamp(44px, 12.5vw, 56px);
 	}
 }
 
-
 /* Eight menu items on smaller laptops: tighten the top menu a little. */
 @media (min-width: 901px) and (max-width: 1280px) {
-	.site-nav a {
+.site-nav a {
 		padding: 10px 7px;
 		font-size: 12.5px;
 	}
@@ -868,7 +833,7 @@ footer .fn .name-amp {
 	display: none;
 }
 @media (max-width: 900px) {
-	body .tabbar {
+body .tabbar {
 		grid-template-columns: repeat(5, minmax(0, 1fr));
 	}
 	.tabbar a,
@@ -909,12 +874,12 @@ footer .fn .name-amp {
 		transition: background-color 0.2s;
 	}
 	.tab-more.is-current,
-	.tab-more[aria-expanded='true'] {
+	.tab-more[aria-expanded="true"] {
 		color: var(--deep);
 		font-weight: 600;
 	}
 	.tab-more.is-current svg,
-	.tab-more[aria-expanded='true'] svg {
+	.tab-more[aria-expanded="true"] svg {
 		background: rgba(10, 58, 94, 0.12);
 		stroke-width: 2;
 	}
@@ -981,7 +946,7 @@ footer .fn .name-amp {
 	.more-panel a:hover {
 		background: rgba(10, 58, 94, 0.06);
 	}
-	.more-panel a[aria-current='page'] {
+	.more-panel a[aria-current="page"] {
 		background: rgba(10, 58, 94, 0.08);
 		font-weight: 700;
 	}
@@ -1021,13 +986,13 @@ footer .fn .name-amp {
 	}
 }
 @media (prefers-reduced-motion: reduce) {
-	.more-panel,
+.more-panel,
 	.more-scrim {
 		animation: none;
 	}
 }
 @media (max-width: 374px) {
-	.tabbar a span,
+.tabbar a span,
 	.tab-more span {
 		font-size: 10px;
 		letter-spacing: -0.01em;
@@ -1070,7 +1035,7 @@ body .tp-tags span {
 	padding: 6px 10px;
 }
 @media (max-width: 600px) {
-	body .fav-tag {
+body .fav-tag {
 		font-size: 10.5px;
 		letter-spacing: 0.05em;
 		line-height: 1.25;
@@ -1085,7 +1050,7 @@ body .tp-tags span {
 /* RSVP card on very small phones (320px): a little less padding so the
    countdown fits. */
 @media (max-width: 374px) {
-	.countdown-rsvp {
+.countdown-rsvp {
 		padding-left: 12px;
 		padding-right: 12px;
 	}
@@ -1124,7 +1089,7 @@ body .tp-tags span {
 	aspect-ratio: 3 / 2;
 	object-fit: cover;
 }
-.pc-st img[src*='whats_with_all_the_dogs'] {
+.pc-st img[src*="whats_with_all_the_dogs"] {
 	object-position: center 70%;
 }
 
@@ -1152,12 +1117,6 @@ body .tp-tags span {
 	min-height: 0;
 	object-fit: cover;
 	object-position: center top;
-}
-/* Any card still showing a drawing keeps the same shape as the photos */
-.wr .drink > svg {
-	height: auto;
-	aspect-ratio: 3 / 4;
-	width: 100%;
 }
 /* The photo pair is a <div>, so undo the caption padding cards give their divs */
 .wr .drink > .wr-pair {

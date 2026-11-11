@@ -30,41 +30,6 @@ updateCountdown();
 
 setInterval(updateCountdown, 1000);
 
-// RSVP form
-
-const form = document.getElementById('rsvp-form');
-
-if (form) {
-	form.addEventListener('submit', (event) => {
-		event.preventDefault();
-
-		const name = document.getElementById('name').value.trim();
-
-		const attending = document.getElementById('attendance').value === 'yes';
-
-		document.getElementById('rsvp-message').textContent = attending
-			? `Thank you, ${name}! We can't wait to celebrate with you.`
-			: `Thank you for letting us know, ${name}. We'll miss you!`;
-
-		form.reset();
-	});
-}
-
-// Departures board letter tiles
-document.querySelectorAll('.flap').forEach((el, n) => {
-	const s = el.textContent;
-	el.setAttribute('aria-label', s);
-	el.textContent = '';
-	[...s].forEach((c, i) => {
-		const t = document.createElement('span');
-		t.className = 't';
-		t.setAttribute('aria-hidden', 'true');
-		t.textContent = c === ' ' ? '\u00a0' : c.toUpperCase();
-		t.style.animationDelay = n * 0.05 + i * 0.03 + 's';
-		el.appendChild(t);
-	});
-});
-
 // FAQ tabs
 const faqTabs = document.querySelectorAll('.faq-tab');
 faqTabs.forEach((tab) => {
