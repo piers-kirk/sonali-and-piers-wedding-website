@@ -72,7 +72,7 @@ var places=[
  {id:'ffl',chip:'FLIC EN FLAC',lbl:'WHERE TO STAY',name:'Flic en Flac',when:'Our recommended base',ll:[57.372,-20.278],side:'l',dy:-20,
   txt:'A relaxed beach town on the west coast, close to the Mehendi and the wedding. It’s a small island, though, so you’ll be fine wherever you land. More hotel suggestions coming soon.',map:q('Flic en Flac Mauritius')},
  {id:'anna',chip:'MEHENDI',lbl:'SATURDAY, 26 JUNE',name:'Domaine Anna',when:'Mehendi · 6:00 PM – Midnight',ll:[57.392,-20.262],side:'r',
-  txt:'A joyful start to the weekend with good food and colour, just inland from Flic en Flac.',map:q('Domaine Anna Flic en Flac Mauritius')},
+  txt:'A joyful start to the weekend with colour, just inland from Flic en Flac.',map:q('Domaine Anna Flic en Flac Mauritius')},
  {id:'hilton',chip:'WEDDING',lbl:'SUNDAY, 27 JUNE',name:'Hilton Mauritius',when:'The Wedding · 3:00 – 6:00 PM',ll:[57.362,-20.297],side:'l',dy:12,
   txt:'Hilton Mauritius Resort & Spa, right on the beach at Flic en Flac. Join us as we exchange vows and celebrate.',map:q('Hilton Mauritius Resort & Spa Flic en Flac')},
  {id:'ruins',chip:'RECEPTION',lbl:'MONDAY, 28 JUNE',name:'Ruins of Balaclava',when:'The Reception · from 6:00 PM',ll:[57.516,-20.082],side:'l',
